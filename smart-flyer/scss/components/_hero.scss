@@ -1,0 +1,162 @@
+.hp-hero-image {
+
+  height: calc(100vh - 333px);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  @media screen and (max-height: 800px) and (min-width: 701px){
+
+    height: calc(100vh - 250px);
+
+  }
+
+  @include breakpoint($max: 700px) {
+
+    height: auto;
+    background-image: none !important;
+
+  }
+
+  img {
+
+    display: none;
+
+    @include breakpoint($max: 700px) {
+
+      display: block;
+      width: 100%;
+
+    }
+
+  }
+
+  a {
+
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-family: $sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: right;
+
+    span {
+
+      margin-right: 6px;
+      font-family: $serif;
+      font-size: 14px;
+
+      @include breakpoint($max: 600px) {
+
+        margin-right: 0;
+        display: block;
+
+      }
+
+    }
+
+  }
+
+}
+
+.hp-hero-content {
+
+  background-color: $brand;
+  color: $white;
+  padding: 80px 0;
+
+  @include breakpoint($max: 960px) {
+
+    padding: 40px 12px;
+
+  }
+
+  img {
+
+    width: 22px;
+    height: auto;
+
+  }
+
+}
+
+.hp-hero-content-inner {
+
+  max-width: 711px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+
+  h2 {
+
+    font-family: $display;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 55px;
+    margin: 24px 0;
+
+    @include breakpoint($max: 960px) {
+
+      font-size: 35px;
+      line-height: 35px;
+
+    }
+
+  }
+
+  p {
+
+    opacity: .8;
+    font-family: $serif;
+    font-weight: $book;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 28px;
+
+    @include breakpoint($max: 960px) {
+
+      font-size: 16px;
+      line-height: 26px;
+
+    }
+
+  }
+
+  span {
+
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2.66px;
+    line-height: 20px;
+    cursor: pointer;
+
+    svg {
+
+      display: block;
+      width: 12px;
+      height: 18px;
+      margin: 9px auto 0;
+      fill: $white;
+      transition: all .3s;
+
+    }
+
+    &:hover {
+
+      svg {
+
+        @include transform(translateY(6px));
+
+      }
+
+    }
+
+  }
+
+}
+
+
+

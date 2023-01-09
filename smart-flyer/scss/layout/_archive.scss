@@ -1,0 +1,4533 @@
+
+header + .reviews-hero {
+
+  margin-top: 35px;
+
+}
+
+.reviews-hero {
+
+  background-image: url('img/raster/compressed/review-hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  color: $white;
+  padding: 120px 24px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include breakpoint($max: 500px) {
+
+    padding: 80px 24px;
+    margin-bottom: 48px;
+
+  }
+
+  @include breakpoint($max: 400px) {
+
+    padding: 48px 24px;
+
+  }
+
+  &::before {
+
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brand;
+    opacity: .6; 
+
+  }
+
+  &.team {
+
+    background-image: url('img/raster/compressed/team-bg.jpg');
+
+    @include breakpoint($max: 760px) {
+
+      margin-bottom: 10px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      margin-bottom: 24px !important;
+
+    }
+
+  }
+
+  &.press {
+
+    background-image: none;
+    background-color: $brand;
+
+  }
+
+  h2 {
+
+    position: relative;
+    font-family: $display;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    margin: 0 0 12px;
+
+    @include breakpoint($max: 500px) {
+
+      font-size: 32px;
+      line-height: 32px;
+
+    }
+
+  }
+
+  h3 {
+
+    position: relative;
+    font-family: $serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 auto;
+    max-width: 662px;
+
+    @include breakpoint($max: 500px) {
+
+      font-size: 16px;
+      line-height: 24px;
+
+    }
+
+  }
+
+}
+
+.reviews-filters {
+
+  background-color: $lightest-grey;
+  position: relative;
+  margin-top: 35px;
+
+  @include breakpoint($max: 880px) {
+
+    margin-top: 0;
+
+  }
+
+  @include breakpoint($max: 800px) {
+
+    margin-bottom: 32px;
+
+  }
+
+  .wrapper {
+
+    padding: 0;
+
+  }
+
+  .filters-left {
+
+    display: inline-block;
+
+  }
+
+  .filters-right {
+
+    display: inline-block;
+    float: right;
+
+  }
+
+  &.team {
+
+    .filters-left .dd-top,
+    .filters-right {
+
+      @include breakpoint($max: 960px) {
+
+        display: none;
+
+      }
+      
+
+    }
+
+    .filters-left {
+
+      @include breakpoint($max: 960px) {
+
+        @include alignment(absolute, horizontal);
+        top: calc(100% + 12px);
+        z-index: 0;
+        width: 100%;
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+  .label {
+
+    margin-right: 36px;
+    font-family: $serif;
+    font-weight: $book;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    @include breakpoint($max: 500px) {
+
+      margin-right: 20px;
+
+    }
+
+  }
+
+  .dd-top {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    //margin-right: 36px;
+    cursor: pointer;
+    position: relative;
+    padding: 31px 33px 26px;
+    border-left: solid 1px $white;
+    border-right: solid 1px $white;
+    display: inline-block;
+    color: $brand;
+    transition: all .3s;
+
+    @include breakpoint($max: 500px) {
+
+      padding: 20px 20px 16px;
+
+    }
+
+    &.step-2 {
+
+      display: none;
+
+    }
+
+    + .dd-top {
+
+      border-left: 0;
+
+    }
+
+    svg {
+
+      width: 11px;
+      height: 6px;  
+      fill: $brand;
+      margin-left: 6px;
+      margin-bottom: 2px;
+      transition: all .3s;
+
+    }
+
+    &:hover {
+
+      color: $black;
+
+      svg {
+
+        fill: $black;
+
+      }
+
+    }
+
+    .dd {
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $lightest-grey;
+      display: none;
+      min-width: 100%;
+      max-width: 200%;
+      z-index: 8;
+      color: $black;
+
+      &.region,
+      &.list,
+      &.sortby {
+
+        padding: 18px 30px;
+
+        span {
+
+          font-size: 16px;
+          letter-spacing: 1px;
+          line-height: 20px;
+          display: block;
+          margin-bottom: 12px;
+
+        }
+
+      }
+
+      &.style {
+
+        width: 620px;
+        max-width: calc(100vw - 140px);
+        padding: 29px 29px 44px;
+
+        @include breakpoint($max: 500px) {
+
+          max-width: calc(100vw - 114px);
+
+        }
+
+        > span:not(.button) {
+
+          font-family: $serif;
+          font-weight: $book;
+          font-style: italic;
+          font-size: 14px;
+          line-height: 14px;
+          text-transform: none;
+          letter-spacing: 0; 
+
+        }
+
+        ul {
+
+          @include justifyed();
+
+          margin: 20px 0 0;
+          padding: 0;
+
+          li {
+
+            list-style: none;
+            width: 30%;
+            display: inline-block;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            transition: all .3s;
+            vertical-align: top;
+
+            @include breakpoint($max: 500px) {
+
+              text-align: center;
+
+            }
+
+            svg {
+
+              width: 16px;
+              height: 16px;
+              margin: 0;
+              vertical-align: sub;
+              margin-right: 11px;
+              fill: $black; 
+
+              @include breakpoint($max: 500px) {
+
+                display: block;
+                margin: 0 auto; 
+
+              }
+
+            }
+
+            &.active,
+            &:hover {
+
+              color: $brand;
+
+              svg {
+
+                fill: $brand;
+
+              }
+
+            }
+
+          }
+
+        }
+
+        .button {
+
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          left: 0; 
+          pointer-events: none;
+          transition: all .3s;
+          background-color: $line-grey;
+
+          &.apply {
+
+            pointer-events: all;
+            background-color: $brand;
+
+          }
+
+          svg {
+
+            fill: $white;
+            width: 12px;
+            height: 12px;
+
+          }
+
+        }
+
+      }
+
+      &.city {
+
+        width: 700px;
+        max-width: 100vw;
+        line-height: 0;
+        font-size: 0;
+
+        span {
+
+          display: inline-block;
+          width: 24%;
+          vertical-align: top;
+
+        }
+
+      }
+
+      &.spec {
+
+        width: 700px;
+        max-width: 100vw;
+        line-height: 0;
+        font-size: 0;
+
+        span {
+
+          display: inline-block;
+          width: 49%;
+          vertical-align: top;
+
+        }
+
+      }
+
+      &.partners {
+
+        @include justifyed();
+        max-width: none;
+        width: 790px;
+        font-size: 0;
+
+        @include breakpoint($max: 1080px) {
+
+          width: calc(100vw - 274px);
+
+        }
+
+        span {
+
+          display: inline-block;
+          vertical-align: top;
+          width: 48%;
+          text-align: left;
+          transition: all .3s;
+
+          @include breakpoint($max: 400px) {
+
+            width: 100%;
+
+          }
+
+          &:hover {
+
+            color: $brand;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .check-wrap {
+
+    font-family: $serif;
+    font-weight: $bold;
+    color: $brand;
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 30px;
+    cursor: pointer;
+
+    @include breakpoint($max: 960px) {
+
+      margin-left: 0;
+      z-index: 0;
+
+    }
+
+    svg {
+
+      width: 12px;
+      height: 12px;
+      margin-bottom: -1px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+    }
+
+    .box {
+
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+      border: solid 1px $light-grey;
+      display: inline-block;
+      margin-top: -4px;
+
+      svg {
+
+        width: 10px;
+        height: 10px;
+        margin: 1.5px;
+        opacity: 0;
+        transition: all .3s;
+
+      }
+
+      &.active {
+
+        svg {
+
+          opacity: 1;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .filters-mobile {
+
+    line-height: 0;
+    font-size: 0;
+    display: none;
+
+    @include breakpoint($max: 960px) {
+
+      display: block;
+
+    }
+
+    .dd-top {
+
+      width: 50%;
+      text-align: center;
+
+    }
+
+    .dd {
+
+      //display: block;
+      font-size: 0;
+      line-height: 0;
+
+      &.col-2 {
+
+        width: 200%;
+
+      }
+
+      ul {
+
+        width: 50%;
+        vertical-align: top;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+
+        li.title {
+
+          font-size: 14px;
+          line-height: 14px;
+          list-style: none;
+          margin-bottom: 12px;
+          color: $dark-grey;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.reviews-list {
+
+  padding: 72px 0;
+
+  @include breakpoint($max: 860px) {
+
+    padding: 48px 0;
+
+  }
+
+
+
+}
+
+.reviews-main {
+
+  @include justifyed();
+
+  > h2 {
+
+    font-family: $display;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: .7px;
+    line-height: 16px;
+    position: relative;
+    text-transform: uppercase;
+    margin: 18px 0;
+    display: inline-block;
+    width: 100%;
+
+    &:after {
+
+      content: ' ';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 1px;
+      background-color: $line-grey; 
+      z-index: -1;
+
+    }
+
+    span {
+
+      background-color: $white;
+      padding-right: 12px;
+
+    }
+
+  }
+
+  .review {
+
+    width: calc(25% - 22.5px);
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: top;
+    text-align: left;
+
+    @include breakpoint($max: 860px) {
+
+      width: calc(33% - 20px);
+
+    }
+
+    @include breakpoint($max: 700px) {
+
+      width: calc(33% - 8px);
+      margin-bottom: 12px;
+
+    }
+
+    @include breakpoint($max: 500px) {
+
+      width: calc(50% - 12px);
+      margin-bottom: 24px;
+
+    }
+
+    @include breakpoint($max: 400px) {
+
+      width: 100%;
+
+    }
+
+    .review-content {
+
+      transition: all .3s;
+
+    }
+
+    &:hover {
+
+      .review-content {
+
+        @include transform(translateY(6px));
+
+      }
+
+    }
+
+    h2 {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $brand;
+      margin: 17px 0 6px; 
+
+      @include breakpoint($max: 700px) {
+
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 6px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        padding-bottom: 0;
+
+      }
+
+    }
+
+    span {
+
+      font-size: 17px;
+      line-height: 17px;
+      font-family: $serif;
+      font-weight: $book;
+      color: $brand;
+      font-style: italic;
+
+      @include breakpoint($max: 700px) {
+
+        font-size: 14px;
+
+      }
+
+    }
+
+  }
+
+  &.agents-main {
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 50px;
+
+    @include breakpoint($max: 960px) {
+
+      grid-column-gap: 20px;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      display: block;
+
+    }
+
+  }
+
+  .agent {
+
+    display: inline-block;
+    //width: calc(16.666666667% - 43.333333333px);
+    margin-bottom: 35px;
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+    white-space: normal;
+
+    @include breakpoint($max: 960px) {
+
+      //width: calc(16.666666667% - 16.666666667px);
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      width: 20%;
+      margin-right: 30px;
+
+      &:last-child {
+
+        margin-right: 20px;
+
+      }
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: 26%;
+
+    }
+
+    @include breakpoint($max: 500px) {
+
+      width: 32%;
+
+    }
+
+    svg {
+
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 2px;
+      right: 5px;
+      padding: 8px;
+      background-color: $lightest-grey;
+      border-radius: 50%;
+
+    }
+
+
+    img {
+
+      border-radius: 50%;
+      height: auto;
+      width: 100%;
+
+    }
+
+    h2 {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $brand;
+      font-size: 18px;
+      line-height: 18px;
+      margin: 20px 0 8px;
+      letter-spacing: .8px;
+      transition: all .3s;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 16px;
+
+      }
+
+    }
+
+    span {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-style: italic;
+      font-size: 17px;
+      color: $brand;
+      line-height: 17px;
+      display: inline-block;
+      transition: all .3s;
+
+    }
+
+    &:hover {
+
+      h2,
+      span {
+
+        @include transform(translateY(3px));
+
+      }
+
+    }
+
+  }
+
+  .press-item {
+
+    display: inline-block;
+    width: 14.3%;
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+
+    @include breakpoint($max: 960px) {
+
+      width: calc(25% - 30px);
+
+    }
+
+    @include breakpoint($max: 700px) {
+
+      width: calc(25% - 15px);
+
+    }
+
+    @include breakpoint($max: 500px) {
+
+      width: calc(50% - 24px);
+
+    }
+
+    @include breakpoint($max: 400px) {
+
+      width: calc(50% - 12px);
+
+    }
+
+    .img-wrap {
+
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      position: relative;
+
+      img {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+
+      }
+
+    }
+
+    h2 {
+
+      font-family: $sans-serif;
+      font-weight: bold; 
+      font-size: 18px;
+      letter-spacing: .8px;
+      line-height: 18px;
+      margin: 0 0 12px;
+      color: $brand;
+      text-transform: uppercase;
+
+    }
+
+    h3 {
+
+      font-size: $serif;
+      font-weight: $book;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0;
+      margin: 0;
+      color: $brand;
+
+      a {
+
+        color: $brand;
+
+      }
+
+    }
+
+    span {
+
+      font-size: $serif;
+      font-weight: $book;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0;
+      margin: 12px 0 0;
+      color: $light-grey;
+      display: block; 
+
+    }
+
+  }
+
+  > p {
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+
+    span {
+
+      display: block;
+      font-size: 25px;
+      line-height: 38px;
+      text-transform: none;
+      font-family: $serif;
+      margin-top: 6px;
+
+    }
+
+  }
+
+}
+
+.load-more {
+
+  display: block;
+  text-align: center;
+  background-color: $lightest-grey;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding: 33px 0 26px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  svg {
+
+    width: 12px;
+    height: 8px;
+    margin-left: 7px;
+    margin-bottom: 2px;
+
+  }
+
+}
+
+
+
+.posts-hero {
+
+  background-color: $brand;
+  position: relative;
+  line-height: 0;
+  margin-top: 35px;
+
+  @include breakpoint($max: 880px) {
+
+    margin-top: 0;
+
+  }
+
+  .hero-left {
+
+    width: 50%;
+
+    @include breakpoint($max: 700px) {
+
+      width: 100%;
+
+    }
+
+    img {
+
+      width: 100%;
+      height: auto;
+
+    }
+
+  }
+
+  .hero-right {
+
+    @include alignment(absolute, vertical);
+
+    width: 50%;
+    left: 50%;
+    right: 0;
+    margin: 0 auto;
+    max-width: 420px;
+    padding: 0 24px;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint($max: 700px) {
+
+      @include transform(none);
+
+      width: 100%;
+      position: static;
+      padding: 24px;
+
+    }
+
+
+    span {
+
+      opacity: .75;
+      font-family: $sans-serif;
+      font-size: 12px;
+      letter-spacing: 2.72px;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      a {
+
+        color: $white;
+
+      }
+
+    }
+
+    h2 {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 48px;
+      letter-spacing: 1px;
+      line-height: 50px;
+      margin: 20px 0 26px;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 42px;
+        line-height: 42px;
+
+      }
+
+      @include breakpoint($max: 800px) {
+
+        font-size: 32px;
+        line-height: 32px;
+
+      }
+
+      @include breakpoint($max: 700px) {
+
+        margin: 12px 0;
+
+      }
+
+      a {
+
+        color: $white;
+
+      }
+
+    }
+
+    p {
+
+      opacity: .79;
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 18px;
+      line-height: 1.4;
+      margin: 0;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 16px;
+
+      }
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 14px;
+
+      }
+      
+    }
+
+    > a {
+
+      font-family: $sans-serif;
+      font-size: 16px;
+      letter-spacing: 1.77px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: $white;
+      margin-top: 24px;
+      display: inline-block;
+      font-weight: bold;
+
+      svg {
+
+        width: 8px;
+        height: 12px;
+        margin-left: 10px;
+        fill: $grey;
+        opacity: .7;
+        transition: all .3s;
+
+      }
+
+      &:hover {
+
+        svg {
+
+          @include transform(translateX(12px));
+          opacity: 1;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.posts-categories {
+
+  background-color: $lightest-grey;
+  text-align: center;
+  padding: 20px 24px 13px;
+  margin-top: 35px;
+
+  @include breakpoint($max: 880px) {
+
+    margin-top: 0;
+
+  }
+
+  &.category-landing {
+
+    margin-bottom: 48px;
+    margin-top: 0;
+
+  }
+
+  a {
+
+    color: $light-grey;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.14px;
+    text-transform: uppercase;
+    margin: 12px 24px;
+    display: inline-block;
+
+    &.active {
+
+      color: $dark-grey;
+
+    }
+  
+  }
+
+}
+
+header + .posts-categories.category-landing {
+
+  margin-top: 35px;
+
+}
+
+.blog-excerpt {
+
+  opacity: .79;
+  font-family: $display;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 23px;
+  color: $dark-grey;
+  line-height: 30px;
+  max-width: 600px; 
+  padding: 0 24px;
+  margin: 80px auto 75px;
+  text-align: center;
+
+}
+
+.post-alt {
+
+  position: relative;
+  margin-bottom: 48px;
+  line-height: 0;
+  transition: all .3s;
+
+  @include breakpoint($max: 800px) {
+
+    margin-bottom: 24px;
+
+  }
+
+  @include breakpoint($max: 700px) {
+
+    max-width: 580px;
+    margin: 0 auto 24px;
+    line-height: 0;
+
+  }
+
+  img {
+
+    width: calc(50% - 12px);
+
+    @include breakpoint($max: 700px) {
+
+      width: 100%;
+
+    }
+
+  }
+
+  .post-content {
+
+    width: calc(50% - 12px);
+    position: absolute;
+    left: calc(50% + 12px);
+    height: 100%;
+    top: 0;
+    border-top: solid 1px $line-grey;
+    border-bottom: solid 1px $line-grey;
+    padding: 0 32px;
+
+    @include breakpoint($max: 800px) {
+
+      padding: 0 18px;
+
+    }
+
+    @include breakpoint($max: 700px) {
+
+      width: 100%;
+      position: static;
+      padding: 24px 0;
+      border: 0;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      text-align: center;
+
+    }    
+
+    .post-inner {
+
+      @include alignment(relative, vertical);
+
+      @include breakpoint($max: 700px) {
+
+        @include transform(none);
+        position: static;
+
+      }
+
+    }
+
+    span {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 2.3px;
+
+      a {
+
+
+        color: $brand;
+
+      }
+
+    }
+
+    h2 {
+
+      font-family: $display;
+      font-size: 34px;
+      color: $brand;
+      font-weight: normal;
+      line-height: 40px;
+      margin: 16px 0 10px;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 32px;
+        line-height: 32px;
+        margin: 12px 0;
+
+      }
+
+      @include breakpoint($max: 800px) {
+
+        font-size: 26px;
+        line-height: 26px;
+        margin: 8px 0;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        margin: 10px 0 14px;
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 14px;
+      color: $dark-grey;
+      line-height: 24px;
+      margin: 0;
+
+      @include breakpoint($max: 800px) {
+
+        font-size: 12px;
+        line-height: 18px;
+      
+      }
+
+    }
+
+  }
+
+
+  &:nth-child(even) {
+
+    text-align: right;
+
+    .post-content {
+
+      left: 0;
+      right: auto;
+      text-align: left;
+
+      @include breakpoint($max: 600px) {
+
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+  &:hover {
+
+    background-color: $lightest-grey;
+
+  }
+
+}
+
+.posts-popular {
+
+  padding: 70px 0;
+  background-color: $lightest-grey;
+  margin-bottom: 72px;
+  margin-top: 64px;
+
+  @include breakpoint($max: 600px) {
+
+    padding: 38px 0;
+
+  }
+
+}
+
+.posts-load {
+
+  margin-bottom: 62px;
+
+  .post {
+
+    margin-bottom: 22px; 
+
+  }
+
+}
+
+.archive .col-3 {
+
+  margin-bottom: 24px;
+
+}
+
+.reviews-tags {
+
+  margin-bottom: 40px; 
+  margin-top: 40px;
+  text-align: left;
+
+  .tag {
+
+    margin-right: 18px;
+    color: $black;
+    cursor: pointer;
+    font-family: $sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .3s;
+    font-weight: bold; 
+
+    svg {
+
+      width: 15px;
+      height: 15px;
+      background-color: $line-grey;
+      fill: $black;
+      border-radius: 50%;
+      padding: 2px;
+      margin-right: 4px;
+      vertical-align: middle; 
+      margin-top: -3px;
+      transition: all .3s;
+
+    }
+
+    &:hover {
+
+      color: $brand;
+
+      svg {
+
+        background-color: rgba($brand, .5);
+
+      }
+
+    }
+
+  }
+
+}
+
+.reviews-filters.reviews {
+
+  @include breakpoint($max: 700px) { 
+
+    font-size: 0;
+
+  }
+
+  .filters-left {
+
+    @include breakpoint($max: 700px) { 
+
+      width: 100%;
+      display: flex;
+
+    }
+
+    .dd-top {
+
+      @include breakpoint($max: 700px) {
+
+        width: 33.333%;
+        border-left: 0;
+        text-align: center;
+        display: inline-block !important;
+        padding-left: 0;
+        padding-right: 0;
+
+      }
+
+    }
+
+    .dd.style {
+
+      @include breakpoint($max: 700px) {
+
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        max-width: 100vw;
+        z-index: 20;
+
+      }
+
+      li {
+
+        @include breakpoint($max: 700px) { 
+
+          width: 48%;
+
+        }
+
+      }
+
+    }
+
+    .dd.region {
+
+      @include breakpoint($max: 700px) {
+
+        width: 100vw;
+        max-width: 100vw;
+        z-index: 20;
+
+      }
+
+    }
+
+    .dd.partners {
+
+      @include breakpoint($max: 700px) {
+
+        width: 100vw;
+        max-width: 100vw;
+        z-index: 20;
+        right: 0;
+        left: auto;
+
+      }
+
+    }
+
+  }
+
+  .filters-right {
+
+    @include breakpoint($max: 700px) {
+
+      width: 100%;
+      float: none;
+      border-top: solid 1px $white;
+      text-align: center;
+      background-color: $white;
+
+    }
+
+    .dd-top {
+      
+      @include breakpoint($max: 700px) { 
+       
+        border: 0;
+        width: 50%;
+        text-align: left;
+      
+      }
+
+    }
+
+    .label {
+
+      @include breakpoint($max: 700px) { 
+       
+        margin-right: 0;
+        width: 50%;
+        text-align: right;
+        display: inline-block;
+      
+      }
+
+    }
+
+  }
+
+}
+
+// NEW STYLES
+
+.reviews-main {
+
+  margin-top: 60px; 
+
+  @include breakpoint($max: 800px) {
+
+    margin-top: 0;
+
+  }
+
+  .wrapper {
+
+    @include justifyed();
+
+    .review-full {
+
+      font-size: 0;
+      line-height: 0;
+      margin-bottom: 30px;
+      position: relative;
+
+      &::before {
+
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 344px;
+        height: 1px;
+        background-color: $line-grey;
+        top: 0;
+        right: 0;
+
+        @include breakpoint($max: 860px) {
+
+          display: none;
+
+        }
+
+      }
+
+      &::after {
+
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 344px;
+        height: 1px;
+        background-color: $line-grey;
+        bottom: 0;
+        right: 0;
+
+        @include breakpoint($max: 860px) {
+
+          display: none;
+
+        }
+
+      }
+
+      > a {
+
+
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(100% - 364px);
+
+        @include breakpoint($max: 860px) {
+
+          width: 100%;
+
+        }
+
+        img {
+
+          width: 100%;
+          height: auto;
+          display: block;
+
+        }
+
+      }
+
+      .review-full-content {
+
+        display: inline-block;
+        vertical-align: middle;
+        width: 344px;
+        text-align: left;
+        margin-left: 20px;
+
+        @include breakpoint($max: 860px) {
+
+          width: 100%;
+          margin-left: 0;
+          margin-top: 20px;
+
+        }
+
+        h2 {
+
+          font-family: $sans-serif;
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 36px;
+          color: $brand;
+          margin: 0;
+          text-transform: uppercase;
+
+          @include breakpoint($max: 600px) {
+
+            font-size: 28px;
+            line-height: 28px;
+
+          }
+
+        }
+
+        small {
+
+          display: block;
+          font-family: $serif;
+          font-weight: 300;
+          font-style: italic;
+          margin: 10px 0 16px;
+          color: $brand;
+          font-size: 20px;
+          line-height: 20px;
+
+        }
+
+        p {
+
+          margin: 0;
+          font-family: $serif;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 24px;
+
+        }
+
+      }
+
+    }
+
+    .review {
+
+      @include breakpoint($max: 860px) {
+
+        width: calc(50% - 15px);
+
+      }
+
+      @include breakpoint($max: 400px) {
+
+        width: 100%;
+
+      }
+
+      img {
+
+        width: 100%;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.reviews-agents {
+
+  padding: 80px 0;
+  background-color: $lightest-grey;
+  margin-top: 40px;
+
+  .wrapper {
+
+    @include justifyed();
+
+    > h2 {
+
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 46px;
+      text-transform: uppercase;
+      font-family: $serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      position: relative;
+
+      &::after {
+
+        display: block;
+        content: ' ';
+        width: calc(100% - 220px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        background-color: $line-grey;
+
+      }
+
+    }
+
+    .review {
+
+      width: calc(25% - 22.5px);
+      display: inline-block;
+      margin-bottom: 35px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: bottom;
+      text-align: left;
+
+      @include breakpoint($max: 860px) {
+
+        width: calc(50% - 15px);
+        //vertical-align: top;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        margin-bottom: 15px;
+
+      }
+
+      .review-content {
+
+        transition: all .3s;
+
+      }
+
+      img {
+
+        width: 100%; 
+
+      }
+
+      &:hover {
+
+        .review-content {
+
+          @include transform(translateY(6px));
+
+        }
+
+      }
+
+      h2 {
+
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $brand;
+        margin: 17px 0 6px; 
+
+        @include breakpoint($max: 700px) {
+
+          font-size: 18px;
+          line-height: 20px;
+          padding-bottom: 6px;
+
+        }
+
+        @include breakpoint($max: 600px) {
+
+          padding-bottom: 0;
+
+        }
+
+      }
+
+      span {
+
+        font-size: 17px;
+        line-height: 17px;
+        font-family: $serif;
+        font-weight: $book;
+        color: $brand;
+        font-style: italic;
+
+        @include breakpoint($max: 700px) {
+
+          font-size: 14px;
+
+        }
+
+      }
+
+    }
+
+    .review-quotes {
+
+      width: calc(25% - 22.5px);
+      display: inline-block;
+      margin-bottom: 35px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: bottom;
+      text-align: left;
+
+      @include breakpoint($max: 860px) {
+
+        width: calc(50% - 15px);
+        //vertical-align: top;
+        padding-top: 34px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        margin-bottom: 42px;
+
+      }
+
+      p {
+
+        margin: 0;
+        font-family: $serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: left;
+        position: relative;
+
+        &::before {
+
+          display: block;
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          content: "“";
+          opacity: .2;
+          font-size: 72px;
+          margin-bottom: -12px;
+
+        }
+
+      }
+
+      .review-agent {
+
+        margin-top: 6px;
+
+        a {
+
+          display: inline-block;
+          vertical-align: middle;
+          font-family: $serif;
+          font-weight: 500;
+          color: $brand;
+          font-size: 18px;
+          line-height: 18px;
+
+          &:last-child {
+
+            width: calc(100% - 60px);
+
+          }
+
+        }
+
+        img {
+
+          width: 46px;
+          height: auto;
+          margin-right: 14px;
+          border-radius: 50%;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.reviews-discover {
+
+  margin-top: 88px;
+
+  .wrapper {
+
+    @include justifyed();
+    position: relative;
+
+    > h2 {
+
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 46px;
+      text-transform: uppercase;
+      font-family: $serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      position: relative;
+
+      &::after {
+
+        display: block;
+        content: ' ';
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        background-color: $line-grey;
+        z-index: 1;
+
+      }
+
+      span {
+
+        background-color: $white;
+        z-index: 2;
+        padding-right: 30px;
+        position: relative;
+
+      }
+
+    }
+
+    > a {
+
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      color: $brand;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: $white;
+      padding-left: 30px;
+      display: inline-block;
+      width: auto !important;
+      z-index: 2;
+
+      @include breakpoint($max: 600px) {
+
+        position: static;
+        padding: 0;
+
+      }
+
+      svg {
+
+        height: 12px;
+        width: 6px;
+        stroke: $brand;
+        margin-left: 12px;
+
+      }
+
+    }
+
+    .review {
+
+      width: calc(50% - 15px);
+      display: inline-block;
+      margin-bottom: 35px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: top; 
+      text-align: left;
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+
+      }
+
+      .review-content {
+
+        transition: all .3s;
+
+      }
+
+      img {
+
+        width: 100%; 
+
+      }
+
+      &:hover {
+
+        .review-content {
+
+          @include transform(translateY(6px));
+
+        }
+
+      }
+
+      h2 {
+
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 1.45px;
+        text-transform: uppercase;
+        color: $brand;
+        margin: 20px 0 6px; 
+
+        @include breakpoint($max: 600px) {
+
+          font-size: 24px;
+          line-height: 28px;
+
+        }
+
+      }
+
+      span {
+
+        font-size: 20px;
+        line-height: 20px;
+        font-family: $serif;
+        font-weight: $book;
+        color: $brand;
+        font-style: italic;
+
+        @include breakpoint($max: 600px) {
+
+          font-size: 16px;
+          line-height: 16px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.reviews-best {
+
+  padding: 80px 0;
+  background-color: $lightest-grey;
+  margin-top: 48px;
+
+  .wrapper {
+
+    @include justifyed();
+
+    > h2 {
+
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 46px;
+      text-transform: uppercase;
+      font-family: $serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      position: relative;
+
+      &::after {
+
+        display: block;
+        content: ' ';
+        width: calc(100% - 110px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        background-color: $line-grey;
+
+      }
+
+    }
+
+  }
+
+  .best-controls {
+
+    width: 280px;
+    vertical-align: top;
+    display: inline-block;
+
+    @include breakpoint($max: 1080px) {
+
+      width: 200px;
+
+    }
+
+    @include breakpoint($max: 860px) {
+
+      width: 100%;
+      text-align: left;
+      overflow: auto;
+      white-space: nowrap;
+
+    }
+
+    span {
+
+      font-size: 22px;
+      font-family: $sans-serif;
+      font-weight: bold;
+      opacity: .5;
+      line-height: 22px;
+      letter-spacing: 1px;
+      transition: all .3s;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 30px; 
+      cursor: pointer;
+
+      @include breakpoint($max: 860px) {
+
+        display: inline-block;
+        margin-right: 30px;
+        line-height: 28px;
+
+      }
+
+      svg:first-child {
+
+        width: 22px;
+        height: 25px;
+        transition: all .3s;
+        margin-right: 14px;
+        vertical-align: middle;
+        margin-top: -6px;
+
+        @include breakpoint($max: 860px) {
+
+          margin-right: 2px;
+
+        }
+
+      }
+
+      svg:last-child {
+
+        width: 7px;
+        height: 10px;
+        transition: all .3s;
+        opacity: 0;
+        vertical-align: middle;
+        margin-left: 14px;
+        margin-top: -4px;
+
+        @include breakpoint($max: 860px) {
+
+          display: none;
+
+        }
+
+      }
+
+      &.active {
+
+        color: $brand;
+        opacity: 1;
+
+        svg {
+
+          opacity: 1;
+          fill: $brand;
+
+        }
+
+      }
+
+      &:hover {
+
+        opacity: 1;
+
+      }
+
+    }
+
+  }
+
+  .best-posts {
+
+    width: calc(100% - 280px);
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+
+    @include breakpoint($max: 1080px) {
+
+      width: calc(100% - 200px);
+
+    }
+
+    @include breakpoint($max: 860px) {
+
+      width: 100%;
+
+    }
+
+    .review {
+
+      width: calc(33% - 20px);
+      display: inline-block;
+      margin-bottom: 35px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: bottom;
+      text-align: left;
+      vertical-align: top;
+
+      @include breakpoint($max: 860px) {
+
+        //width: calc(50% - 15px);
+        //vertical-align: top;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        margin-bottom: 30px;
+
+      }
+
+      .review-content {
+
+        transition: all .3s;
+
+      }
+
+      img {
+
+        width: 100%; 
+
+      }
+
+      &:hover {
+
+        .review-content {
+
+          @include transform(translateY(6px));
+
+        }
+
+      }
+
+      h2 {
+
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $brand;
+        margin: 17px 0 6px; 
+
+        @include breakpoint($max: 700px) {
+
+          font-size: 18px;
+          line-height: 20px;
+          padding-bottom: 6px;
+
+        }
+
+        @include breakpoint($max: 600px) {
+
+          padding-bottom: 0;
+          margin-top: 20px;
+
+        }
+
+      }
+
+      span {
+
+        font-size: 17px;
+        line-height: 17px;
+        font-family: $serif;
+        font-weight: $book;
+        color: $brand;
+        font-style: italic;
+
+        @include breakpoint($max: 700px) {
+
+          font-size: 14px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .best-posts-inner {
+
+    @include justifyed(); 
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &:first-of-type {
+
+      display: block;
+
+    }
+
+    &.active {
+
+      position: static;
+
+    }
+
+  }
+
+  .best-cta {
+
+    width: 165px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: $brand;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: $white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 20px 0 18px;
+    display: none;
+    display: none;
+    pointer-events: none;
+
+    &.active {
+
+      display: block;
+      pointer-events: all;
+
+    }
+
+    svg {
+
+      width: 6px;
+      height: 9px;
+      fill: $white;
+      vertical-align: middle;
+      margin-left: 12px;
+
+    }
+
+  }
+
+}
+
+
+.team-filters-old {
+
+  display: inline-block;
+  vertical-align: top;
+  width: 344px;
+
+  @include breakpoint($max: 860px) {
+
+    width: 300px;
+
+  }
+
+  @include breakpoint($max: 760px) {
+
+    width: 100%; 
+
+  }
+
+  + .reviews-list {
+
+    width: calc(100% - 344px - 38px);
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0;
+
+    @include breakpoint($max: 860px) {
+
+      width: calc(100% - 300px - 24px);
+
+    }
+
+    @include breakpoint($max: 760px) {
+
+      width: 100%;
+
+    }
+
+    .reviews-main {
+
+      margin-top: 0;
+
+    }
+
+    .agent {
+
+      width: calc(25% - 30px);
+
+      @include breakpoint($max: 1080px) {
+
+        width: calc(25% - 18px);
+
+      }
+
+      @include breakpoint($max: 860px) {
+
+        width: calc(33% - 16px);
+
+      }
+
+      @include breakpoint($max: 400px) {
+
+        width: calc(50% - 12px);
+
+      }
+
+    }
+
+  }
+
+  .mobile-buttons {
+
+    @include justifyed();
+    display: none;
+    margin: 0 0 10px;
+
+    @include breakpoint($max: 760px) {
+
+      display: block;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      margin: 0;
+
+    }
+
+    span {
+
+      display: inline-block;
+      width: calc(50% - 5px);
+      font-family: $sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+      color: $white;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 20px 24px;
+      text-align: left;
+      background-color: $lightest-grey;
+      color: $black;
+      cursor: pointer;
+      transition: all .3s;
+
+      @include breakpoint($max: 600px) {
+
+        display: block;
+        margin: 0 0 10px;
+        width: 100%;
+
+      }
+
+      svg {
+
+        width: 14px;
+        height: 10px;
+        float: right;
+        fill: $black;
+        margin-top: 4px;
+        transition: all .3s;
+
+      }
+
+      &.active {
+
+        background-color: $brand;
+        color: $white;
+
+        svg {
+
+          @include transform(rotate(180deg));
+          fill: $white;
+
+        }
+
+      }
+
+      &.hidden {
+
+        opacity: .3; 
+
+      }
+
+    }
+
+  }
+
+  > h2 {
+
+    font-family: $display;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: .7px;
+    line-height: 16px;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+
+    @include breakpoint($max: 760px) {
+
+      display: none;
+
+    } 
+
+    &:after {
+
+      content: ' ';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 1px;
+      background-color: $line-grey;
+      z-index: -1;
+
+    }
+
+    span {
+
+      background-color: $white;
+      padding-right: 12px;
+
+    }
+
+  }
+
+  .input-wrap {
+
+    position: relative;
+    margin-bottom: 40px;
+
+    @include breakpoint($max: 760px) {
+
+      margin-bottom: 10px;
+
+    }
+
+  }
+
+  input {
+
+    display: block;
+    font-family: $display;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    background-color: $lightest-grey;
+    border: 0;
+    padding: 16px 44px 16px 16px;
+    width: 100%;
+
+  }
+
+  button {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px 16px;
+    background: 0;
+    border: 0;
+
+    svg {
+
+      width: 12px;
+      height: 16px;
+      fill: $light-grey;
+
+    }
+
+  }
+
+  ul {
+
+    @include justifyed();
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-bottom: 18px;
+    border-bottom: solid 1px $line-grey;
+    margin-bottom: 36px;
+
+    @include breakpoint($max: 760px) {
+
+      margin-bottom: 0;
+      display: none;
+      padding: 0;
+      border: 0;
+
+    }
+
+    li {
+
+      background-color: $lightest-grey;
+      color: $brand;
+      display: inline-block;
+      width: calc(50% - 6px);
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: .5px;
+      font-family: $sans-serif;
+      font-weight: normal;
+      padding: 12px;
+      margin-bottom: 12px;
+      position: relative;
+      transition: all .3s;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      span {
+
+        float: right;
+        font-family: $display;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: .5px;
+        line-height: 14px;
+        color: $dark-grey;
+
+      }
+
+    }
+
+  }
+
+  .team-cta {
+
+    display: block;
+    background-color: $brand;
+    font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: $white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    cursor: pointer;
+
+    svg {
+
+      float: right;
+      width: 8px;
+      height: 12px;
+      fill: $white;
+      margin-top: 4px;
+
+      &:first-child {
+
+        float: none;
+        //vertical-align: middle;
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        margin-top: 0;
+
+      }
+
+    }
+
+  }
+
+}
+
+.city-filters {
+
+  @include justifyed();
+  margin-bottom: 28px;
+
+  @include breakpoint($max: 760px) {
+
+    margin-bottom: 0;
+    display: none;
+
+  }
+
+  > span {
+
+    background-color: $lightest-grey;
+    color: $brand;
+    display: inline-block;
+    width: calc(50% - 6px);
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: .8px;
+    font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 16px;
+    margin-bottom: 12px;
+    position: relative;
+    transition: all .3s;
+
+    svg {
+
+      width: 14px;
+      height: 10px;
+      float: right;
+      fill: $light-grey;
+      margin-top: 7px;
+      transition: all .3s;
+
+    }
+
+    .dd {
+
+      vertical-align: top;
+      text-align: justify;
+      font-size: 0;
+      position: absolute;
+      top: 100%;
+      width: calc(200% + 12px);
+      left: 0;
+      background-color: $brand;
+      padding: 16px 16px 4px;
+      z-index: 10;
+      opacity: 0;
+      pointer-events: none;
+      //margin-top: -16px;
+      transition: all .3s;
+
+      &:hover {
+
+        opacity: 1;
+        margin-top: 0;
+        pointer-events: all;
+
+      }
+
+      span {
+
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        display: inline-block;
+        margin-bottom: 12px;
+        font-family: $sans-serif;
+        color: $white;
+        width: calc(50% - 6px);
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+
+          color: $lightest-grey;
+
+        }
+
+      }
+
+    }
+
+    &:nth-child(even) {
+
+      .dd {
+
+        left: auto;
+        right: 0;
+
+      }
+
+    }
+
+    &:hover {
+
+      background-color: $brand;
+      color: $white;
+
+      > svg {
+
+        transform: rotate(180deg);
+        fill: $white;
+
+      }
+
+      .dd {
+
+        opacity: 1;
+        margin-top: 0;
+        pointer-events: all;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+//NEW STYLES
+
+.team-filters {
+
+  display: block;
+  margin-top: 35px;
+  background-color: $lightest-grey;
+  padding: 0 38px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include breakpoint($max: 880px) {
+
+    margin-top: 0;
+
+  }
+
+  @include breakpoint($max: 800px) {
+
+    padding: 0;
+
+  }
+  
+  .team-dropdowns {
+
+    border-left: solid 1px $white;
+
+    @include breakpoint($max: 600px) {
+
+      width: calc(100% - 69px);
+      border-left: 0;
+      font-size: 0;
+
+    }
+
+    > span {
+
+      border-right: solid 1px $white;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1.14px;
+      text-transform: uppercase;
+      padding: 30px 34px;
+      color: $brand;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      width: 185px;
+
+      @include breakpoint($max: 600px) {
+
+        width: 50%;
+        text-align: center;
+        font-size: 14.4px;
+        letter-spacing: 1px;
+        padding: 26px 0;
+
+      }
+
+      svg {
+
+        width: 8px;
+        height: 6px;
+        margin-left: 7px;
+        vertical-align: middle;
+        fill: $brand;
+        margin-top: -1px;
+
+      }
+
+    }
+
+    .dd-top {
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $lightest-grey;
+      border-left: solid 1px $white;
+      border-right: solid 1px $white;
+      display: none;
+      z-index: 2;
+
+      > div {
+
+        display: block;
+        border-bottom: solid 1px $white;
+
+        > span {
+
+          padding: 12px;
+          text-align: center;
+          display: block;
+
+        }
+
+      }
+
+      > span {
+
+        display: block;
+        padding: 12px 40px 12px 12px;
+        position: relative;
+        border-bottom: solid 1px $white;
+
+        span {
+
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          color: $black;
+
+        }
+
+      }
+
+      .dd {
+
+        display: none;
+        background-color: $brand;
+        color: $white;
+        padding: 12px;
+        font-size: 0;
+
+        > span {
+
+          display: block;
+          font-size: 12px;
+          text-align: center;
+          padding: 6px 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .input-wrap {
+
+    border-left: solid 1px $white;
+    border-right: solid 1px $white;
+    display: flex;
+    width: 304px;
+    padding: 0 24px;
+    transition: all .3s;
+
+    @include breakpoint($max: 800px) {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $lightest-grey;
+      //display: none;
+      z-index: 2;
+      padding-right: 48px;
+      opacity: 0;
+      pointer-events: none;
+
+    }
+
+    &.active {
+
+      opacity: 1;
+      pointer-events: all;
+
+    }
+
+    input {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: .4px;
+      border: 0;
+      background-color: transparent;
+      width: 100%;
+      align-self: center;
+
+    }
+
+    button {
+
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      align-self: center;
+
+      svg {
+
+        width: 8px;
+        height: 11px;
+        fill: $brand;
+
+      }
+
+    }
+
+    .mob-filter-trigger {
+
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: 0;
+      margin: auto;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+
+      @include breakpoint($max: 800px) {
+
+        display: block;
+
+      }
+
+      svg {
+
+        width: 12px;
+        height: 12px;
+        fill: $brand;
+        display: block;
+
+      }
+
+    }
+
+  }
+
+  .mob-filter-trigger {
+
+    display: none;
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 24px;
+    margin: auto;
+    z-index: 1;
+
+    @include breakpoint($max: 800px) {
+
+      display: block;
+
+    }
+
+    svg {
+
+      fill: $brand;
+      width: 21px;
+      height: 20px;
+
+    }
+
+  }
+
+}
+
+.team-hero {
+
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 83px;
+  flex-wrap: wrap;
+
+  img {
+
+    width: calc(62% + 64px);
+    margin-left: -64px;
+    align-self: center;
+
+    @include breakpoint($max: 960px) {
+
+      margin-left: 0;
+      margin-right: -64px;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      order: 2;
+      width: 100%;
+      margin: 0;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      width: calc(100% + 48px);
+      max-width: calc(100% + 48px);
+      margin-left: -24px;
+      margin-right: -24px;
+      margin-top: 28px;
+
+    }
+
+  }
+
+  .content {
+
+    width: 38%;
+    align-self: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 10px;
+
+    @include breakpoint($max: 800px) {
+
+      width: 100%;
+      padding: 0;
+
+    }
+
+    h2 {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 42px;
+      line-height: 1;
+      margin: 0 0 13px;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 36px;
+
+      }
+
+    }
+
+    p {
+
+      font-family: $sans-serif;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 23px;
+      margin: 0 0 50px;
+
+      @include breakpoint($max: 800px) {
+
+        margin: 0 0 35px;
+
+      }
+
+    }
+
+    span {
+
+      cursor: pointer;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1.14px;
+      text-transform: uppercase;
+      color: $brand;
+      cursor: pointer;
+
+      @include breakpoint($max: 800px) {
+
+        display: none;
+
+      }
+
+      &::after {
+
+        content: ' ';
+        display: block;
+        width: 1px;
+        height: 43px;
+        margin: 14px auto 0;
+        background-color: $brand;
+
+      }
+
+    }
+
+  }
+
+}
+
+.team-grid {
+
+  position: relative;
+
+  > h2 {
+
+    font-family: $display;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    position: relative;
+    margin: 0 0 35px;
+    z-index: 1;
+
+    @include breakpoint($max: 800px) {
+
+      text-align: center;
+      margin: 0;
+
+    }
+
+    span {
+
+      display: inline-block;
+      padding-right: 20px;
+      background-color: $white;
+      position: relative;
+      z-index: 1;
+
+    }
+
+    &::after {
+
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $line-grey;
+      z-index: 0;
+      margin: auto;
+
+      @include breakpoint($max: 800px) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .team-grid-controls {
+
+    position: absolute;
+    top: -14px;
+    right: 0;
+    background-color: $white;
+    padding-left: 20px;
+    z-index: 2;
+    font-size: 0;
+
+    @include breakpoint($max: 800px) {
+
+      position: static;
+      width: 100%;
+      margin: 22px auto 38px;
+      padding: 0;
+      max-width: 360px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      margin: 22px auto 0;
+
+    }
+
+    > span,
+    > a {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 18px 22px;
+      border: solid 1px $line-grey;
+      color: $brand;
+      min-width: 191px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer; 
+
+      small {
+
+        font-size: 100%;
+
+      }
+
+      svg {
+
+        float: right;
+        fill: $brand;
+        width: 12px;
+        height: 6px;
+        margin-top: 3px;
+        margin-left: 10px;
+
+      }
+
+    }
+
+    > span {
+
+      @include breakpoint($max: 800px) {
+
+        width: 100%;
+
+      }
+
+      svg:not(.arrow-down) {
+
+        float: none;
+        margin-top: auto;
+        display: inline;
+        width: 18px;
+        height: 18px;
+        margin-bottom: -7px;
+        margin-left: 0;
+        transform: translateY(-3px);
+        fill: $brand;
+        margin-right: 10px;
+
+      }
+
+      select {
+
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        @include breakpoint($max: 800px) {
+
+          display: block;
+
+        }
+
+      }
+
+    }
+
+    > a {
+
+      background-color: $brand;
+      border: solid 1px $brand;
+      color: $white;
+      margin-left: 17px;
+
+      @include breakpoint($max: 800px) {
+
+        display: none;
+
+      }
+
+      svg {
+
+        width: 7px;
+        height: 10px;
+        fill: $white;
+        margin-top: 2px;
+
+      }
+
+    }
+
+    .dd-top {
+
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      width: calc(100% + 2px);
+      background-color: $white;
+      border-left: solid 1px $line-grey;
+      border-right: solid 1px $line-grey;
+      border-top: solid 1px $line-grey;
+      display: none;
+      z-index: 2;
+
+      @include breakpoint($max: 800px) {
+
+        display: none !important;
+
+      }
+
+      > div {
+
+        display: block;
+        border-bottom: solid 1px $line-grey;
+
+        > span {
+
+          padding: 12px;
+          text-align: left;
+          display: block;
+          cursor: pointer;
+
+          svg {
+
+            float: right;
+            margin-left: 6px;
+            margin-bottom: 2px;
+
+          }
+
+        }
+
+      }
+
+      > span {
+
+        display: block;
+        padding: 12px 40px 12px 12px;
+        position: relative;
+        border-bottom: solid 1px $line-grey;
+
+        span {
+
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          color: $black;
+
+        }
+
+      }
+
+      .dd {
+
+        display: none;
+        background-color: $brand;
+        color: $white;
+        padding: 12px;
+        font-size: 0;
+
+        > span {
+
+          display: block;
+          font-size: 12px;
+          text-align: left;
+          padding: 6px 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .mob-cta {
+
+    display: none;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $brand;
+    padding: 18px 24px;
+    max-width: 360px;
+    margin: 0 auto;
+
+    @include breakpoint($max: 800px) {
+
+      display: block;
+
+    }
+
+    svg {
+
+      width: 7px;
+      height: 10px;
+      fill: $white;
+      margin-top: 2px;
+      float: right;
+
+    }
+
+  }
+
+  .reviews-main {
+
+    @include breakpoint($max: 800px) {
+
+      width: auto;
+      margin: 0 -20px;
+      white-space: nowrap;
+      overflow: auto;
+      padding-left: 20px;
+
+      &::after {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+}
+
+.team-featured-agents {
+
+  margin: 50px 30px 88px;
+  background-color: $lightest-grey;
+  padding: 67px 0 80px;
+
+  @include breakpoint($max: 1180px) {
+
+    margin: 50px 0 88px;
+
+  }
+
+  @include breakpoint($max: 960px) {
+
+    margin: 50px 20px 88px;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    padding: 52px 0 60px;
+
+  }
+
+  .wrapper > h2 {
+
+    font-family: $display;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    margin: 0 0 24px;
+    text-align: center;
+
+    span {
+
+      @include breakpoint($max: 960px) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .featured-agents {
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+
+      content: ' ';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $line-grey;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      @include breakpoint($max: 960px) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .agent {
+
+    width: calc(50% - 40px);
+    display: flex;
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      display: block;
+
+    }
+
+    + .agent {
+
+      @include breakpoint($max: 960px) {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+  .profile {
+
+    width: 130px;
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .featured-image {
+
+      display: block;
+      margin-bottom: 28px;
+
+      @include breakpoint($max: 600px) {
+
+        width: 100px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+
+      }
+
+      img {
+
+        display: block;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+
+      }
+
+    }
+
+    h3 {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 37px;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 18px;
+      text-align: left;
+
+      span {
+
+        display: block;
+
+      }
+
+      a {
+
+        color: $black;
+
+      }
+
+    }
+
+    .socials {
+
+      margin-bottom: 18px;
+      text-align: center;
+
+      @include breakpoint($max: 600px) {
+
+        display: none;
+
+      }
+
+      svg {
+
+        fill: $black;
+
+      }
+
+      a {
+
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        line-height: 0;
+
+        + a {
+
+          margin-left: 20px;
+
+        }
+
+      }
+
+      .fb {
+
+        width: 9px;
+        height: 16px;
+
+      }
+
+      .tw {
+
+        width: 15px;
+        height: 13px;
+
+      }
+
+      .ig {
+
+        width: 14px;
+        height: 14px;
+
+      }
+
+    }
+
+    .cta {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1.14px;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      color: $brand;
+
+      @include breakpoint($max: 600px) {
+
+        display: none;
+
+      }
+
+      svg {
+
+        width: 6px;
+        height: 12px;
+        display: inline-block;
+        margin-left: 6px;
+        margin-top: 1px;
+
+      }
+
+    }
+
+  }
+
+  .content {
+
+    width: 100%;
+    padding-left: 34px;
+    margin-top: 34px;
+
+    @include breakpoint($max: 600px) {
+
+      padding-left: 0;
+      margin-top: 18px;
+      text-align: center;
+
+    }
+
+    h3 {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 46px;
+      margin: 0;
+
+      a {
+
+        color: $black;
+
+      }
+
+    }
+
+    .details {
+
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: 20px;
+
+      .detail {
+
+        width: 50%;
+
+        span {
+
+          font-family: $serif;
+          font-weight: $book;
+          font-size: 10px;
+          line-height: 1;
+          letter-spacing: 2.14px;
+          text-transform: uppercase;
+          display: block;
+          margin: 0 0 10px;
+
+        }
+
+        h3 {
+
+          font-family: $sans-serif;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 1;
+          text-transform: uppercase;
+          margin: 0;
+
+          a {
+
+            color: $dark-grey;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    p {
+
+      font-family: $sans-serif;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+
+    }
+
+  }
+
+  .mob-cta {
+
+    display: none;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 1.14px;
+    text-transform: uppercase;
+    color: $brand;
+    text-align: center;
+    margin-top: 33px;
+
+    @include breakpoint($max: 600px) {
+
+      display: block;
+
+    }
+
+    svg {
+
+      width: 6px;
+      height: 12px;
+      margin-left: 9px;
+
+    }
+
+  }
+
+}
+
+.team-leadership-wrap {
+
+  margin: 45px 30px 80px;
+  background-color: $lightest-grey;
+  padding: 57px 0 45px;
+
+  @include breakpoint($max: 1180px) {
+
+    margin: 45px 0 80px;
+
+  }
+
+  .team-grid > h2 span {
+
+    background-color: $lightest-grey;
+
+  }
+
+  .team-grid-controls {
+
+    background-color: $lightest-grey;
+    top: 5px;
+
+    a {
+
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      min-width: auto;
+      color: $brand;
+      border: 0;
+
+      svg {
+
+        fill: $brand;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.team-join-cta {
+
+  margin: 80px auto 92px;
+  max-width: 556px;
+  text-align: center;
+
+  h2 {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 4.67px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 32px;
+      letter-spacing: 3.56px;
+
+    }
+
+    a {
+
+      color: $brand;
+
+    }
+
+    svg {
+
+      width: 30px;
+      height: 15px;
+      margin-left: 0;
+      margin-top: -5px;
+      vertical-align: middle;
+      transition: all .3s;
+
+      @include breakpoint($max: 600px) {
+
+        width: 22px;
+
+      }
+
+    }
+
+    &:hover {
+
+      svg {
+
+        transform: translateX(6px);
+
+      }
+
+    }
+
+  }
+
+  p {
+
+    font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+  }
+
+}
+
+.post-authors {
+
+  display: block;
+  font-size: 0;
+  margin-top: 20px;
+
+  .img-wrap {
+
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotate(180deg);
+
+    img {
+
+      width: 25px;
+      height: 25px;
+      object-fit: cover;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+      border: solid 1px $white;
+      transform: rotate(180deg);
+
+      + img {
+
+        margin-left: -8px;
+
+      }
+
+    }
+
+  }
+
+  span {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 1px !important;
+    text-transform: uppercase;
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $black;
+    transform: none !important;
+
+  }
+
+}
+
+
+.reviews-partners {
+
+  position: relative;
+  padding: 110px 0 133px;
+
+  @include breakpoint($max: 860px) {
+
+    padding: 55px 0 58px;
+    background-color: $dark-grey;
+
+  }
+
+
+  .bg {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: grayscale(1);
+    background-color: $dark-grey;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+
+    @include breakpoint($max: 860px) {
+
+      display: none;
+
+    }
+
+
+  }
+
+  .wrapper {
+
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint($max: 860px) {
+
+      display: block;
+
+    }
+
+    > h2 {
+
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 46px;
+      text-transform: uppercase;
+      font-family: $serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      position: relative;
+      color: $white;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 1.2px;
+        margin: 0 0 20px;
+
+      }
+
+      &::after {
+
+        display: block;
+        content: ' ';
+        width: calc(100% - 220px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        background-color: $white;
+
+        @include breakpoint($max: 600px) {
+
+          width: calc(100% - 160px);
+          background-color: $line-grey;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .content {
+
+    width: calc(50% - 12px);
+    color: $white;
+
+    @include breakpoint($max: 860px) {
+
+      width: 100%;
+
+    }
+
+    h3 {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 43px;
+      margin: 0 0 13px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 30px;
+        line-height: 36px;
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0 0 24px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 15px;
+        line-height: 24px;
+
+      }
+
+    }
+
+    > a {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 1.56px;
+      text-transform: uppercase;
+      color: $white;
+
+      @include breakpoint($max: 860px) {
+
+        display: none;
+
+      }
+
+      svg {
+
+        width: 6px;
+        height: 9px;
+        fill: $white;
+        margin-left: 11px;
+
+      }      
+
+    }
+
+  }
+
+  .partner-reviews {
+
+    width: calc(50% - 12px);
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($max: 860px) {
+
+      width: 100%;
+
+    }
+
+    .review {
+
+      padding-top: 0;
+      margin-top: 0;
+      width: calc(50% - 16px);
+      margin-bottom: 0;
+
+      @include breakpoint($max: 600px) {
+
+        width: calc(50% - 10px);
+
+      }
+
+      a {
+
+        color: $white;
+
+      }
+
+      h2 {
+
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0;
+        margin-top: 12px;
+
+        @include breakpoint($max: 600px) {
+
+          font-size: 18px;
+          line-height: 20px;
+          letter-spacing: .8px;
+
+        }
+
+      }
+
+      span {
+
+        font-family: $serif;
+        font-weight: $book;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1;
+
+        @include breakpoint($max: 600px) {
+
+          font-size: 12px;
+          line-height: 1;
+          margin-top: 6px;
+          display: block;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .mob-cta {
+
+    display: none;
+    font-family: $sans-serif;
+    font-weight: bold;
+    color: $white;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 21px;
+    background-color: $brand;
+    margin-top: 30px;
+
+    @include breakpoint($max: 860px) {
+
+      display: block;
+
+    }
+
+    svg {
+
+      width: 6px;
+      height: 9px;
+      float: right;
+      fill: $white;
+
+    }
+
+  }
+
+}
+
+

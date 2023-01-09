@@ -1,0 +1,1477 @@
+<?php
+	
+/* ---------------------------------
+	Theme Support
+--------------------------------- */
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'menus' );
+require('_inc/theme-options.php');
+require( '_inc/images.php' );
+require( '_inc/exsite-gallery/exsite_gallery.php' );
+require( '_inc/social.php' );
+require( '_inc/exsite-image.php' );
+
+/* ---------------------------------
+	CPT's
+--------------------------------- */
+
+require('_inc/cpt-industrynews.php');
+require('_inc/cpt-agent.php');
+require('_inc/cpt-team.php');
+require('_inc/cpt-review.php');
+require('_inc/cpt-press.php');
+require('_inc/cpt-office.php');
+require('_inc/cpt-partner.php');
+require('_inc/cpt-bio-post.php');
+require('_inc/cpt-destination.php');
+require('_inc/meta-page.php');
+require('_inc/meta-post.php');
+
+
+/* ---------------------------------
+	Image Sizes 
+--------------------------------- */
+
+//add_image_size( 'exsite', 836 );
+//add_image_size( '268_268', 268, 268, true );
+//add_image_size( '488_272', 488, 272, true );
+//add_image_size( '400_400', 400, 400, true );
+//add_image_size( '720_720', 720, 720, true );
+//add_image_size( '700_430', 700, 430, true );
+//add_image_size( '709_397', 709, 397, true );
+//add_image_size( '1800w', 1800, 0, false );
+//add_image_size( '1200w', 1200, 0, false );
+//add_image_size( '1080w', 1080, 0, false );
+//add_image_size( '1512_377', 1512, 377, true );
+add_image_size( '480h', 0, 480, false );
+//add_image_size( '1620_795', 1620, 795, true );
+//add_image_size( '1300_1300', 1300, 1300, true );
+//add_image_size( '2400w', 2400, 0, false );
+//add_image_size( '240_120f', 240, 120, false );
+//add_image_size( '212x212f', 212, 212, false );
+//add_image_size( '78_86', 78, 86, false );
+//add_image_size( '343x245', 343, 245, true );
+
+
+
+
+/* ---------------------------------
+	Scripts
+--------------------------------- */
+function smartflyer_scripts()
+{  	
+	
+	wp_register_script('modernizr', get_template_directory_uri().'/js/vendor/modernizr-2.6.2.min.js', array('jquery'), '1.0', false);
+	wp_enqueue_script('modernizr');
+	
+	wp_register_script('slick', get_template_directory_uri().'/js/vendor/slick.min.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('slick');
+
+	wp_register_script('select2', get_template_directory_uri().'/js/vendor/select2.min.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('select2');
+	
+	wp_register_script('ajaxchimp', get_template_directory_uri().'/js/vendor/jquery.ajaxchimp.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('ajaxchimp');
+
+	wp_register_script('ftellipsis', get_template_directory_uri().'/js/vendor/ftellipsis.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('ftellipsis');
+
+	wp_register_script('fitvids', get_template_directory_uri().'/js/vendor/fitvids.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('fitvids');
+		
+	wp_register_script('main', get_template_directory_uri().'/js/main.js', array('jquery'), '3.8', true);
+	wp_enqueue_script('main');
+
+	wp_register_script('login-script', get_template_directory_uri().'/js/login.js', array('jquery'), time(), true);
+	wp_enqueue_script('login-script');
+
+	wp_register_script('fancybox', get_template_directory_uri().'/include/js/jquery.fancybox.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('fancybox');
+
+	wp_register_script('imagesloaded', get_template_directory_uri().'/include/js/imagesloaded.pkgd.min.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('imagesloaded');
+
+	// wp_register_script('masonry', get_template_directory_uri().'/include/js/masonry.pkgd.min.js', array('jquery'), '1.0', true);
+	// wp_enqueue_script('masonry');
+
+	// wp_register_script('select2', get_template_directory_uri().'/include/js/select2.min.js', array('jquery'), '1.0', true);
+	// wp_enqueue_script('select2');
+
+	wp_register_script('slick1', get_template_directory_uri().'/include/js/slick.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('slick1');
+
+	wp_register_script('aos', 'https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('aos');
+
+	wp_register_script('public-script', get_template_directory_uri().'/include/js/public-script.js', array('jquery'), '3.3', true);
+	wp_enqueue_script('public-script');
+	
+
+	if(is_page('insurance-addon-information') || is_page('insurance-addon-tab') || is_page('experiences-addons-tab') || is_page('experiences-addons-information') || is_page('yacht-sea-transportation-tab') || is_page('yacht-sea-transportation-information') || is_page('helicopter-air-transportation-tab') || is_page('helicopter-air-transportation-information') || is_page('rental-car-information') || is_page('rental-car-tab') || is_page('on-site-tab') || is_page('on-site-information') || is_page('cruise-tab') || is_page('cruise-information') || is_page('villas-tab') || is_page('villas-information') || is_page('brands-aman-tab') || is_page('brands-aman-information') || is_page('hotel-mauna-lani-tab') || is_page('hotel-mauna-lani-information') || is_page('private-aviation-aero-information') || is_page('private-aviation-aero-tab')){
+		
+		wp_register_script('custom-form-information-script', get_template_directory_uri().'/include/js/custom-form-information-script.js', array('jquery'), '1.0', true);
+		wp_enqueue_script('custom-form-information-script');
+	}
+};
+
+// Load Scripts
+add_action('wp_enqueue_scripts', 'smartflyer_scripts');
+
+
+//ASYNC
+add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+function add_defer_attribute($tag, $handle) {
+	if (strpos($handle,'async') !== false) {
+	    return str_replace( ' src', ' async src', $tag );
+	}
+	return $tag;
+}
+
+
+/* ---------------------------------
+	Styles
+--------------------------------- */
+function smartflyer_styles()
+{	
+	wp_enqueue_style('exsite_gallery', get_stylesheet_directory_uri().'/_inc/exsite-gallery/exsite-gallery.css', false, '1.0');
+	wp_enqueue_style('slick_styles', get_stylesheet_directory_uri().'/slick.css', false, '1.0');
+	wp_enqueue_style('select_styles', get_stylesheet_directory_uri().'/select2.min.css', false, '1.0');
+	
+	wp_enqueue_style('smartflyer_styles', get_stylesheet_directory_uri().'/style.css', false, '3.1');
+	wp_enqueue_style('smartflyer_non_sass_styles', get_stylesheet_directory_uri().'/scss/non_sass_edits.css', false, '3.0');
+	wp_enqueue_style('jquery-fancybox', get_stylesheet_directory_uri().'/include/css/jquery.fancybox.css', false, '1.0');
+	wp_enqueue_style('select2', get_stylesheet_directory_uri().'/include/css/select2.min.css', false, '1.0');
+	wp_enqueue_style('slick', get_stylesheet_directory_uri().'/include/css/slick.css', false, '1.0');
+	wp_enqueue_style('custom-style', get_stylesheet_directory_uri().'/include/css/custom-style.css', false, '8.1');
+	wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.9.3', false, '1.0');
+	wp_enqueue_style('aos', 'https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css', false, '1.0');
+	
+	if(is_page('insurance-addon-tab') || is_page('insurance-addon-information') || is_page('experiences-addons-tab') || is_page('experiences-addons-informations') || is_page('yacht-sea-transportation-tab')|| is_page('yacht-sea-transportation-informations') || is_page('helicopter-air-transportation-tab') || is_page('helicopter-air-transportation-informations') || is_page('rental-car-form-tab') || is_page('rental-car-informations') || is_page('on-site-information') || is_page('on-site-tab') || is_page('cruise-form-tab') || is_page('cruise-information') || is_page('villas-form-tab') || is_page('villas-information') || is_page('brands-aman-tab') || is_page('brands-aman-informations') || is_page('hotel-mauna-lani-tab') || is_page('hotel-mauna-lani-informations') || is_page('private-aviation-airo-tabs') || is_page('private-aviation-airo-informations') || is_page('private-aviation-air-transportation-information') || is_page('private-aviation-air-transportation-tabs')){
+		wp_enqueue_style('custom-form-information-style', get_stylesheet_directory_uri().'/include/css/custom-form-information-style.css', false, '1.0');
+	}
+	
+	
+}
+
+// Load Styles
+add_action('wp_enqueue_scripts', 'smartflyer_styles');
+
+
+
+
+
+add_action( 'init', 'wp_dis_init' );
+function wp_dis_init()
+{
+    add_post_type_support( 'post', 'page-attributes' );
+}
+
+/* ---------------------------------
+	Sidebars
+--------------------------------- */
+if ( function_exists('register_sidebar') )
+{
+	register_sidebar(array(
+		'name' => 'Homepage',
+		'id' => 'homepage',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	
+	register_sidebar(array(
+		'name' => 'Post',
+		'id' => 'post',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	
+	register_sidebar(array(
+		'name' => 'Blog',
+		'id' => 'blog',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	
+	register_sidebar(array(
+		'name' => 'Archive',
+		'id' => 'archive',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	
+	register_sidebar(array(
+		'name' => 'Page',
+		'id' => 'page',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+}
+
+
+/* ---------------------------------
+	Remove Default Widgets
+--------------------------------- */
+function unregister_default_widgets()
+{
+	unregister_widget('WP_Widget_Pages');
+	unregister_widget('WP_Widget_Calendar');
+	unregister_widget('WP_Widget_Archives');
+	unregister_widget('WP_Widget_Links');
+	unregister_widget('WP_Widget_Meta');
+	unregister_widget('WP_Widget_Search');
+	unregister_widget('WP_Widget_Categories');
+	unregister_widget('WP_Widget_Recent_Posts');
+	unregister_widget('WP_Widget_Recent_Comments');
+	unregister_widget('WP_Widget_RSS');
+	unregister_widget('WP_Widget_Tag_Cloud');
+	unregister_widget('WP_Nav_Menu_Widget');
+}
+add_action('widgets_init', 'unregister_default_widgets', 11);
+
+
+
+/* ---------------------------------
+	Theme Functions
+--------------------------------- */
+
+
+
+//Custom Excerpt
+function new_excerpt_more( $excerpt, $id = "") {
+	if($id)
+		$link = get_permalink( $id );
+	else
+		$link = get_permalink( get_the_ID() );
+	return $excerpt.' <a href="'. $link . '" class="post-link" >Read More</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+function smartflyer_excerpt($text, $length = 35, $read_more = true, $id = '')
+{
+    $text = strip_shortcodes( $text );
+
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]&gt;', $text);
+    $text = strip_tags($text);
+    $excerpt_length = apply_filters('excerpt_length', $length);
+    $excerpt_more = '...';
+    if($read_more == true)
+    	$excerpt_more = new_excerpt_more( '...', $id );
+    $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+    if ( count($words) > $excerpt_length ) {
+            array_pop($words);
+            $text = implode(' ', $words);
+            $text = $text . $excerpt_more;
+    } else {
+            $text = implode(' ', $words);
+            $text = $text . $excerpt_more;
+    }
+
+	$text = str_replace("PDF 📄", "", $text);
+
+    return apply_filters('wp_trim_excerpt', $text);
+}
+
+
+
+
+/* ---------------------------------
+	AJAX Functions
+--------------------------------- */
+function smartflyer_ajaxurl() {
+?>
+	<script type="text/javascript">
+		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+	</script>
+<?php
+}
+add_action('wp_head','smartflyer_ajaxurl');
+
+
+//*** Search
+add_action('wp_ajax_nopriv_smartflyer_search', 'ajax_smartflyer_search');
+add_action('wp_ajax_smartflyer_search', 'ajax_smartflyer_search');
+function ajax_smartflyer_search()
+{
+	$search_terms = $_POST['search_terms'];
+	
+	$args = array(
+		    'posts_per_page'	=> 7,
+		    's'             => $search_terms
+		);
+	$posts = get_posts($args);
+	
+	$content = '';
+	ob_start();
+	foreach($posts as $post)
+		include('_objects/search-column.php');
+		
+	$content .= ob_get_clean();	
+		
+	$data = array('content'=>$content);
+	echo json_encode($data);
+	die;
+}
+
+
+
+
+//*** Get More Posts
+add_action('wp_ajax_nopriv_smartflyer_more_posts', 'ajax_smartflyer_more_posts');
+add_action('wp_ajax_smartflyer_more_posts', 'ajax_smartflyer_more_posts');
+function ajax_smartflyer_more_posts()
+{
+	$content = '';
+	$page = $_POST['data']['paged'];
+	$term = $_POST['data']['term'];
+	$type = $_POST['data']['type'];
+	
+	$exclude = $_POST['data']['exclude'];
+	$exclude = explode(',', $exclude);
+	
+	
+	if($type == 'archive')
+	{
+		$args = array(
+		    'posts_per_page'	=> 9,
+		    'exclude'			=> $exclude,
+		    'tax_query' 		=> array(
+										array(
+											'taxonomy' => 'category',
+											'field' => 'slug',
+											'terms' => $term
+										)
+									)
+		);	
+	}
+	
+	if($type == 'author')
+	{
+		$args = array(
+		    'posts_per_page'	=> 9,
+		    'paged'             => $page,
+		    'author' 			=> $term
+		);	
+	}
+	
+	if($type == 'agent')
+	{
+		$args = array(
+		    'posts_per_page'	=> 9,
+		    'meta_key' 			=> '_post_agent', 
+		    'meta_value' 		=> $term
+		);	
+	}
+	
+	if($type == 'blog')
+	{
+		$page = $page-1;
+		$args = array(
+		    'posts_per_page'	=> 9,
+		    'exclude' 			=> $exclude
+		);	
+	}
+	
+	$posts = get_posts($args);
+
+	$content = '';
+	ob_start();
+	foreach($posts as $post)
+	{
+		$exclude[] = $post->ID;
+		include('_objects/3-col-post.php');
+	}
+		
+	$content .= ob_get_clean();	
+	
+	
+	
+	
+	$args['paged'] = $page+1;
+	$next_posts = get_posts(  $args );
+	
+	$data = array('content'=>$content,'next_count'=> count($next_posts),'exclude'=> implode(",",$exclude));
+	echo json_encode($data);
+	die;
+		
+}
+
+
+
+//*** Get More Reviews
+add_action('wp_ajax_nopriv_smartflyer_more_reviews', 'ajax_smartflyer_more_reviews');
+add_action('wp_ajax_smartflyer_more_reviews', 'ajax_smartflyer_more_reviews');
+function ajax_smartflyer_more_reviews()
+{
+	$content = '';
+	$page = $_POST['data']['paged'];
+	$region = $_POST['data']['region'];
+	$styles = $_POST['data']['styles'];
+	$sort = $_POST['data']['sort'];
+	$exclude = $_POST['data']['exclude'];
+	$exclude = explode(',', $exclude);
+	
+	$args = array(
+	    'post_type'    =>  'review',
+	    'exclude'           => $exclude,
+	    'posts_per_page'    => 36
+	);
+	
+	//Filter on Region
+	if($region != '')
+	{
+		$filter = true;
+		$args['tax_query'][] = array(
+										'taxonomy' => 'review_region',
+										'field' => 'slug',
+										'terms' => $region
+									);
+	}
+	
+	
+	//Filter on style
+	if($styles != '')
+	{
+		$filter = true;
+		$styles = explode("-", $styles);
+		
+		foreach($styles as $style)
+		{
+			$args['tax_query'][] = array(
+										'taxonomy' => 'review_style',
+										'field' => 'slug',
+										'terms' => $style
+									);
+		}
+	}
+	
+	if($sort != '')
+	{
+		if($sort == 'alpha')
+		{
+			$args['orderby'] = 'title';	
+			$args['order'] = 'ASC';
+		}
+	}
+	
+	
+	$posts = get_posts(  $args );
+	$content = '';
+	ob_start();
+	foreach($posts as $post)
+	{
+		$exclude[] = $post->ID;
+		include('_objects/review.php');		
+	}
+	$content .= ob_get_clean();	
+	
+	
+	
+	$args['exclude'] = $exclude;
+	$next_posts = get_posts(  $args );
+	
+	$data = array('content'=>$content,'next_count'=> count($next_posts),'exclude'=> implode(",",$exclude));
+	echo json_encode($data);
+	die;
+		
+}
+
+
+
+//*** Team Selection
+add_action('wp_ajax_nopriv_smartflyer_team_selection', 'ajax_smartflyer_team_selection');
+add_action('wp_ajax_smartflyer_team_selection', 'ajax_smartflyer_team_selection');
+function ajax_smartflyer_team_selection()
+{
+	$content = '';
+	$taxonomy = $_POST['data']['tax'];
+	$slug = $_POST['data']['filter'];
+
+	
+	$args = array(
+	    'post_type'    =>  'agent',
+	    'posts_per_page'    => 6
+	);
+	$args['tax_query'][] = array(
+									'taxonomy' => $taxonomy,
+									'field' => 'slug',
+									'terms' => $slug
+								);	
+	
+	$posts = get_posts(  $args );
+	$content = '';
+	ob_start();
+	foreach($posts as $post)
+		include('_objects/agent.php');		
+	$content .= ob_get_clean();	
+	
+	
+	$data = array('content'=>$content);
+	echo json_encode($data);
+	die;
+		
+}
+
+
+
+//*** Home Reviews Selection
+add_action('wp_ajax_nopriv_smartflyer_home_reviews', 'ajax_smartflyer_home_reviews');
+add_action('wp_ajax_smartflyer_home_reviews', 'ajax_smartflyer_home_reviews');
+function ajax_smartflyer_home_reviews()
+{
+	$content = '';
+	$region = $_POST['data']['region'];
+	$style = $_POST['data']['style'];
+	$slug = $_POST['data']['filter'];
+	
+	
+	$args = array(
+	    'post_type'    =>  'review',
+	    'posts_per_page'    => 3
+	);
+	if($region != '')
+	{
+		$args['tax_query'][] = array(
+									'taxonomy' => 'review_region',
+									'field' => 'slug',
+									'terms' => $region
+								);
+	}	
+	if($style != '')
+	{
+		$args['tax_query'][] = array(
+									'taxonomy' => 'review_style',
+									'field' => 'slug',
+									'terms' => $style
+								);
+	}	
+	
+	$posts = get_posts(  $args );
+	
+	$content_large = '';
+	ob_start();
+	$post = $posts[0];
+	include('_objects/hp-large-review.php');
+	$content_large .= ob_get_clean();	
+	
+	$content_small = '';
+	unset($posts[0]);
+	ob_start();
+	foreach($posts as $post)
+		include('_objects/hp-small-review.php');		
+	$content_small .= ob_get_clean();	
+	
+	
+	$data = array('content_large'=>$content_large,'content_small'=>$content_small);
+	echo json_encode($data);
+	die;
+		
+}
+
+/************ Get Reviews Ajax ***************/
+add_action('wp_ajax_nopriv_smartflyer_reviews', 'ajax_smartflyer_reviews');
+add_action('wp_ajax_smartflyer_reviews', 'ajax_smartflyer_reviews');
+function ajax_smartflyer_reviews() {
+	$args = array(
+		'post_type' => 'review',
+		'posts_per_page' => 6,
+		'post_status' => 'publish',
+	);
+
+	if (isset($_POST['paged'])) {
+		$args['paged'] = (int)$_POST['paged'];
+	}
+
+	if (isset($_POST['partners'])) {
+		$review_ids = get_post_meta((int)$_POST['partners'], '_partner_reviews', true);
+
+		$args['post__in'] = $review_ids;
+	}
+	
+	$tax_query = [];
+	if (isset($_POST['region'])) {
+		array_push($tax_query, array(
+				'taxonomy' => 'review_region',
+				'field' => 'slug',
+				'terms' => [$_POST['region']],
+			)
+		);
+	}
+	if (isset($_POST['style'])) {
+		array_push($tax_query, array(
+				'taxonomy' => 'review_style',
+				'field' => 'slug',
+				'terms' => [$_POST['style']],
+			)
+		);
+	}
+	
+	
+	if (count($tax_query) > 0) {
+		$args['tax_query'] = $tax_query;
+	}
+
+	$ajaxposts = new WP_Query($args);
+
+	$response = '';
+
+	if($ajaxposts->have_posts()) {
+		ob_start();
+		while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+			get_template_part('_objects/destination', 'review');
+		endwhile;
+		$response .= ob_get_clean();
+	} else {
+		$response = '';
+	}
+
+	echo $response;
+	exit;
+}
+
+/************ Get Partners Ajax ***************/
+add_action('wp_ajax_nopriv_smartflyer_partners', 'ajax_smartflyer_partners');
+add_action('wp_ajax_smartflyer_partners', 'ajax_smartflyer_partners');
+function ajax_smartflyer_partners() {
+	$args = array(
+		'post_type' => 'partner',
+		'posts_per_page' => 6,
+	);
+
+	if (isset($_POST['paged'])) {
+		$args['paged'] = (int)$_POST['paged'];
+	}
+
+	if (isset($_POST['partners'])) {
+		$args['p'] = (int)$_POST['partners'];
+	}
+	
+	$meta_query = [];
+	if (isset($_POST['region'])) {
+		array_push($meta_query, array(
+				'key' => '_partner_region',
+				'value' => $_POST['region'],
+				'compare' => 'LIKE',
+			)
+		);
+	}
+	if (isset($_POST['style'])) {
+		array_push($meta_query, array(
+				'key' => '_partner_style',
+				'value' => $_POST['style'],
+				'compare' => '=',
+			)
+		);
+	}
+	
+	
+	if (count($meta_query) > 0) {
+		$args['meta_query'] = $meta_query;
+	}
+
+	$ajaxposts = new WP_Query($args);
+
+	$response = '';
+
+	if($ajaxposts->have_posts()) {
+		ob_start();
+		while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+			get_template_part('_objects/partner', 'filter');
+		endwhile;
+		$response .= ob_get_clean();
+	} else {
+		$response = '';
+	}
+
+	echo $response;
+	exit;
+}
+
+/************ Get More Press Ajax ***************/
+add_action('wp_ajax_nopriv_smartflyer_press', 'ajax_smartflyer_press');
+add_action('wp_ajax_smartflyer_press', 'ajax_smartflyer_press');
+function ajax_smartflyer_press() {
+	$args = array(
+		'post_type' => 'press',
+		'posts_per_page' => 10,
+		'orderby' => 'date',
+		'order' => 'DESC',
+	);
+
+	if (isset($_POST['paged'])) {
+		$args['paged'] = (int)$_POST['paged'];
+	}
+
+	$meta_query = [];
+	if (isset($_POST['agent'])) {
+		array_push($meta_query, array(
+			'key' => '_press_agent',
+			'value' => '"' . $_POST['agent'] . '"',
+			'compare' => 'LIKE'
+		));
+	}
+
+	if (count($meta_query) > 0) {
+		$args['meta_query'] = $meta_query;
+	}
+
+	$ajaxposts = new WP_Query($args);
+
+	$response = '';
+
+	if($ajaxposts->have_posts()) {
+		ob_start();
+		while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+			get_template_part('_objects/agent', 'press');
+		endwhile;
+		$response .= ob_get_clean();
+	} else {
+		$response = '';
+	}
+
+	echo $response;
+	exit;
+}
+
+/* ---------------------------------
+	Post View Counter
+--------------------------------- */
+function smartflyer_post_view($post_id)
+{
+	global $wpdb,$table_prefix;
+	$views_counter_table_name = $table_prefix . 'view_counter';
+	
+	$sql = "INSERT INTO ".$views_counter_table_name." (post_id, ip_address) VALUES ('".$post_id."', '".$_SERVER['REMOTE_ADDR']."')";
+	$wpdb->get_results($sql);
+}
+
+
+/* ---------------------------------
+	Popular
+--------------------------------- */
+function smartflyer_popular($exclude = array())
+{
+	delete_transient( 'smartflyer_popular' );
+	if ( false === ( $popular = get_transient( 'smartflyer_popular' ) ) )
+	{
+		global $wpdb,$table_prefix;
+		$posts = $wpdb->get_results("	
+										SELECT post_id, count(post_id) FROM ".$table_prefix."view_counter 
+										WHERE visited_date > DATE_SUB(now(), INTERVAL 30 DAY)
+										GROUP BY post_id
+										ORDER BY count(post_id) DESC
+									");
+		$popular = array();
+		$counter = 0;
+		
+		foreach($posts as $post_db)
+		{
+			if(!in_array($post_db->post_id, $exclude))
+			{
+				$post = get_post($post_db->post_id);
+				if($post->post_type == 'post' && $post->post_status == 'publish')
+				{
+					if( strtotime($post->post_date) > strtotime('-365 day') )
+					{
+						$popular[]  = $post;
+						$counter++;
+					}
+				}
+				
+				if($counter == 3)
+					break;
+			}
+		}
+		
+		set_transient( 'smartflyer_popular', $popular, 60 * 60 * 12 );
+	}else{
+		$popular = get_transient( 'smartflyer_popular' );
+	}
+	
+	return $popular;
+}
+
+
+function haet_prepopulate_forms($data) {
+    if($data['label']=='Do you have a preferred agent?') {  
+        $args = array(
+            'post_type' => 'agent',
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+			'order'   => 'ASC'
+        );
+        $query = new WP_Query( $args );
+        if ( $query->have_posts() ) {
+            $data['list']['options'] = array();
+            $data['list']['options'][] = array(
+                        'label' =>  'Select',
+                        'value' =>  null,
+                        'calc'  =>  null,
+                        'selected' => 0
+                    );
+            while ( $query->have_posts() ) {
+                $query->the_post();
+                $data['list']['options'][] = array(
+                        'label' =>  get_the_title(),
+                        'value' =>  null,
+                        'calc'  =>  null,
+                        'selected' => 0
+                    );
+            }
+        } 
+        wp_reset_postdata();
+    }
+    return $data;
+}
+add_filter('ninja_forms_field','haet_prepopulate_forms');
+
+
+
+add_filter('gform_pre_render', 'populate_agents');
+add_filter( 'gform_pre_validation', 'populate_agents' );
+add_filter( 'gform_admin_pre_render', 'populate_agents' );
+add_filter( 'gform_pre_submission_filter', 'populate_agents' );
+
+function populate_agents( $form ) {
+
+    if ( $form['title'] != "Trip Planner" ) return $form;
+
+    foreach ( $form['fields'] as &$field ) {
+        if ( $field->type != 'select' || strpos( $field->cssClass, 'agents-dropdown' ) === false ) {
+            continue;
+        }
+        $agent_ids = get_posts('fields=ids&posts_per_page=-1&post_status=publish&post_type=agent&order=asc&orderby=title');
+
+        // update 'Not listed Here' to whatever you'd like the instructive option to be
+        $choices = array(array('text' => 'Select', 'value' => 0 ));
+
+        foreach ( $agent_ids as $agent_id ) {
+            $choices[] = array( 'text' => get_the_title( $agent_id ), 'value' => $agent_id, 'isSelected' => false );
+        }
+
+        $field['choices'] = $choices;
+    }
+    return $form;
+}
+
+
+add_action( 'init', 'register_ninjaforms_raw_field' );
+function register_ninjaforms_raw_field() {
+  $args = array(
+    'name' => 'Raw Field', 
+    'sidebar' => 'layout_fields',    
+    'edit_options' => array(
+      array(
+        'type' => 'textarea',
+        'name' => 'custom_code',
+        'label' => __( 'Raw code to display as is', 'ninja-forms' ),
+        'width' => 'wide',
+        'class' => 'widefat',
+      ),
+          ),
+    'display_function' => 'raw_field_display',
+    'group' => 'layout_elements',
+    'display_label' => false,
+    'display_wrap' => false,
+    'edit_label' => false,
+    'edit_label_pos' => false,
+    'edit_req' => false,
+    'edit_custom_class' => false,
+    'edit_help' => false,
+    'edit_meta' => false,
+    'edit_conditional' => true,
+    'process_field' => false,
+  );  
+  if(function_exists( 'ninja_forms_register_field')){ninja_forms_register_field('raw_field', $args);}
+}
+function raw_field_display( $field_id, $data ){
+  if(isset( $data['custom_code']))
+    echo $data['custom_code'];  
+}
+
+
+function agent_plugin_rules() {
+  add_rewrite_rule('posts/?([^/]*)', 'index.php?pagename=posts&agent_id=$matches[1]', 'top');
+ }
+
+ function agent_plugin_query_vars($vars) {
+  $vars[] = 'agent_id';
+  return $vars;
+ }
+ 
+ add_action('init', 'agent_plugin_rules');
+ add_filter('query_vars', 'agent_plugin_query_vars');
+ 
+ 
+ 
+function sf_img_caption_shortcode_filter($val, $attr, $content = null)
+{
+	extract(shortcode_atts(array(
+		'id'      => '',
+		'align'   => 'aligncenter',
+		'width'   => '',
+		'caption' => ''
+	), $attr));
+	
+	// No caption, no dice... But why width? 
+	if ( 1 > (int) $width || empty($caption) )
+		return $val;
+ 
+	if ( $id )
+		$id = esc_attr( $id );
+     
+	// Add itemprop="contentURL" to image - Ugly hack
+	$content = str_replace('<img', '<img itemprop="contentURL"', $content);
+
+	return '<figure id="' . $id . '" aria-describedby="figcaption_' . $id . '" class="wp-caption ' . esc_attr($align) . '" itemscope itemtype="http://schema.org/ImageObject" style="width: ' . (0 + (int) $width) . 'px">' . do_shortcode( $content ) . '<figcaption id="figcaption_'. $id . '" class="wp-caption-text" itemprop="description">' . $caption . '</figcaption></figure>';
+}
+add_filter( 'img_caption_shortcode', 'sf_img_caption_shortcode_filter', 10, 3 );
+
+
+
+function nf_datepicker_modify_script( $args ){
+	//for a list of arguments which can be used here, see the options here http://api.jqueryui.com/datepicker/
+	$args['minDate'] = "0";
+	$args['changeMonth'] = 1;
+	$args['changeYear'] = 1;
+	return $args;
+}
+add_filter( 'ninja_forms_forms_display_datepicker_args', 'nf_datepicker_modify_script' );
+
+
+function getLocDataOffice($url)
+{
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+	$result = curl_exec($ch);
+	curl_close($ch); 
+	return $result;
+}
+
+
+/*
+add_filter( 'ninja_forms_display_init', 'my_change_nf_default_value', 10, 3 );
+function my_change_nf_default_value($form_id) {
+	global $ninja_forms_loading;
+    $ip_field = 45;
+    $ninja_forms_loading->update_field_value($ip_field, nf_get_ip());
+}
+*/
+
+
+function get_author_data($post)
+{
+	$author_image = '';
+	$author = get_user_meta($post->post_author, 'first_name', true).' '.get_user_meta($post->post_author, 'last_name', true);
+	
+	$issf = false;
+	if($author == 'SmartFlyer ')
+		$issf = true;
+		
+	$multiAuthor = 'Multiple Contributors';
+
+	if (get_post_meta($post->ID, '_post_author_syntax', true)) {
+
+		$multiAuthor = 'Multiple Authors';
+
+	}
+
+	if($agents = get_post_meta($post->ID, '_post_agent', true))
+	{
+		
+		if(is_array($agents))
+		{
+			foreach($agents as $agent_id)
+			{
+				$agent = get_post($agent_id);
+				$author = $agent->post_title;
+
+                $featured = exsite_image_resize(get_post_thumbnail_id($agent->ID), '268x268');
+				if($featured)
+					$image = $featured;
+				else
+					$image = get_template_directory_uri().'/img/raster/compressed/avatar.png';
+				
+				$author_image .= '<img src="'.$image.'">';
+			}
+			if(count($agents)>1)
+				$author = $multiAuthor;
+		}
+		else
+		{
+			$agent = get_post($agents);
+			$author = $agent->post_title;
+            $featured = exsite_image_resize(get_post_thumbnail_id($agent->ID), '268x268');
+			if($featured)
+				$image = $featured;
+			else
+				$image = get_template_directory_uri().'/img/raster/compressed/avatar.png';						$author_image = '<img src="'.$image.'">';
+		}
+		$issf = false;
+	}
+	else
+	{	
+
+		if (!get_post_meta($post->ID, '_post_author', true)) {
+
+			$image = get_template_directory_uri().'/img/raster/compressed/avatar.png';							$author_image .= '<img src="'.$image.'">';
+
+		}
+		
+	}
+
+	if($users = get_post_meta($post->ID, '_post_author', true)) {
+
+		$issf = false;
+
+
+		if (count($agents) + count($users) > 1) {
+
+			$author = $multiAuthor;
+
+		}
+
+		if (count($users) == 1 && !$agents) {
+
+			$user = get_user_by('ID', $users[0]);
+			$author = $user->display_name;
+
+		}
+
+		foreach ($users as $user) {
+
+			$userID = get_user_by('ID', $user);
+			$image = esc_url( get_avatar_url( $userID->ID ) );
+			$author_image .= '<img src="'.$image.'">';
+
+		}
+
+	}
+	
+	
+	return array('author'=>$author,'author_image'=>$author_image,'issf'=>$issf);
+	
+}
+
+
+
+
+
+
+add_action('wp_ajax_nopriv_exsite_newsletter_ac', 'ajax_exsite_newsletter_ac');
+add_action('wp_ajax_exsite_newsletter_ac', 'ajax_exsite_newsletter_ac');
+require_once("_inc/ac/includes/ActiveCampaign.class.php");
+
+function ajax_exsite_newsletter_ac()
+{	
+	
+	$ac = new ActiveCampaign("https://smartflyer.api-us1.com", "9073060446d3d5e9a10e65049ef3e43b05e148a980e9f2a5597163f4de581f5cc9e48096");
+	
+	$contact = array(
+		"email"              => $_POST['email'],
+		"first_name"         => $_POST['fname'],
+		"last_name"          => $_POST['lname'],
+		//"p[{$list_id}]"      => 1,
+		"status[{$list_id}]" => 1, // "Active" status
+		"tags"				=> 'typeform-integration'
+	);
+
+	$contact_sync = $ac->api("contact/sync", $contact);
+
+	if (!(int)$contact_sync->success) {
+		$data = array('result'=>'error','msg'=> $contact_sync->error);
+		echo json_encode($data);
+		exit();
+	}
+	
+	$data = array('result'=>'success','msg'=> 'Thanks for signing up! Please check your email inbox to confirm your subscription.');
+	echo json_encode($data);
+	exit();
+        
+}
+
+function wpFooter(){
+		if(is_page('destination-main')){
+	?>	
+		<script src="https://smartflyer.theglobalwebdev.com/new-website/wp-content/themes/smart-flyer/include/js/public-script.js"></script>
+	<?php
+	}
+}
+
+add_action('wp_head', 'wpFooter'); 
+
+
+function more_post_ajax() 
+{
+	$ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 6;
+	$page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 1;
+
+	header("Content-Type: text/html");
+
+	$args = array(
+		'post_type' => 'partner',
+		'posts_per_page' => $ppp,
+		'paged' => $page,
+	);
+	$loop = new WP_Query($args);
+
+	$out = '';
+
+	$max_pages = $loop->max_num_pages;
+
+	if ($loop->posts) :
+
+		foreach($loop->posts as $key => $val ) :
+			$out .= '<div class="partners-wrap">
+						<div class="inner">
+							<a href="'.get_permalink($val->ID).'">
+								<div class="partners-content background"
+									style="background-image: url('.get_the_post_thumbnail_url($val->ID).')">
+									<div class="content">
+										<h4>'.$val->post_title.'</h4>
+										<p>'.implode(',', get_post_meta($val->ID, '_partner_region', true)).'</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>';
+		endforeach;
+	endif;
+	wp_reset_postdata();
+
+	$response['html'] = $out;
+	$response['max'] = $max_pages;
+	
+	echo json_encode($response);
+
+	die();
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+add_action( 'init', 'smartflyer_postType_data_API_callback' );
+function smartflyer_postType_data_API_callback(){
+
+	if ( isset( $_GET['smtAPI'] ) && !empty( $_GET['smtAPI'] ) && $_GET['smtAPI'] == 'getAgentList' ) {
+		
+		$per_page = $_GET['per_page'];
+		$page = $_GET['page'];
+		$order = $_GET['order'];
+		$not_in = $_GET['not_in'];
+
+
+		// Create args of pages
+		$args = array(
+			'post_type'		=> 'agent',
+			'post_status'   => 'publish',
+		);
+
+		if ( !empty( $per_page ) ) {
+			$args['posts_per_page'] = $per_page;
+		}
+
+		if ( !empty( $page ) ) {
+			$args['paged'] = $page;
+		}
+		if ( !empty( $order ) ) {
+			$args['order'] = $order;
+		}
+		if ( !empty( $not_in ) ) {
+			$args['post__not_in'] = $not_in;
+		}
+
+		// New wp query
+		$agent = new WP_Query( $args );
+		
+		$agentArray = [];
+		$agentArray['total_count'] = $agent->found_posts;
+
+		foreach ( $agent->posts as $key => $value ) {
+			$permalink = get_permalink( $value->ID );
+			$agent_email = get_post_meta( $value->ID, '_agent_email', true );
+			$agent_website = get_post_meta( $value->ID, '_agent_website', true );
+			$locations = get_the_terms( $value->ID, 'agent_location' );
+			$post_image = get_the_post_thumbnail_url( $value->ID );
+
+			$locArray = [];
+			foreach ( $locations as $locKey => $locValue ) {
+				$locArray[] = $locValue->name;
+			}
+
+			$location = '';
+			if ( !empty( $locArray ) ) {
+				$location =  implode(', ', $locArray);
+			}
+
+			$agentArray['records'][] = array( 
+										'postName' => $value->post_title,
+										'postLink' => $permalink,
+										'agent_email' => $agent_email,
+										'agent_website' => $agent_website,
+										'locations' => $location,
+										'postImage' => $post_image,
+										'phone_number' => '',
+										);
+			
+		}
+		echo json_encode( $agentArray );die();
+	}
+}
+
+/*add_filter( 'pre_handle_404', 'wpse_376370', 10, 2 );
+function wpse_376370( $value, $wp_query ) {
+    if (
+        // It's a valid "mash" endpoint request,
+        // but the request is not a Page or its slug is not 'example',
+        ! $wp_query->is_page( 'plan-a-trip' ) &&
+        // and the Page is not using the template some-template.php.
+        ! is_page_template( 'page-plan-a-trip.php' )
+    ) {
+        // Therefore, we throw a 404 error
+        $wp_query->set_404();
+
+        // and avoid redirect to the page. (at example.com/example)
+        remove_action( 'template_redirect', 'redirect_canonical' );
+    }
+
+    return $value;
+}*/
+
+
+function plan_a_trip_page_parse_request( $wp ) {
+    // custom variables will only be available on popular page.
+    $pageslug = 'agent';
+
+    global $wp;
+
+    $wp->query_vars['agent'] = $pageslug;
+
+    // get the actual request and parse it down
+    if ( isset( $wp->request ) && strpos( $wp->request, '/' ) ) {
+        $requests = explode( '/', $wp->request );
+
+        // array_shift takes out the first path what is the page slug/name.
+        // and make sure it's the popular page.
+        if ( $pageslug == array_shift( $requests ) ) {
+            // set pagename to make sure we have found a page with the name.
+            $wp->set_query_var( 'pagename', $pageslug );
+
+            // wordpress automatically try to check if it's an attachment when a parameter is present
+            // after pageslug, so we set it false as we do the parsing ourselves.
+            $wp->set_query_var( 'attachment', false );
+
+            // we understand this is a valid page, and let WordPress understand there's no error.
+            $wp->set_query_var( 'error', false );
+
+            $count = count( $requests );
+
+            if ( $count > 0 ) {
+                // stop the canonical redirection, if a url request isn't same as get_permalink( ) or
+                // the_permalink( ), then wordpress redirects it to the actual page
+                // and removes all parameter after slug name.
+                remove_action( 'template_redirect', 'redirect_canonical' );
+
+                // the first parameter will definitely be the category.
+                $wp->set_query_var( 'popular_category', $requests[0] );
+
+               
+            }
+
+            // the final step to set some defaults if no value was available.
+            if ( ! isset( $wp->query_vars['popular_category'] ) ) {
+                $wp->set_query_var( 'popular_category', 'any' );
+            }
+
+        }
+    }
+}
+//add_action( 'parse_request', 'plan_a_trip_page_parse_request', 0 );
+
+add_filter( 'query_vars', 'addnew_query_vars', 10, 1 );
+function addnew_query_vars($vars)
+{   
+    $vars[] = 'agent'; // c is the name of variable you want to add       
+    return $vars;
+}
+
+function custom_rewrite_basic() 
+{
+    add_rewrite_rule('^plan-a-trip/([a-z]+)/?', 'plan-a-trip?agent=$1', 'top');
+}
+add_action('init', 'custom_rewrite_basic');
+
+/* CRM Login */
+add_action('admin_init', 'add_agent_role');
+function add_agent_role() {  
+    //Add the Agent user role
+    add_role( 'agent', 'Agent', array( 'read' => true ) );
+}
+
+function callAPI( $method, $url, $data, $access_token='' ){
+    $curl = curl_init();
+
+    switch ( $method ){
+      	case "POST":
+        	curl_setopt( $curl, CURLOPT_POST, 1 );
+            if ( $data)
+                curl_setopt( $curl, CURLOPT_POSTFIELDS, $data );
+            break;
+      	case "PUT":
+    		curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PUT" );
+        	if ($data)
+            	curl_setopt( $curl, CURLOPT_POSTFIELDS, $data );
+         	break;
+      	default:
+        if ( $data )
+            $url = sprintf( "%s?%s", $url, http_build_query( $data ) );
+    }
+	
+	$headerArray = [];
+	$headerArray[] = 'Accept: application/json';
+
+	if ( !empty( $access_token ) ) {
+		$headerArray[] = 'Authorization: Bearer '.$access_token;
+	}
+
+
+    // OPTIONS:
+    curl_setopt( $curl, CURLOPT_URL, $url );
+    curl_setopt( $curl, CURLOPT_HTTPHEADER, $headerArray );
+    curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt( $curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC );
+    
+    // EXECUTE:
+    $result = curl_exec( $curl );
+    
+    if( !$result ){ die("Connection Failure"); }
+    curl_close( $curl );
+    return json_decode( $result );
+}
+
+add_action( 'wp_ajax_check_login_callback', 'check_login_callback' );
+add_action( 'wp_ajax_nopriv_check_login_callback', 'check_login_callback' );
+function check_login_callback(){
+	if ( !empty( $_POST['login'] ) ) {
+		$message = '';		
+		$getEmail = $_POST['email'];
+		$getPassword = $_POST['password'];
+
+		if ( !empty( $getEmail ) && !empty( $getPassword ) ) {
+			$params['email'] = $getEmail;
+			$params['password'] = $getPassword;
+			$response = callAPI( 'POST', 'http://stagingsociety.smartflyer.com/api/auth/login', $params );
+
+			if ( !empty( $response->access_token ) && !empty( $response->user ) ) {
+				$message = create_custom_user( $response , $getPassword, $getEmail );
+			}else{
+				$message = $response->message;
+			}
+
+		}else{
+			if ( empty( $getEmail ) ) {
+				$message = '<p>Please Enter Username</p>';
+			}
+			if ( empty( $getPassword ) ) {
+				$message .= '<p>Please Enter Password</p>';
+			}
+		}
+	}elseif ( !empty( $_POST['logout'] ) ) {
+
+		$accessToken = get_user_meta( get_current_user_id(), 'login_access_token', true );
+
+		$response = callAPI( 'POST', 'http://stagingsociety.smartflyer.com/api/auth/logout', false, $accessToken );
+		wp_logout();
+		$message = array( 'redirectUrl' => site_url('crm-login'), 'redirect' => true );
+	}
+
+	echo json_encode($message);
+	die();
+}
+
+function create_custom_user( $response, $password, $email ) {
+
+	if ( username_exists( $response->user->name ) || email_exists( $email ) ) {
+
+		if ( !is_user_logged_in() ) {
+			$user = get_userdatabylogin( $response->user->name );
+	        $user_id = $user->ID;
+	        wp_set_current_user( $user_id, $response->user->name );
+	        wp_set_auth_cookie( $user_id );
+    		
+    		update_user_meta( $user_id, 'login_access_token', $response->access_token );
+	        update_user_meta( $user_id, 'user_profile', $response->user->image_url );
+
+        	wp_update_user([
+			    'ID' => $user_id,
+			    'first_name' => $response->user->first_name,
+			    'last_name' => $response->user->last_name,
+			]);
+	        	
+	        $data = array( 'redirectUrl' => site_url('insurance-addon-information'), 'redirect' => true );
+	        return $data;
+    	}else{
+    		return "User already Login";
+    	}
+	}
+
+    if ( username_exists( $response->user->name ) == null && email_exists( $email ) == false ) {
+
+        // Create the new user
+        $user_id = wp_create_user( $response->user->name, $password, $email );
+
+        // Get current user object
+        $user = get_user_by('id', $user_id);
+
+        // Remove role
+        $user->remove_role('administrator');
+
+        // Add role
+        $user->add_role('agent');
+
+        update_user_meta( $user_id, 'login_access_token', $response->access_token );
+        update_user_meta( $user_id, 'user_profile', $response->user->image_url );
+
+        wp_update_user([
+		    'ID' => $user_id,
+		    'first_name' => $response->user->first_name,
+		    'last_name' => $response->user->last_name,
+		]);
+
+        $data = array( 'redirectUrl' => site_url('insurance-addon-information'), 'redirect' => true );
+        return $data;
+    }else{
+    	return "User already exists. Please try with another Email";
+    }
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+	if ( !current_user_can( 'administrator' ) && !is_admin() ) {
+	  	show_admin_bar(false);
+	}
+}
+
+function change_user_avtar( $url, $id, $arg ) {
+			
+	$user_profile = get_user_meta( $id, 'user_profile', true );
+			
+	if ( !empty( $user_profile ) ) {
+		return $user_profile;
+	}
+
+    return $url;
+}
+add_filter( 'get_avatar_url', 'change_user_avtar', 10, 5 );

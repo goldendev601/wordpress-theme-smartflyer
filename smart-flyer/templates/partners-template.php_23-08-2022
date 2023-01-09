@@ -1,0 +1,331 @@
+<?php
+/*
+Template Name: Partners Template
+*/
+
+get_header(); ?>
+
+<div class="wp-container">
+
+    <!-- Partners hero banner -->
+    <section class="hero-banner-section partners-banner">
+        <div class="herobanner partners-banner-wrap ">
+            <div class="banner-content padding-left left-content">
+                <div class="inner">
+                   <div class="sub-title" data-aos="fade-up" data-aos-easing="linear">
+                        BRANDS & Partnerships       
+                    </div>
+                    <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-delay="300">
+                        Partners
+                    </h1>
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-delay="350">
+                        <p>
+                            Each of our partners recognize SmartFlyer as a top producer and puts our clients at the top of every upgrade and VIP list. With some of the most iconic hotels around the world,  delights guests with its fine European hospitality from France to Brazil and beyond.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-image">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/partners-banner-bg.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners hero banner -->
+    <div class="leisure-travel_main_wrap partners-leisure-travel">
+        <div class="line-travel container ">
+            <div class="line-travel-wrap">LEARN MORE</div>
+        </div>
+        <div class="leisure-travel-wrap d-flex flex-wrap">
+            <div class="leisure-travel-left">
+                <div class="d-flex flex-wrap">
+                    <h3>SmartFlyer Partners</h3>
+                </div>
+                <div class="content">
+                    <p>SmartFlyer is a member of the Virtuoso network, an elite, invitation-only consortium of the top 1% of travel providers in the world.  Virtuoso is a powerful network that books billions of dollars of travel per year collectively. </p>
+                </div>
+                 <div class="button-1">
+                    <a href="#">SMARTFLYER ACCESS</a>
+                </div>
+            </div>
+            <div class="leisure-travel-right">
+                <div class="images">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/jesse-schoff-3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="preferred-partners">
+            <div class="container">
+                <div class="title text-align-center">
+                    <h2>Preferred Partners</h2>
+                    <p>As an agency, SmartFlyer is a recognized preferred partner of the most notable and highly regarded hotel brands in the world. These “By Invitation Only” elite programs were created to recognize and differentiate top-tier travel producers. They are a demonstration of relationships created as a result of massive buying power.</p>
+                </div>
+                    <div class="preferred-partners-wrap-logos">
+                        <ul class="d-flex flex-wrap preferred-partners-logos">
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/accor-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/belmondbellini-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/couture-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/diamondclub-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fourseasons-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/impresario-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/hyattprive-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/ihg-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/jumeirah-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mandarinoriental-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mariott-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/peninsula-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/roccoforte-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/luxury-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/within-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/elite-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/belmondbellini-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/couture-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/diamondclub-logo.svg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fourseasons-logo.svg">
+                                </div>
+                            </li>
+                            <li class="show_transparent">
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/fourseasons-logo.svg">
+                                </div>
+                            </li>
+                            <li class="show_transparent">
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/impresario-logo.svg">
+                                </div>
+                            </li>
+                            <li class="show_transparent">
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/hyattprive-logo.svg">
+                                </div>
+                            </li>
+                            <li class="show_transparent">
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/ihg-logo.svg">
+                                </div>
+                            </li>
+                            <li class="show_transparent">
+                                <div class="d-flex">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/luxury-logo.svg">
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="" class="load-more"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/down-arrow-Partner.png"></a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Partners -->
+    <section class="destination-partners-section destination-partners-page">
+
+        <div class="container">
+            <div class="destination-title text-align-center">
+                <h2>Hotel Partners</h2>
+            </div>
+            <div class="mobile-partners-filter">
+                <div class="filter-btn"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/filters.svg">filters</div>
+            </div>
+            <div class="partners-main-filter">
+                <div class="close-filter"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/close-btn.png"></div>
+                <div class="partners-main-filter-wrap">
+                    <div class="custom-filter">
+                        <strong>REGION</strong>
+                        <select class="form-select region">
+                            <option>All</option>
+                            <option>France</option>
+                            <option>France</option>
+                            <option>Auchterarder</option>
+                        </select>
+                    </div>
+                    <div class="custom-filter">
+                        <strong>STYLE</strong>
+                        <select class="form-select style">
+                            <option>All</option>
+                            <option>France</option>
+                            <option>Auchterarder</option>
+                            <option>Citroen</option>
+                        </select>
+                    </div>
+                    <div class="custom-filter">
+                        <strong>PARTNERS</strong>
+                        <select class="form-select partners">
+                            <option>All</option>
+                            <option>France</option>
+                            <option>Auchterarder</option>
+                            <option>Auchterarder</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="partners-filter">
+                <?php
+                $args = array(
+                    'post_type' => 'partner',
+                    'posts_per_page' => 6,
+                );
+                $partners_cpt = new WP_Query($args);
+
+                if ($partners_cpt->have_posts()) :
+                    while ($partners_cpt->have_posts()) :
+                        $partners_cpt->the_post();
+                        // echo '<pre>'; print_r(get_post_meta(get_the_ID()));
+                        // echo '</pre>'; die;
+                ?>
+                        <div class="partners-wrap">
+                            <div class="inner">
+                                <div class="partners-content background" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                                    <a href="<?php echo get_the_permalink(); ?>">
+                                        <div class="content">
+                                            <h4><?php the_title(); ?></h4>
+                                            <p><?php echo get_post_meta(get_the_ID(), '_partner_region', true); ?></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                    endwhile;
+                endif;
+                ?>
+                <!-- <div class="partners-wrap">
+                    <div class="inner">
+                        <div class="partners-content background" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/images/paris.png);">
+                            <div class="content">
+                                <h4>SAINT JAMES PARIS</h4>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-wrap">
+                    <div class="inner">
+                        <div class="partners-content background" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/images/Auchterarder.png);">
+                            <div class="content">
+                                <h4>THE GLENEAGLES HOTEL </h4>
+                                <p>Auchterarder, Scotland</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-wrap">
+                    <div class="inner">
+                        <div class="partners-content background" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/images/Santorini.png);">
+                            <div class="content">
+                                <h4>GRACE HOTEL SANTORINI </h4>
+                                <p>Santorini, Greece</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-wrap">
+                    <div class="inner">
+                        <div class="partners-content background" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/images/France2.png);">
+                            <div class="content">
+                                <h4>RELAIS CHRISTINE</h4>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-wrap">
+                    <div class="inner">
+                        <div class="partners-content background" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/images/Paris-1.png);">
+                            <div class="content">
+                                <h4>BVLGARI HOTEL PARIS</h4>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Partners -->
+
+
+</div>
+<?php get_footer(); ?>

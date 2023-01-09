@@ -1,0 +1,167 @@
+<!-- Subscribe Instagram Section -->
+<section class="subscribe-instagram-section">
+    <div class="container">
+        <div class="subscribe-instagram-wrap d-flex flex-wrap ">
+            <div class="subscribe-form padding-left">
+                <div class="left d-flex flex-wrap">
+                    <div class="content">
+                        <strong data-aos="fade-up" data-aos-delay="300">Subscribe to our newsletter</strong>
+                        <h3 data-aos="fade-up" data-aos-delay="400">Receive inspiration in your inbox</h3>
+                        <form action="javascript:void(0)" data-aos="fade-up" data-aos-delay="500">
+                            <ul>
+                                <li><input type="text" id="fname" name="Full name" placeholder="Full name"></li>
+                                <li>
+                                    <input type="email" id="email" name="Enter your email" placeholder="Enter your email">
+                                    <input type="submit" value="Subscribe" name="Subscribe">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="image" data-aos="fade-up" data-aos-delay="700">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/Subscribe-img.png">
+                    </div>
+                </div>
+            </div>
+            <div class="instagram-sec">
+                <div class="right d-flex flex-wrap">
+                    <div class="content">
+                        <h3 data-aos="fade-up" data-aos-delay="300">Find us on instagram</h3>
+                        <h3 data-aos="fade-up" data-aos-delay="400"> <a href="#">#smartflyer</a></h3>
+                        <div data-aos="fade-up" data-aos-delay="500">
+                            <p>Keep up with the places that deserve more than a bookmark, but a check-in.</p>
+                        </div>
+                        <div class="follow-us" data-aos="fade-up" data-aos-delay="600"><i class="fa fa-instagram" aria-hidden="true"></i>FOLLOW US</div>
+                    </div>
+                    <div class="instagram-img">
+                        <div class="top-img">
+                            <div class="image-one" data-aos="fade-up" data-aos-delay="300">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/instagram-4.png">
+                            </div>
+                            <div class="image-two" data-aos="fade-up" data-aos-delay="500">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/instagram-3.png">
+                            </div>
+                        </div>
+                        <div class="bottom-img">
+                            <div class="image-three" data-aos="fade-up" data-aos-delay="700">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/instagram-1.png">
+                            </div>
+                            <div class="image-four" data-aos="fade-up" data-aos-delay="900">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/instagram-2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Subscribe form -->
+
+<!-- Footer -->
+<footer>
+    <div class="footer-section">
+        <div class="container">
+            <div class="d-flex flex-wrap">
+                <div class="footer-left">
+                    <div class="inner">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/white-logo.png">
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <ul>
+                                <li><a href="https://www.facebook.com/smartflyernyc"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/thesmartflyer/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="copy-right">
+                            <p>CST# 2103672<br>Copyright &copy; <?php echo date('Y'); ?> SmartFlyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-wrap">
+                        <h4><a href='<?php echo home_url('reviews'); ?>'>Reviews</a></h4>
+                        <?php $terms = get_terms('review_region'); ?>
+                        <ul>
+                            <?php foreach ($terms as $term) : ?>
+                                <li><a href='<?php echo home_url() . '/reviews/?region=' . $term->slug; ?>'><?php echo $term->name; ?></a></li>
+                            <?php endforeach; ?>
+                            <!-- <li><a href="javascript:void(0)">Americas</a></li>
+                            <li><a href="javascript:void(0)">Caribbean/Mexico</a></li>
+                            <li><a href="javascript:void(0)">Africa</a></li>
+                            <li><a href="javascript:void(0)">Asia Pacific</a></li>
+                            <li><a href="javascript:void(0)">Europe</a></li>
+                            <li><a href="javascript:void(0)">Australia</a></li>
+                            <li><a href="javascript:void(0)">UAE</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-wrap">
+                        <h4><a href='<?php echo home_url('blog'); ?>'>Stories</a></h4>
+                        <?php $categories = get_categories(); ?>
+                        <ul>
+                            <?php foreach ($categories as $cat) : ?>
+                                <li><a href='<?php echo get_term_link($cat); ?>' <?php if ($term->term_id == $cat->term_id) : ?>class='active' <?php endif; ?>><?php echo $cat->name; ?></a></li>
+                            <?php endforeach; ?>
+                            <!-- <li><a href="javascript:void(0)"> City Guides</a></li>
+                            <li><a href="javascript:void(0)">Industry Intel</a></li>
+                            <li><a href="javascript:void(0)">Take Me To</a></li>
+                            <li><a href="javascript:void(0)">Travel Culture</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-wrap">
+                        <h4><a href='<?php echo home_url('about'); ?>'>About</a></h4>
+                        <?php $items = wp_get_nav_menu_items('About Menu Footer'); ?>
+                        <ul>
+                            <?php foreach ($items as $item) : ?>
+                                <li><a href='<?php echo $item->url; ?>'><?php echo $item->title; ?></a></li>
+                            <?php endforeach; ?>
+                            <!-- <li><a href="javascript:void(0)">Access</a></li>
+                            <li><a href="javascript:void(0)">Services</a></li>
+                            <li><a href="javascript:void(0)">SmartFlyerAU</a></li>
+                            <li><a href="javascript:void(0)">Press</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-wrap">
+                        <h4><a href='<?php echo home_url('team'); ?>'>Team</a></h4>
+                        <!-- <h4><a href="javascript:void(0)">press</a></h4> -->
+                    </div>
+                    <div class="copy-right">
+                        <p>© 2021 All rights reserved. <a href="javascript:void(0)">SmartFlyer, Inc.</a> | <a href="javascript:void(0)">Privacy Policy </a> This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
+<!-- Footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    var initialSrc = "<?php echo get_stylesheet_directory_uri() ?>/images/white-logo.png";
+    var scrollSrc = "<?php echo get_stylesheet_directory_uri() ?>/images/logo.svg";
+    var initialSrcSearch = "<?php echo get_stylesheet_directory_uri() ?>/images/white-search.svg";
+    var scrollSrcSearch = "<?php echo get_stylesheet_directory_uri() ?>/images/search.svg";
+    var initialSrcUser = "<?php echo get_stylesheet_directory_uri() ?>/images/white-user.svg";
+    var scrollSrcUser = "<?php echo get_stylesheet_directory_uri() ?>/images/user.svg";
+
+    jQuery(window).scroll(function() {
+        var scroll = jQuery(this).scrollTop();
+        if (scroll > 100) {
+            jQuery(".logo").attr("src", scrollSrc);
+            jQuery(".searchImage").attr("src", scrollSrcSearch);
+            jQuery(".userImage").attr("src", scrollSrcUser);
+        } else {
+            jQuery(".logo").attr("src", initialSrc);
+            jQuery(".searchImage").attr("src", initialSrcSearch);
+            jQuery(".userImage").attr("src", initialSrcUser);
+        }
+    });
+</script>
+
+<?php wp_footer(); ?>
+</body>
+
+</html>

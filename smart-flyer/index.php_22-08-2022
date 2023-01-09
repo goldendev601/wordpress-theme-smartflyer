@@ -1,0 +1,423 @@
+<?php get_header(); ?>
+
+<div class="wp-container">
+
+	<!-- Hero Banner -->
+	<section class="hero-banner-section">
+		<div class="herobanner">
+			<div class="banner-content padding-left">
+				<div class="inner">
+					<div class="sub-title" data-aos="fade-up" data-aos-easing="linear">
+						FULL-SERVICE LUXURY TRAVEL AGENCY BUILT FOR CURIOUS TRAVELERS
+					</div>
+					<h1 data-aos="fade-up" data-aos-easing="linear" data-aos-delay="300">
+						Find Yourself Here
+					</h1>
+					<div data-aos="fade-up" data-aos-easing="linear" data-aos-delay="350">
+						<p>
+							We specialize in crafting exceptional experiences worldwide created through vetted recommendations, carefully cultivated relationships, and continuous boots-on-the-ground research.
+						</p>
+					</div>
+					<div class="banner-btn" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="400">
+						<div class="button-1"><a href="<?php echo get_site_url().'/what-we-do';?>">OUR PROCESS</a></div>
+						<div class="button-1">
+							<a href="javascript:void(0)" class="plan-a-trip-btn">
+								PLAN A TRIP
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="herobanner-image" data-aos="fade-left">
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/images/hero.png">
+				<div class="herobanner-right-content">
+					<div class="herobanner-content">
+						<h3>FEATURED STORY</h3>
+						<h2>The Ultimate Safari Guide</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero Banner -->
+
+	<!-- Partners  -->
+	<section>
+		<div class="partners-section">
+			<div class="container">
+				<div class="partners-logs d-flex flex-wrap align-items-center">
+					<p>As Seen In</p>
+					<ul class="d-flex flex-wrap align-items-center">
+						<li data-aos="zoom-out" data-aos-delay="300"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/harper-baazaar.svg"></li>
+						<li data-aos="zoom-out" data-aos-delay="400"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/conde-nast.svg"></li>
+						<li data-aos="zoom-out" data-aos-delay="500"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/new-york-times.png"></li>
+						<li data-aos="zoom-out" data-aos-delay="600"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/martha-stewart-weddings.svg"></li>
+						<li data-aos="zoom-out" data-aos-delay="700"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/vogue.svg"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Partners  -->
+
+	<!-- Form tack of -->
+	<section class="take-off-section">
+		<div class="take-off-main-wrap d-flex flex-wrap ">
+			<div class="take-off-wrap padding-left">
+				<div class="take-off-wrap-inner">
+					<div class="content white">
+						<h2 data-aos="fade-right" data-aos-easing="linear" data-aos-delay="500">From take-off to touch down</h2>
+						<div data-aos="fade-right" data-aos-delay="600" data-aos-easing="linear">
+							<p>
+								SmartFlyer is known across the luxury travel space for creating unforgettable, one-of-a-kind travel experiences that are tailored to each client’s unique preferences. From private tours to reservations at the best hotels and restaurants, the possibilities are endless. If you can dream it, we can do it.
+							</p>
+						</div>
+						<div class="button-2" data-aos="fade-right" data-aos-delay="700" data-aos-easing="linear">
+							<a href="javascript:void(0)">HOW IT WORKS</a>
+						</div>
+					</div>
+					<div class="take-off-image">
+						<ul>
+							<li data-aos="zoom-in" data-aos-delay="400">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/Vector.svg"></div><span>Hotels</span>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="500">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/Frame-2.svg"></div><span>Custom itinerary</span>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="600">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/private.svg"></div><span>Flights and private charter</span>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="700">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/celebrations.svg"></div><span>Celebrations</span>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="800">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/villas.svg"></div><span>Villas</span>
+							</li>
+							<li data-aos="zoom-in" data-aos-delay="900">
+								<div class="tack-img"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/corporate.svg"></div><span>Corporate Travel</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="take-off-right">
+				<div class="right-image" data-aos="fade-left" data-aos-duration="3000">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/jesse-schoff-new.png">	
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Form tack of -->
+
+	<!-- slider-image-section -->
+	<section class="home-slider-main-section">
+		<div class="home-slider-main">
+			<div class="padding-left">
+
+				<div class="slider-img-list slider-img-list-slider">
+					<div class="slider-content">
+						<div class="slider-image top-curve" data-aos="fade-up" data-aos-delay="500">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/home-slider-1.png">
+						</div>
+						<div class="travel-by" data-aos="fade-up" data-aos-delay="600">
+							<span>TRAVEL CULTURE - 10.06.2021</span>
+						</div>
+						<div class="slider-Heding" data-aos="fade-up" data-aos-delay="700">
+							<h3>Travel by the Stars: Where to Go Based on Your Sign</h3>
+						</div>
+						<div class="slider-desc" data-aos="fade-up" data-aos-delay="800">
+							<p>The exact time of year you were born has everything to do with how you traverse the globe and what kinds of places are most suited to you. In response to the popularity of our last astrological roundup...</p>
+						</div>
+						<div class="contribute-by" data-aos="fade-up" data-aos-delay="900">
+							<p>CONTRIBUTED BY <span>REBECCA GORDON</span></p>
+						</div>
+					</div>
+					<div class="slider-content">
+						<div class="slider-image full-square" data-aos="fade-up" data-aos-delay="500">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/home-slider-2.png">
+						</div>
+						<div class="travel-by" data-aos="fade-up" data-aos-delay="600">
+							<span>TRAVEL CULTURE - 10.06.2021</span>
+						</div>
+						<div class="slider-Heding" data-aos="fade-up" data-aos-delay="700">
+							<h3>Travel by the Stars: Where to Go Based on Your Sign</h3>
+						</div>
+						<div class="slider-desc" data-aos="fade-up" data-aos-delay="800">
+							<p>The exact time of year you were born has everything to do with how you traverse the globe and what kinds of places are most suited to you. In response to the popularity of our last astrological roundup...</p>
+						</div>
+						<div class="contribute-by" data-aos="fade-up" data-aos-delay="900">
+							<p>CONTRIBUTED BY <span>REBECCA GORDON</span></p>
+						</div>
+					</div>
+					<div class="slider-content">
+						<div class="slider-image bottom-right-curve" data-aos="fade-up" data-aos-delay="500">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/home-slider-3.png">
+						</div>
+						<div class="travel-by" data-aos="fade-up" data-aos-delay="600">
+							<span>TRAVEL CULTURE - 10.06.2021</span>
+						</div>
+						<div class="slider-Heding" data-aos="fade-up" data-aos-delay="700">
+							<h3>Travel by the Stars: Where to Go Based on Your Sign</h3>
+						</div>
+						<div class="slider-desc" data-aos="fade-up" data-aos-delay="800">
+							<p>The exact time of year you were born has everything to do with how you traverse the globe and what kinds of places are most suited to you. In response to the popularity of our last astrological roundup...</p>
+						</div>
+						<div class="contribute-by" data-aos="fade-up" data-aos-delay="900">
+							<p>CONTRIBUTED BY <span>REBECCA GORDON</span></p>
+						</div>
+					</div>
+					<div class="slider-content">
+						<div class="slider-image bottom-right-curve" data-aos="fade-up" data-aos-delay="500">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/home-slider-3.png">
+						</div>
+						<div class="travel-by" data-aos="fade-up" data-aos-delay="600">
+							<span>TRAVEL CULTURE - 10.06.2021</span>
+						</div>
+						<div class="slider-Heding" data-aos="fade-up" data-aos-delay="700">
+							<h3>Travel by the Stars: Where to Go Based on Your Sign</h3>
+						</div>
+						<div class="slider-desc" data-aos="fade-up" data-aos-delay="800">
+							<p>The exact time of year you were born has everything to do with how you traverse the globe and what kinds of places are most suited to you. In response to the popularity of our last astrological roundup...</p>
+						</div>
+						<div class="contribute-by" data-aos="fade-up" data-aos-delay="900">
+							<p>CONTRIBUTED BY <span>REBECCA GORDON</span></p>
+						</div>
+					</div>
+					<div class="slider-content">
+						<div class="slider-image bottom-right-curve" data-aos="fade-up" data-aos-delay="500">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/home-slider-3.png">
+						</div>
+						<div class="travel-by" data-aos="fade-up" data-aos-delay="600">
+							<span>TRAVEL CULTURE - 10.06.2021</span>
+						</div>
+						<div class="slider-Heding" data-aos="fade-up" data-aos-delay="700">
+							<h3>Travel by the Stars: Where to Go Based on Your Sign</h3>
+						</div>
+						<div class="slider-desc" data-aos="fade-up" data-aos-delay="800">
+							<p>The exact time of year you were born has everything to do with how you traverse the globe and what kinds of places are most suited to you. In response to the popularity of our last astrological roundup...</p>
+						</div>
+						<div class="contribute-by" data-aos="fade-up" data-aos-delay="900">
+							<p>CONTRIBUTED BY <span>REBECCA GORDON</span></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="button-1" data-aos="fade-up" data-aos-delay="1000">
+				<a href="javascript:void(0)">MORE ITINERARIES, IDEAS AND INSPIRATION</a>
+			</div>
+		</div>
+	</section>
+	<!-- slider-image-section -->
+
+	<!-- all-aboout-know -->
+	<section class="all-aboout-know-section">
+		<div class="all-about-know-main d-flex flex-wrap">
+			<div class="all-about-know-content padding-left">
+				<div class="about-know-desc">
+					<div class="about-know-heading" data-aos="fade-up">
+						<h2>It's all about who you know</h2>
+					</div>
+					<div class="about-desc" data-aos="fade-up" data-aos-delay="500">
+						<p>
+							Our relationships allow us to clear priority waitlists, allocate upgrades, and offer you exclusive amenities. As they say, “you can’t VIP yourself,” which is where we come in. Our industry clout combined with our team’s personal relationships gives you an edge that takes precedence over even the most prestigious credit card.
+						</p>
+					</div>
+					<div class="all-know-img">
+						<div class="images" data-aos="fade-up" data-aos-delay="300">
+							<div class="img">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/know-1.png">
+							</div>
+							<div class="content">
+								<p>Upgrade upon arrival, subject to availability</p>
+							</div>
+						</div>
+						<div class="images" data-aos="fade-up" data-aos-delay="400">
+							<div class="img">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/know-3.png">
+							</div>
+							<div class="content">
+								<p>Daily full breakfast for two guests per bedroom</p>
+							</div>
+						</div>
+						<div class="images" data-aos="fade-up" data-aos-delay="500">
+							<div class="img">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/know-2.png">
+
+							</div>
+							<div class="content">
+								<p>Complimentary one-way private transfers</p>
+							</div>
+						</div>
+						<div class="images" data-aos="fade-up" data-aos-delay="600">
+							<div class="img">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/images/know-4.png">
+							</div>
+							<div class="content">
+								<p>Early check-in/late check-out, subject to availability</p>
+							</div>
+						</div>
+					</div>
+					<div class="upgrade-btn" data-aos="fade-up" data-aos-delay="700">
+						<div class="button-2">
+							<a href="javascript:void(0)">UPGRADE MY STAY</a>
+						</div>
+					</div>
+				</div>
+				<div class="full-img" data-aos="zoom-in-up">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/you-know-1.png">
+				</div>
+			</div>
+			<div class="about-knw-right-content">
+				<div class="stamp" data-aos="zoom-in">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/stamp.png">
+				</div>
+				<div class="right-full-img" data-aos="fade-left">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/you-know-2.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- all-aboout-know -->
+
+	<!-- partners -->
+	<section>
+		<div class="partners-section">
+			<div class="container">
+				<div class="partners-logs d-flex flex-wrap align-items-center">
+					<!--  <p>As Seen In</p> -->
+					<ul class="d-flex flex-wrap align-items-center">
+						<li data-aos="zoom-in" data-aos-delay="300"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/bazaar.png"></li>
+						<li data-aos="zoom-in" data-aos-delay="400"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/traveler.png"></li>
+						<li data-aos="zoom-in" data-aos-delay="500"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-3.png"></li>
+						<li data-aos="zoom-in" data-aos-delay="600"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logs-4.png"></li>
+						<li data-aos="zoom-in" data-aos-delay="700"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logs-5.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- partners -->
+
+	<!-- takemeto -->
+	<section class="take-me-to-section">
+		<div class="container">
+			<div class="take-me-heading" data-aos="fade-up" data-aos-delay="300">
+				<h2>#smartflyertakemeto</h2>
+			</div>
+			<div class="take-me-desc" data-aos="fade-up" data-aos-delay="400">
+				<p>Inspiration for your next getaway</p>
+			</div>
+			<div class="take-me-img d-flex flex-wrap">
+				<div class="take-me-content col-4" data-aos="fade-up" data-aos-delay="500">
+					<div class="img">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/france.png">
+					</div>
+					<div class="take-desc">
+						<p>LA RÉSERVE RAMATUELLE</p>
+						<span>Ramatuelle, France</span>
+					</div>
+				</div>
+				<div class="take-me-content col-4" data-aos="fade-up" data-aos-delay="600">
+					<div class="img">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/paris.png">
+					</div>
+					<div class="take-desc">
+						<p>SAINT JAMES PARIS</p>
+						<span>Paris, France</span>
+					</div>
+				</div>
+				<div class="take-me-content col-4" data-aos="fade-up" data-aos-delay="600">
+					<div class="img">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/partner-conrad.png">
+					</div>
+					<div class="take-desc">
+						<p>SAINT JAMES PARIS</p>
+						<span>Paris, France</span>
+					</div>
+				</div>
+			</div>
+			<div class="plan-trip">
+				<p>Plan your trip with us</p>
+			</div>
+		</div>
+	</section>
+	<!-- takemeto -->
+
+	<!-- travel-advisor -->
+	<section class="travel-advisor-section">
+		<div class="container">
+			<div class="travel-center-content">
+				<div class="travel-advisor-heading" data-aos="fade-up" data-aos-delay="300">
+					<h2>Match with a SmartFlyer Travel Advisor</h2>
+				</div>
+				<div class="travel-advisor-desc" data-aos="fade-up" data-aos-delay="400">
+					<p>
+						Our advisors have traveled the globe, covering ground from the world's most sought-after cities to the gems you haven't even heard of (yet, that is). Connect with a SmartFlyer travel advisor to begin planning your next adventure.
+					</p>
+				</div>
+				<div class="travel-advisor-selector d-flex flex-wrap" data-aos="fade-up" data-aos-delay="500">
+					<p>Find Your Expert In...</p>
+					<div class="select-dropdown">
+						<select class="custom-selector">
+							<option value="" disabled selected>select one</option>
+							<option value="red">red</option>
+							<option value="black">black</option>
+						</select>
+					</div>
+					<div class="button">
+						<a href="javascript:void(0)"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/white-search.svg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- travel-advisor -->
+
+	<section class="travel-advisor-image">
+		<div class="container">
+			<div class="travel-advisor-wrap">
+				<div class="left">
+					<div class="image" data-aos="fade-up" data-aos-delay="300">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/travel-advisors-1.png">
+					</div>
+				</div>
+				<div class="center">
+					<div class="image" data-aos="fade-up" data-aos-delay="400">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/travel-advisors-2.png">
+					</div>
+					<div class="image" data-aos="fade-up" data-aos-delay="500">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/travel-advisors-3.png">
+					</div>
+					<div class="image" data-aos="fade-up" data-aos-delay="600">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/travel-advisors-5.png">
+					</div>
+				</div>
+				<div class="right">
+					<div class="image" data-aos="fade-up" data-aos-delay="700">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/images/travel-advisors-4.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Join a Team -->
+	<section class="join-team text-center">
+		<div class="container">
+			<div class="join-team-wrap">
+				<h2 data-aos="fade-up" data-aos-delay="300">Interested in up-leveling your career in travel?</h2>
+				<div data-aos="fade-up" data-aos-delay="400">
+					<p>Connect with our Affiliates Team to learn more about what it means to be an independent contractor at SmartFlyer.</p>
+				</div>
+				<div class="button-1" data-aos="fade-up" data-aos-delay="500">
+					<a href="<?php echo get_site_url(); ?>/how-to-become-a-luxury-travel-advisor">JOIN THE TEAM</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Join a Team -->
+
+</div>
+
+<?php get_footer(); ?>

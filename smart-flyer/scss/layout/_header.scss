@@ -1,0 +1,1045 @@
+
+header {
+
+  position: relative;
+
+  @include breakpoint($max: 860px) {
+
+    padding-bottom: 17px;
+    line-height: 0;
+
+  }
+
+}
+
+.header-bottom {
+
+  position: relative;
+  margin-top: 24px;
+
+  @include breakpoint($max: 860px) {
+
+    margin-top: 12px;
+
+  }
+
+}
+
+.header-socials {
+
+  @include alignment(absolute, vertical);
+
+  left: 35px;
+  line-height: 0;
+
+  @include breakpoint($max: 860px) {
+
+    display: none;
+
+  }
+
+  a {
+
+    transition: all .3s;
+
+    &:hover {
+
+      opacity: .7;
+
+    }
+
+  }
+
+  svg {
+
+    width: 14px;
+    height: 16px;
+    margin-right: 24px;
+    fill: $light-grey;
+
+  }
+
+}
+
+nav {
+
+  text-align: center;
+
+  @include breakpoint($max: 860px) {
+
+    display: none;
+
+  }
+
+  a {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: $brand;
+    letter-spacing: 2.81px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0 20px;
+    border-bottom: solid 2px transparent;
+    transition: all .3s;
+    padding: 0;
+    position: relative;
+
+    &::after {
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 2px;
+      margin-top: 1px;
+      height: 2px;
+      background-color: transparent;
+      content: ' ';
+      transition: all .3s;
+
+    }
+
+    &.active,
+    &:hover {
+
+      &::after {
+
+        background-color: $brand;
+
+      }
+
+    }
+
+  }
+
+}
+
+.header-call {
+
+  @include alignment(absolute, vertical);
+
+  right: 35px;
+  padding-top: 2px;
+
+  font-family: $serif;
+  font-weight: $book;
+  font-size: 12px;
+  color: $grey;
+  letter-spacing: 1px;
+  line-height: 12px;
+  display: none;
+
+  @include breakpoint($max: 860px) {
+
+    @include alignment(static);
+    @include transform(none);
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  span {
+
+    @include breakpoint($max: 1100px) {
+
+      display: none;
+
+    }
+
+  }
+
+  a {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: $dark-grey;
+    letter-spacing: 1.7px;
+    line-height: 14px; 
+    vertical-align: text-top;
+    //margin-left: 17px;
+    text-transform: uppercase;
+    color: $brand;
+
+  }
+
+  .arrow-right-large {
+
+    width: 14px;
+    height: 8px;
+    vertical-align: middle;
+    margin-left: 6px;
+
+  }
+
+}
+
+.header-top {
+
+  position: relative;
+  margin: 35px 0 0;
+
+  @include breakpoint($max: 860px) {
+
+    margin: 17px 0 0;
+
+  }
+
+}
+
+.header-controls {
+
+  @include alignment(absolute, vertical);
+
+  left: 35px;
+  display: inline-block;
+
+  @include breakpoint($max: 860px) {
+
+    display: none;
+
+  }
+
+  svg {
+
+    width: 19px;
+    height: 16px;
+    vertical-align: text-bottom;
+    margin-right: 10px;
+    fill: $light-grey;
+    transition: all .3s; 
+
+  }
+
+  span {
+
+    font-family: $serif;
+    font-weight: $bold;
+    font-size: 13.8px;
+    color: $light-grey;
+    line-height: 14px;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: all .3s; 
+
+    &.active,
+    &:hover {
+
+      color: $brand;
+
+      svg {
+
+        fill: $brand;
+
+      }
+
+    }
+
+  }
+
+
+}
+
+a.main-logo {
+
+  display: block;
+  margin: 0 auto;
+  width: 480px;
+
+  @include breakpoint($max: 960px) {
+
+    width: 360px;
+
+  }
+
+  @include breakpoint($max: 500px) {
+
+    width: 210px;
+
+  }
+
+  img {
+    
+    width: 100%;
+    height: auto;
+
+  }
+
+  svg {
+
+    width: 480px;
+    height: 48px;
+    max-width: 100%;
+
+    @include breakpoint($max: 500px) {
+
+      height: 20px;
+
+    }
+
+  }
+
+}
+
+.header-cta {
+
+  @include alignment(absolute, vertical);
+
+  right: 35px;
+
+  @include breakpoint($max: 860px) {
+
+    display: none;
+
+  }
+
+}
+
+.header-mobile-controls {
+
+  display: none;
+
+  @include breakpoint($max: 860px) {
+
+    display: inline-block;
+
+  }
+
+  .mob-search-trigger {
+
+    @include alignment(absolute, vertical);
+
+    left: 17px;
+    z-index: 999;
+
+  }
+
+  svg {
+
+    width: 21px;
+    height: 20px;
+    fill: $brand;
+
+  }
+
+  .hamburger {
+
+    @include alignment(absolute, vertical);
+
+    right: 17px;
+    margin-right: -15px;
+    z-index: 999;
+
+  }
+
+}
+
+.mobile-menu {
+
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  padding: 18px;
+  z-index: 9999;
+  height: 125vh;
+  overflow: auto;
+
+  .mob-nav {
+
+    text-align: center;
+
+    a {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      color: $brand;
+      letter-spacing: 2px;
+      line-height: 55px;
+      text-transform: uppercase;
+      display: block;
+
+    }
+
+  }
+
+  .mob-social {
+
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 48px;
+
+    svg {
+
+      width: 17px;
+      height: 17px;
+      fill: $light-grey;
+      margin: 0 15px;
+
+    }
+
+  }
+
+  form {
+
+    //margin-bottom: 22px;
+
+    svg {
+
+      position: absolute;
+
+      &.newsletter-icon {
+
+        left: 0;
+        width: 26px;
+        height: 20px;
+        fill: $light-grey;
+
+      }
+
+      &.arrow-right-large {
+
+        right: 0;
+        width: 34px;
+        height: 16px;
+        top: 0;
+
+      }
+
+    }
+
+    input {
+
+      @include appearance(none); 
+
+      background: transparent;
+      border: 0;
+      border-bottom: solid 1px $light-grey;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      display: block;
+      width: 100%;
+      padding: 0 40px;
+      margin-bottom: 8px;
+      border-radius: 0;
+
+    }
+
+    .message {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 18px;
+      line-height: 18px;
+
+    }
+
+  }
+
+  .button {
+
+    width: 100%;
+    font-size: 16px;
+
+    svg {
+
+      margin-bottom: 2px;
+
+    }
+
+  }
+
+}
+
+.touch-slideout {
+
+  position: fixed;
+  width: 50%;
+  top: 0;
+  right: -100%;
+  background-color: $white;
+  z-index: 9999999999;
+  height: 100vh;
+  padding: 110px 55px 0;
+  line-height: 0;
+  font-size: 0;
+  transition: all .5s;
+
+  @include breakpoint($max: 960px) {
+
+    width: 66%;
+
+  }
+
+  @include breakpoint($max: 700px) {
+
+    width: 75%;
+    padding: 80px 24px 0;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 80px;
+
+  }
+
+  a {
+
+    color: $brand;
+
+    &:visited {
+
+      color: $brand; 
+
+    }
+
+  }
+
+  .cover {
+
+    position: absolute;
+    right: 100%;
+    width: 300%;
+    background-color: rgba($brand, .75);
+    content: ' ';
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: 0s;
+    pointer-events: none;
+
+    @include breakpoint($max: 960px) {
+
+      width: 51.5%;
+
+    }
+
+    @include breakpoint($max: 700px) {
+
+      width: 33.5%;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      display: none;
+
+    }
+
+  }
+
+  &.open {
+
+    right: 0;
+
+    .cover {
+
+      opacity: 1;
+      pointer-events: all;
+      transition-delay: .3s;
+
+    }
+
+  }
+
+  > span {
+
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    display: inline-block;
+    cursor: pointer;
+
+    @include breakpoint($max: 700px) {
+
+      top: 24px;
+      right: 24px;
+
+    }
+
+    svg {
+
+      fill: $brand;
+      width: 35px;
+      height: 35px;
+
+    }
+
+  }
+
+  h2 {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(50% - 20px);
+    margin-right: 40px;
+    font-family: $display;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 46px;
+    letter-spacing: 0;
+    color: $dark-grey;
+    margin-bottom: 40px;
+    margin-top: 0;
+
+    @include breakpoint($max: 500px) {
+
+      width: 100%;
+      margin-bottom: 12px;
+
+    }
+
+  }
+
+  > p {
+
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(50% - 20px);
+    margin: 0 0 40px;
+    font-family: $serif;
+    font-weight: $book;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-grey;
+
+    @include breakpoint($max: 500px) {
+
+      width: 100%;
+
+    }
+
+  }
+
+  .ninja-forms-response-msg {
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-grey;
+    margin-bottom: 12px;
+
+  }
+
+  form {
+
+    @include justifyed();
+
+    .field-wrap {
+
+      display: inline-block;
+      width: calc(50% - 20px);
+      vertical-align: top;
+
+      @include breakpoint($max: 400px) {
+
+        width: 100%;
+
+      }
+
+      &.textarea-wrap {
+
+        width: 100%;
+        display: inline-block;
+
+      }
+
+      &.submit-wrap {
+
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        .button {
+
+          @include transform(none);
+
+          position: static;
+          width: 154px;
+          display: inline-block;
+          background-color: $brand;
+          font-family: $sans-serif;
+          font-weight: bold;
+          font-size: 15px;
+          color: $white;
+          letter-spacing: 1.66px;
+          line-height: 15px;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 19.5px 0;
+          transition: all .3s;
+
+
+        }
+
+      }
+
+      &.checkbox-wrap {
+
+        width: 100%;
+        text-align: left;
+
+      }
+
+    }
+
+    input {
+
+      @include placecolor($black);
+
+      font-size: 20px;
+      font-family: $serif;
+      font-weight: $book;
+      line-height: 20px;
+      letter-spacing: 0;
+      margin-bottom: 40px;
+      border: 0;
+      border-bottom: solid 1px $light-grey;
+      padding: 0 0 3px;
+
+      @include breakpoint($max: 500px) {
+
+        width: 100%;
+
+      }
+
+      &:focus {
+
+        outline: none;
+
+      }
+
+    }
+
+    textarea {
+
+      display: inline-block;
+      width: 100%;
+      background-color: $lightest-grey;
+      padding: 20px;
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0;
+      border: 0;
+      margin-bottom: 34px;
+      height: 130px;
+
+      &:focus {
+
+        outline: none;
+
+      }
+
+    }
+
+    button {
+
+      border: 0;
+
+    }
+
+  }
+
+}
+
+.header-search,
+.header-newsletter {
+
+  padding: 84px 24px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: $white;
+  display: none;
+  z-index: 900;
+
+  @include breakpoint($max: 860px) {
+
+    padding: 24px;
+
+  }
+
+  form {
+
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+
+    input {
+
+      width: 100%;
+      border: 0;
+      font-family: $display;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 43px;
+      border-bottom: solid 1px $light-grey;
+
+      @include breakpoint($max: 500px) {
+
+        font-size: 24px;
+        line-height: 36px;
+
+      }
+
+      &:focus {
+
+        outline: none;
+
+      }
+
+    }
+
+    button {
+
+      @include alignment(absolute, vertical);
+      right: 0;
+
+      border: 0;
+      background: none;
+
+      svg {
+
+        width: 55px;
+        height: 25px;
+
+        @include breakpoint($max: 500px) {
+
+          width: 30px;
+          height: 30px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.newsletter-modal {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  display: none;
+
+  &__shade {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $brand;
+    opacity: .7;
+    z-index: 1;
+
+  }
+
+  &__close {
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    svg {
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      stroke: $brand;
+
+    }
+
+  }
+
+  &__inner {
+
+    background: $white;
+    max-width: 915px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    padding: 84px 55px 101px;
+    text-align: center;
+
+    @include breakpoint($max: 600px) {
+
+      padding: 60px 12px;
+
+    }
+
+    h2 {
+
+      font-family: $display;
+      font-weight: $light;
+      font-size: 46px;
+      margin: 0;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 32px;
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 16px auto 0;
+      max-width: 508px;
+
+      @include breakpoint($max: 600px) {
+
+        margin-top: 12px;
+
+      }
+
+    }
+
+    form {
+
+      margin: 30px 0 0;
+
+      @include breakpoint($max: 600px) {
+
+        margin: 20px 0 0;
+
+      }
+
+      .form-row {
+
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint($max: 600px) {
+
+          display: block;
+
+        }
+        
+        &.message{
+	        justify-content: center;
+        }
+
+        + .form-row {
+
+          margin-top: 28px;
+
+          @include breakpoint($max: 600px) {
+
+            margin-top: 20px;
+
+          }
+
+        }
+
+        &__inner {
+
+          width: calc(50% - 12px);
+
+          @include breakpoint($max: 600px) {
+
+            width: 100%;
+
+            + .form-row__inner {
+
+              margin-top: 20px;
+
+            }
+
+          }
+
+          input {
+
+            @include placecolor($light-grey);
+            display: block;
+            width: 100%;
+            border: 0;
+            padding: 15px 17px 14px;
+            font-family: $serif;
+            font-weight: $book;
+            font-size: 18px;
+            line-height: 1;
+            color: $black;
+            background: $lightest-grey;
+
+          }
+
+        }
+
+      }
+
+      button {
+
+        background: $brand;
+        color: $white;
+        border: 0;
+        padding: 16px 21px 14px;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 2.5px;
+        font-weight: bold;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint($max: 600px) {
+
+          margin-left: 0;
+          transform: none;
+
+        }
+
+        svg {
+
+          margin-left: 16px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 6px;
+          height: 9px;
+          fill: $white;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

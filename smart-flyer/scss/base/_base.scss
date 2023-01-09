@@ -1,0 +1,559 @@
+
+html {
+
+  overflow-x: hidden;
+
+  &.no-scroll {
+
+    overflow-y: hidden;
+
+  }
+
+}
+
+body {
+  @include transition (all .2s ease-in-out);
+  background-color: $white;
+  color: $text;
+  font-family: $serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.no-scroll {
+
+    overflow-y: hidden;
+
+  }
+
+}
+
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint($max: 600px) {
+
+    padding: 0 20px;
+
+  }
+
+  &.just {
+
+    @include justifyed(); 
+
+  }
+
+  &.flex {
+
+    @include display(flex); 
+
+    @include breakpoint($max: 960px) {
+
+      display: block;
+
+    }
+
+  }
+
+} 
+
+.sprite_hide {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  //@include linkcolor($link, darken);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+  font-weight: normal;
+
+}
+
+input:focus,
+button:focus {
+
+  outline: none;
+
+}
+
+form .message {
+
+  font-size: 12px;
+  margin-top: 6px; 
+
+}
+
+.whole-click {
+
+  cursor: pointer;
+
+}
+
+.just-wrap {
+
+  @include justifyed();
+
+}
+
+.relative {
+
+  position: relative;
+
+}
+
+.button {
+
+  width: 154px;
+  display: inline-block;
+  background-color: $brand;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: $white;
+  letter-spacing: 1.66px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 19.5px 0; 
+  transition: all .3s;
+
+  svg {
+
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    vertical-align: middle;
+    fill: $white;
+    transition: all .3s;
+
+  }
+
+  &:hover,
+  &:visited {
+
+    color: $white;
+
+  }
+
+  &.grow {
+
+    @include breakpoint($max: 600px) {
+
+      width: 100%;
+
+    }
+
+  }
+
+  &.trans {
+
+    background-color: transparent;
+    color: $dark-grey;
+
+    &:hover {
+
+      background-color: transparent;
+
+    }
+
+    svg {
+
+      fill: $dark-grey;
+
+    }
+
+  }
+
+  &:hover {
+
+    background-color: darken($brand, 10%);
+
+    svg {
+
+      @include transform(translateX(6px));
+
+    }
+
+  }
+
+  &.max {
+
+    width: auto;
+    min-width: 156px;
+    padding: 19.5px 20px;
+
+  }
+
+}
+
+.center {
+
+  
+
+}
+
+.inner-center {
+
+  @include alignment(absolute, center);
+
+}
+
+.post {
+
+  text-align: center;
+
+  &.placeholder {
+
+    margin-bottom: 0 !important;
+
+  }
+
+  > img {
+
+    width: 100%;
+
+  }
+
+  span {
+
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: $brand;
+    letter-spacing: 2.3px;
+    line-height: 14px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 22px;
+    transition: all .3s;
+
+    @include breakpoint($max: 800px) {
+
+      margin-top: 4px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      margin-top: 24px;
+      margin-bottom: 5px;
+
+    }
+
+  } 
+
+  h2 {
+
+    font-family: $display;
+    font-size: 25px;
+    color: $brand;
+    line-height: 32px;
+    margin: 0;
+    font-weight: normal;
+    transition: all .3s;
+
+  }
+
+  p {
+
+    font-family: $serif;
+    font-weight: $book;
+    font-size: 14px;
+    color: $dark-grey;
+    line-height: 24px;
+    margin-top: 6px;
+    transition: all .3s;
+
+  }
+  
+}
+
+h2.line { 
+
+  font-size: 22px; 
+  font-family: $display;
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-transform: none;
+  color: $dark-grey;
+  margin-bottom: 38px;
+  margin-top: 0;
+
+  &:before,
+  &:after {
+    background-color: $light-grey;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: inherit;
+    width: 50%;
+    bottom: .3em;
+    opacity: .4;
+
+    @include breakpoint($max: 600px) {
+
+      content: none;
+
+    }
+
+  }
+  
+  &:before {
+    right: 1.5em;
+    margin-left: -50%;
+  }
+  
+  &:after {
+    left: 1.5em;
+    margin-right: -50%;
+  }
+
+}
+
+div[class^='col-'],
+div[class*=' col-'] {
+
+  display: inline-block; 
+  vertical-align: top;
+
+}
+
+.col-3 {
+
+  width: calc(33.333% - 16px);
+
+  @include breakpoint($max: 800px) {
+
+    width: 100%;
+    display: block !important;
+    max-width: 375px;
+    margin: 0 auto 40px;
+
+  }
+
+  @include breakpoint($max: 600px) {
+
+    max-width: 100%; 
+
+  }
+
+}
+
+.col-4 {
+
+  width: calc(25% - 36px);
+
+  @include breakpoint($max: 900px) {
+
+    width: calc(50% - 12px);
+    margin-bottom: 24px;
+
+  }
+
+}
+
+.whole-click-press-image {
+
+  cursor: pointer;
+
+}
+
+.tab {
+
+  display: none;
+
+  @include breakpoint($max: 960px) {
+
+    display: block;
+
+  }
+
+}
+
+.sticky {
+
+  width: inherit;
+
+}
+
+.sticky.fixed {
+
+  position: fixed;
+  bottom: 48px;
+
+  @include breakpoint($max: 960px) {
+
+    position: static;
+
+  }
+
+}
+
+.sticky.fixed-top {
+
+  position: fixed;
+  top: 48px;
+
+  @include breakpoint($max: 960px) {
+
+    position: static;
+
+  }
+
+}
+
+.sticky.stuck {
+
+  position: absolute;
+  bottom: 0;
+
+  @include breakpoint($max: 960px) {
+
+    position: static;
+
+  }
+
+}
+
+
+svg.star {
+
+  fill: $brand;
+
+}
+
+svg.close-icon {
+
+  stroke: $black;
+
+}
+
+.ellip {
+  display: block;
+  height: 100%;
+}
+
+.ellip-line {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  max-width: 100%;
+}
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.explore-main {
+
+  position: relative;
+  padding: 24px 0 0;
+  margin-top: 35px;
+
+  @include breakpoint($max: 860px) {
+
+    margin-top: 0;
+
+  }
+
+  &::before {
+
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 126px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: $lightest-grey;
+    z-index: -1;
+
+  }
+
+}
+
+.explore-grid {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0;
+
+  p {
+
+    text-align: center;
+    margin: 0 0 24px;
+    width: 100%;
+    font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1;
+    padding-top: 3px;
+
+  }
+
+  > a {
+
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+
+    @include breakpoint($max: 600px) {
+
+      width: calc(50% - 10px);
+
+    }
+
+  }
+
+}
+
+body.explore-page {
+
+  .header-call,
+  .header-mobile-controls,
+  .header-bottom,
+  footer {
+
+    display: none;
+
+  }
+
+  .header-top {
+
+    margin: 0;
+
+  }
+
+  header {
+
+    padding: 30px 0;
+
+  }
+
+}

@@ -1,0 +1,1505 @@
+
+.itinerary-hero {
+
+  margin-top: 32px;
+  position: relative; 
+
+  @include breakpoint($max: 860px) {
+
+    margin-top: 0;
+
+  }
+
+  > img {
+
+    display: block;
+    width: 100%;
+    height: calc(100vh - 162px);
+    object-fit: cover;
+
+    @include breakpoint($max: 1060px) {
+
+      height: 600px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      height: 100vw;
+
+    }
+
+  }
+
+  &::before {
+
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 0;
+    opacity: 0.67;
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+
+  }
+
+  .content {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 50px;
+    max-width: 615px;
+    text-align: center;
+    color: $white;
+    font-size: 0;
+    z-index: 1;
+
+    @include breakpoint($max: 600px) {
+
+      margin: 0 20px 36px;
+
+    }
+
+    a {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.31px;
+      display: inline-block;
+      vertical-align: middle;
+      color: $white;
+
+    }
+
+    span {
+
+      font-family: $serif;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: .2px;
+      margin-left: 14px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-bottom: 2px;
+
+    }
+
+    h1 {
+
+      font-family: $display;
+      font-size: 48px;
+      line-height: 55px;
+      letter-spacing: .96px;
+      margin: 4px 0 0;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 40px;
+        line-height: 46px;
+        letter-spacing: .7px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 33px;
+        line-height: 38px;
+        letter-spacing: .66px;
+
+      }
+
+    }
+
+  }
+
+}
+
+.itinerary-article {
+
+  position: relative;
+
+  .itinerary-nav-wrap {
+
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 45px;
+    width: 90px;
+
+    @include breakpoint($max: 1200px) {
+
+      left: 20px;
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+      position: static;
+      background-color: $lightest-grey;
+      text-align: center;
+      padding: 24px 0;
+
+    }
+
+    span {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1.14px;
+      text-transform: uppercase;
+      display: block;
+      transition: all .3s;
+      color: $light-grey;
+      cursor: pointer;
+
+      @include breakpoint($max: 960px) {
+
+        display: inline-block;
+        color: $brand;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 14.4px;
+        line-height: 1;
+        letter-spacing: 1.03px;
+
+      }
+
+      &.active {
+
+        color: $brand;
+
+      }
+
+      + span {
+
+        margin-top: 10px;
+
+        @include breakpoint($max: 960px) {
+
+          margin-top: 0;
+          margin-left: 24px;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.itinerary-wrapper {
+
+  max-width: 710px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoint($max: 800px) {
+
+    max-width: 100%;
+    padding: 0 20px;
+
+  }
+
+  .section-head {
+
+    position: absolute;
+    top: -52px;
+    left: -110px;
+    font-family: $display;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 1;
+    color: $tru-black;
+    opacity: .2;
+    margin: 0;
+    z-index: 0;
+
+    @include breakpoint($max: 960px) {
+
+      left: -36px;
+      font-size: 111px;
+      top: -36px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 72px;
+      left: -10px;
+      top: -24px;
+
+    }
+
+  }
+
+}
+
+.itinerary-intro {
+
+  padding: 60px 0 70px;
+
+  @include breakpoint($max: 800px) {
+
+    padding: 36px 0 36px;
+
+  }
+
+  .intro-copy {
+
+    margin: 0 0 34px;
+    width: 150%;
+
+    @include breakpoint($max: 1530px) {
+
+      width: calc(50vw + 355px - 55px);
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      margin-bottom: 24px;
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0;
+      max-width: 710px;
+
+      @include breakpoint($max: 500px) {
+
+        font-size: 16px;
+        line-height: 28px;
+
+      }
+
+      + p {
+
+        margin-top: 12px;
+
+      }
+
+      a {
+
+        color: $brand;
+        font-weight: 500;
+
+      }
+
+    }
+
+    p:first-child {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 40px;
+      max-width: 100vw;
+
+      @include breakpoint($max: 960px) {
+
+        font-size: 24px;
+        line-height: 32px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 20px;
+        line-height: 28px;
+      
+      }
+
+    }
+
+  }
+
+  .details {
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: flex-start;
+
+    @include breakpoint($max: 1200px) {
+
+      min-height: 1px !important;
+
+    }
+
+  }
+
+  .detail {
+
+    width: 50%;
+    align-self: flex-start;
+    margin-bottom: 28px;
+    padding-right: 22px;
+
+    > span {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: block;
+      margin: 0 0 10px;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 14px;
+        letter-spacing: .9px;
+        margin: 0 0 8px;
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 14px;
+        line-height: 20px;
+
+      }
+
+    }
+
+    &:nth-of-type(3) {
+
+      @include breakpoint($max: 600px) {
+
+        width: 100%;
+        padding-right: 0;
+
+      }
+
+    }
+
+    &:last-of-type {
+
+      @include breakpoint($max: 1200px) {
+
+        width: 100%;
+        padding-right: 0;
+
+      }
+
+    }
+
+  }
+
+  .author-detail {
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    max-width: 240px;
+    width: 50%;
+
+    @include breakpoint($max: 1200px) {
+
+      position: relative;
+      left: 0;
+      max-width: 100%;
+      width: 100%;
+      padding-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      display: block;
+
+    }
+
+    // @include breakpoint($max: 600px) {
+
+    //   width: auto;
+    //   margin-left: -20px;
+    //   margin-right: -20px;
+    //   padding-left: 20px;
+    //   padding-right: 20px;
+    //   max-width: 200%;
+    //   white-space: nowrap;
+    //   overflow: auto;
+    //   padding-bottom: 0;
+    //   margin-bottom: 24px;
+
+    //   span {
+
+    //     display: inline-block;
+    //     vertical-align: middle;
+    //     margin-right: 16px;
+    //     margin-bottom: 0;
+    //     font-size: 11px;
+    //     letter-spacing: .73px;
+
+    //   }
+
+    // }
+
+    .detail {
+
+      width: 100%;
+
+      @include breakpoint($max: 1200px) {
+
+        width: 50%;
+
+      }
+
+      span {
+
+        font-size: 11px;
+        letter-spacing: .7px;
+        color: $light-grey;
+
+      }
+
+    }
+
+    a,
+    div.author {
+
+      color: $brand;
+      position: relative;
+      display: flex;
+
+      // display: block;
+      // position: relative;
+      // padding-left: 58px;
+      // padding-right: 18px;
+      // font-family: $display;
+      // font-weight: normal;
+      // font-size: 22px;
+      // line-height: 1;
+      // color: $brand;
+      // position: relative;
+      // margin-top: 22px;
+
+      // @include breakpoint($max: 600px) {
+
+      //   display: inline-block;
+      //   padding-right: 0;
+      //   padding-left: 0;
+      //   font-size: 14px;
+      //   line-height: 1;
+      //   margin-top: 0;
+
+      // }
+
+      img {
+
+        width: 43px;
+        height: 43px;
+        display: block;
+        border-radius: 50%;
+        align-self: center;
+        object-fit: cover;
+
+        @include breakpoint($max: 1200px) {
+
+          width: 30px;
+          height: 30px;
+
+        }
+
+        + p {
+
+          padding-left: 16px;
+          width: calc(100% - 43px);
+          padding-right: 20px;
+          align-self: center;
+
+          @include breakpoint($max: 1200px) {
+
+            width: calc(100% - 30px);
+
+          }
+
+        }
+
+      }
+
+      svg {
+
+        width: 6px;
+        height: 12px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+
+        @include breakpoint($max: 1200px) {
+
+          position: static;
+          margin-left: 12px;
+          display: none;
+
+        }
+
+        @include breakpoint($max: 600px) {
+
+          display: none;
+
+        }
+
+      }
+
+      + a,
+      + div.author {
+
+        margin-top: 32px;
+
+        @include breakpoint($max: 1200px) {
+
+          margin-top: 0;
+
+        }
+
+      }
+
+    }
+
+    div.author {
+
+      color: $black;
+
+    }
+
+  }
+
+  .author-detail .authors {
+
+    @include breakpoint($max: 1200px) {
+
+      width: 100%;
+      padding-right: 0;
+
+      span {
+
+        position: relative;
+        top: 8px;
+        font-family: $sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+
+      }
+
+      a {
+
+        margin-left: 20px;
+
+      }
+
+      p {
+
+        padding-right: 0;
+        padding-left: 12px;
+
+      }
+
+    }
+
+    .slick-arrow {
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+      margin: 0;
+      transition: all .3s;
+
+      svg {
+
+        width: 6px;
+        height: 12px;
+        margin: auto 0;
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+
+      &.slick-disabled {
+
+        pointer-events: none;
+        opacity: 0;
+
+      }
+
+      &.slick-next {
+
+        left: 100%;
+        padding-left: 12px;
+
+        &::before {
+
+          position: absolute;
+          top: 0;
+          right: 100%;
+          bottom: 0;
+          width: 24px;
+          content: ' ';
+          display: block;
+          background-image: linear-gradient(90deg, rgba($white,0.00) 0%, $white 100%);
+
+        }
+
+      }
+
+      &.slick-prev {
+
+        right: 100%;
+        padding-right: 12px;
+
+        svg {
+
+          transform: translateY(-50%) rotate(180deg);
+
+        }
+
+      }
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      overflow: auto;
+      white-space: nowrap;
+      width: auto;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 0 20px;
+      margin-bottom: 20px;
+
+      > span {
+
+        display: inline-block;
+        vertical-align: middle;
+        top: 0;
+        margin: 0;
+
+      }
+
+      > a {
+
+        display: inline-flex;
+        vertical-align: middle;
+
+        img {
+
+          width: 16px;
+          height: 16px;
+
+        }
+
+        p {
+
+          width: calc(100% - 16px);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .credits {
+
+    @include breakpoint($max: 1200px) {
+
+      width: 100%;
+      margin-bottom: 28px;
+
+      .detail {
+
+        width: auto;
+        padding: 0;
+        margin: 0;
+
+        span {
+
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0;
+
+        }
+
+        > p,
+        > a {
+
+          margin-left: 12px;
+          margin-right: 24px;
+          display: inline-block;
+          vertical-align: middle;
+
+        }
+
+      }
+
+    }
+
+    .slick-arrow {
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+      margin: 0;
+      transition: all .3s;
+
+      svg {
+
+        width: 6px;
+        height: 12px;
+        margin: auto 0;
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+
+      &.slick-disabled {
+
+        pointer-events: none;
+        opacity: 0;
+
+      }
+
+      &.slick-next {
+
+        left: 100%;
+        padding-left: 12px;
+
+        &::before {
+
+          position: absolute;
+          top: 0;
+          right: 100%;
+          bottom: 0;
+          width: 24px;
+          content: ' ';
+          display: block;
+          background-image: linear-gradient(90deg, rgba($white,0.00) 0%, $white 100%);
+
+        }
+
+      }
+
+      &.slick-prev {
+
+        right: 100%;
+        padding-right: 12px;
+
+        svg {
+
+          transform: translateY(-50%) rotate(180deg);
+
+        }
+
+      }
+
+    }
+
+    @include breakpoint($max: 800px) {
+
+      overflow: auto;
+      white-space: nowrap;
+      width: auto;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 0 20px;
+      margin-bottom: 18px;
+
+      .detail {
+
+        display: inline-block;
+
+        &:last-of-type {
+
+          p {
+
+            margin-right: 0;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.itinerary-stay {
+
+  background-color: $dark-grey;
+  padding: 127px 0 120px;
+  overflow: hidden;
+
+  @include breakpoint($max: 600px) {
+
+    padding: 62px 0;
+
+  }
+
+  .stay-copy {
+
+    font-family: $sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 22px;
+    padding-right: 100px;
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+  }
+
+  .stay-slider {
+
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 24px);
+    color: $white;
+
+    .slick-list {
+
+      overflow: visible;
+
+    }
+
+    .prev-arrow {
+
+      position: absolute;
+      bottom: 100%;
+      right: 72px;
+      margin-bottom: 26px;
+      transition: all .3s;
+      cursor: pointer;
+
+      @include breakpoint($max: 600px) {
+
+        display: none !important;
+
+      }
+
+      svg {
+
+        width: 24px;
+        height: 16px;
+        transform: rotate(180deg);
+
+      }
+
+    }
+
+    .next-arrow {
+
+      position: absolute;
+      bottom: 100%;
+      right: 24px;
+      margin-bottom: 26px;
+      transition: all .3s;
+      cursor: pointer;
+
+      @include breakpoint($max: 600px) {
+
+        display: none !important;
+
+      }
+
+      svg {
+
+        width: 24px;
+        height: 16px;
+
+      }
+
+    }
+
+    .slick-disabled {
+
+      opacity: .2;
+
+    }
+
+  }
+
+  .stay-slide {
+
+    margin-right: 24px;
+
+    &:focus {
+
+      outline: 0;
+
+    }
+
+    .image-wrap {
+
+      position: relative;
+
+      img {
+
+        display: block;
+        width: 100%;
+
+      }
+
+      span {
+
+        display: block;
+        font-family: $serif;
+        font-weight: $book;
+        font-size: 11px;
+        line-height: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0 80px 14px 22px;
+
+
+      }
+
+    }
+
+    h3 {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 1.18px;
+      text-transform: uppercase;
+      margin: 28px 0 14px;
+
+      a {
+
+        color: $white;
+
+      }
+
+    }
+
+    .text-wrap {
+
+      position: relative;
+      height: 144px;
+      overflow: hidden;
+      transition: all .3s;
+
+      &::after {
+
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-image: linear-gradient(-180deg, rgba($dark-grey,0.00) 0%, $dark-grey 100%);
+
+      }
+
+      &.short,
+      &.tall {
+
+        &::after {
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 15px;
+      line-height: 24px;
+      margin: 0;
+      
+
+    }
+
+    .content-cta {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 1.14px;
+      display: block;
+      margin-top: 22px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+    }
+
+  }
+
+  .inner-slider {
+
+    position: relative;
+
+    .image-wrap {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s;
+
+      &.active {
+
+        position: static;
+        z-index: 1;
+        opacity: 1;
+        pointer-events: all;
+
+      }
+
+    }
+
+    .inner-slider-controls {
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $dark-grey;
+      font-size: 0;
+      line-height: 0;
+      padding: 16px 0 0 18px;
+
+      span {
+
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        svg {
+
+          width: 10px;
+          height: 18px;
+          fill: $white;
+
+        }
+
+        &:first-of-type {
+
+          margin-right: 23px;
+
+          svg {
+
+            transform: rotate(180deg);
+
+          }
+
+        }
+
+        &.disabled {
+
+          opacity: .2;
+          pointer-events: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.itinerary-highlights {
+
+  padding: 150px 0 100px;
+  background-color: $lightest-grey;
+
+  @include breakpoint($max: 600px) {
+
+    padding: 93px 0 88px;
+
+  }
+
+  .section-head {
+
+    color: $line-grey;
+    opacity: .55;
+
+    @include breakpoint($max: 600px) {
+
+      top: -42px;
+
+    }
+
+  }
+
+  .highlight-sketch {
+
+    position: absolute; 
+    top: -52px;
+    right: -82px;
+    transform: rotate(9deg);
+    width: 136px;
+    height: auto;
+    mix-blend-mode: multiply;
+    z-index: 1;
+
+    @include breakpoint($max: 800px) {
+
+      display: none;
+
+    }
+
+  }
+
+  .highlights-list {
+
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-bottom: solid 1px $line-grey;
+    padding-bottom: 10px;
+    z-index: 2;
+
+    li {
+
+      font-family: $sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      list-style: none;
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 16px;
+        line-height: 23px;
+
+      }
+
+      span {
+
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: .2px;
+
+        @include breakpoint($max: 600px) {
+
+          font-size: 18px 
+
+        }
+
+      }
+
+      a {
+
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: .8px;
+        margin-left: 8px;
+        text-transform: uppercase;
+        color: $brand;
+
+      }
+
+      + li {
+
+        padding-top: 10px;
+        border-top: solid 1px $line-grey;
+        margin-top: 10px;
+
+      }
+
+    }
+
+  }
+
+}
+
+.itinerary-main {
+
+  .main-image {
+
+    width: 100%;
+    height: auto;
+    display: block; 
+    max-width: 100%;
+
+    @include breakpoint($max: 960px) {
+
+      height: 600px;
+      object-fit: cover;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      height: 100vw;
+
+    }
+
+  }
+
+  .main-title {
+
+    font-family: $display;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 1;
+    margin: -80px 0 72px -130px;
+    color: rgba($line-grey, .55);
+    position: relative;
+
+    @include breakpoint($max: 960px) {
+
+      margin-left: 0;
+      font-size: 111px;
+      margin-top: -60px;
+      margin-bottom: 60px;
+
+    }
+
+    @include breakpoint($max: 600px) {
+
+      font-size: 76px;
+      margin-top: -40px;
+      margin-bottom: 40px;
+
+    }
+
+    span {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 80px;
+      color: $white;
+      overflow: hidden;
+
+      @include breakpoint($max: 960px) {
+
+        height: 60px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        height: 40px;
+
+      }
+
+    }
+
+  }
+
+  .itinerary-day {
+
+    width: calc(100% + 186px);
+    position: relative;
+
+    @include breakpoint($max: 1250px) {
+
+      width: calc(50% + 50vw - 86px);
+
+    }
+
+    @include breakpoint($max: 960px) {
+
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    }
+
+    .content {
+
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 1;
+      line-height: 24px;
+      padding-bottom: 26px;
+      margin-bottom: 22px;
+      border-bottom: solid 1px $line-grey;
+
+      @include breakpoint($max: 960px) {
+
+        width: 100%;
+        padding-bottom: 0;
+        padding-top: 24px;
+        border-bottom: 0;
+        border-top: solid 1px $line-grey;
+        margin-top: 20px;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 28px;
+
+      }
+
+    }
+
+    span.day {
+
+      font-family: $display;
+      font-weight: normal;
+      font-size: 144px;
+      line-height: 1;
+      position: absolute;
+      top: -6px;
+      right: 100%;
+      margin-right: 36px;
+      white-space: nowrap;
+      color: $line-grey;
+
+      @include breakpoint($max: 1080px) {
+
+        margin-right: 24px;
+
+      }
+
+      @include breakpoint($max: 960px) {
+
+        position: static;
+        width: auto;
+        display: inline-block;
+        margin-bottom: -33px;
+        margin-right: 0;
+
+      }
+
+      @include breakpoint($max: 600px) {
+
+        font-size: 92px;
+        margin-bottom: -22px;
+
+
+      }
+
+      svg {
+
+        height: 106px;
+        width: 38px;
+        margin-bottom: -2px;
+        margin-right: 12px;
+
+        @include breakpoint($max: 600px) {
+
+          width: 24px;
+          height: 68px;
+          margin-right: 6px;
+          margin-bottom: 0;
+
+        }
+
+      }
+
+    }
+
+    span.location {
+
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      width: 186px;
+      padding-left: 28px;
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: uppercase;
+
+      @include breakpoint($max: 960px) {
+
+        position: static;
+        width: auto;
+        display: inline-block;
+        padding-left: 0;
+        align-self: flex-end;
+
+      }
+
+      svg {
+
+        width: 8px;
+        height: 12px;
+        margin-right: 6px;
+
+      }
+
+    }
+
+    &:not(:first-child) {
+
+      margin-top: 108px;
+
+      @include breakpoint($max: 600px) {
+
+        margin-top: 60px;
+
+      }
+
+    }
+
+  }
+
+}

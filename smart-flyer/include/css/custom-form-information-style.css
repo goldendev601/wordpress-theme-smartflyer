@@ -1,0 +1,744 @@
+@font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-Regular.woff2') format('woff2'), url('fonts/Montserrat-Regular.woff') format('woff'), url('fonts/Montserrat-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('fonts/Montserrat-Light.woff2') format('woff2'), url('fonts/Montserrat-Light.woff') format('woff'), url('fonts/Montserrat-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: #000; opacity: 1; /* Firefox */ }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #000; }
+::-ms-input-placeholder { /* Microsoft Edge */
+color: #000; }
+
+.insurance-addon-form .container-custom-scroll { max-width: 1030px; margin: 0 auto; }
+.insurance-addon-form .container-custom-scroll ul.tabs { justify-content: space-between; }
+.insurance-addon-form .container-custom-scroll ul.tabs li:first-child { padding-left: 0; }
+.insurance-addon-form .container-custom-scroll ul.tabs li:last-child { padding-right: 0; }
+.insurance-addon-tab-content .tab_content { display: none; }
+.insurance-addon-tab-content { max-width: 1240px; }
+.insurance-addon-tab-content form .title { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 24px; line-height: 36px; padding-bottom: 12px; }
+.insurance-addon-tab-content .form-property input, .insurance-addon-tab-content .form-property textarea { border-bottom: 1px solid #000000; padding-left: 0; font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-size: 14px; color: #000000; line-height: 19px; padding: 20px 0 10px; }
+.insurance-addon-tab-content .form-property .width50 { margin-bottom: 45px; }
+.insurance-addon-form .custom-scroll { box-shadow: none; background: #FFFFFF; border-top: 1px solid rgba(151, 151, 151, 0.5); }
+.insurance-addon-tab-content .main-title h2 { font-family: 'Canela'; font-weight: 300; font-size: 44px; line-height: 48px; padding: 50px 0; }
+.custom-file-label::after { position: absolute; top: 0; right: 0; bottom: 0; z-index: 3; display: block; color: #4e5154; content: "Browse"; background-color: #f4f5fa; border-left: inherit; border-radius: 0 0.25rem 0.25rem 0; line-height: normal; padding: 0; height: 26px; padding-top: 15px; width: 68.52px; text-align: center; }
+.custom-file-input:lang(en) ~ .custom-file-label::after { content: "Browse"; }
+.custom-file { position: relative; display: inline-block; width: 100%; height: calc(1.25em + 1.5rem + 2px); margin-bottom: 0; overflow: hidden; }
+.custom-file  .custom-file-input { position: relative; z-index: 2; width: 66%; height: calc(1.25em + 1.5rem + 2px); margin: 0; opacity: 0; }
+.custom-file-label { position: absolute; top: 0; right: 0; left: 0; z-index: 1; height: calc(1.25em + 1.5rem + 2px); padding: 0.75rem 1rem; padding-left: 0; font-family: 'Montserrat'; border-radius: 0; border: none; }
+.custom-file-label::before { content: ''; height: 1px; width: 84%; background-color: #000; position: absolute; bottom: 0; }
+.insurance-addon-tab-content .save-btn a { width: 405px; height: 62px; }
+.insurance-addon-tab-content .save-btn { padding-top: 100px; }
+.insurance-addon-tab-content .detailed-policy-label li.width50 { margin-bottom: 20px; }
+.detailed-policy-wrap-to .detailed-policy-label { width: 100%; }
+.detailed-policy-wrap-to { margin: 0 0 14px; }
+.detailed-policy-clone i { position: absolute; }
+.detailed-policy-clone i + input { padding-left: 30px !important; }
+.detailed-policy-clone li { margin-bottom: 10px !important; }
+.padding-left-right i { position: absolute; left: 0; top: 20px; }
+.padding-left-right label.label-margin +div { position: relative; }
+.padding-left-right > ul > li { padding: 0 20px; }
+.padding-left-right { width: 100%; justify-content: space-between; }
+.padding-left-right > ul > li:first-child { padding-left: 0; }
+.padding-left-right > ul > li:last-child { padding-right: 0; }
+.form-main-wrap .main-title-wrap { margin-top: 20px !important; }
+.padding-left-right input { padding-left: 30px !important; }
+.updates-append-to ul.updates-clone:nth-child(2) { display: none; }
+.commissions-append-to ul.commissions-clone:nth-child(2) { display: none; }
+.policies-des { font-family: 'Montserrat'; font-style: normal; font-weight: 300; font-size: 14px; line-height: 20px; }
+.textarea-div textarea { height: 286px; border: 1px solid #000000; padding: 36px 25px !important; font-size: 14px !important; line-height: 34px !important; }
+.textarea-div { padding-top: 57px; }
+.textarea-div label.label-margin { margin-bottom: 20px; }
+.commssion-details { padding-top: 90px; }
+.commssion-details label { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 20px; line-height: 30px; text-transform: capitalize; letter-spacing: 0; padding-bottom: 10px; }
+.header-section .header-left li a { letter-spacing: 0.14em; text-transform: uppercase; color: #224188; font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 14px; line-height: 17px; }
+.header-section { display: flex; align-items: center; flex-wrap: wrap; }
+.header-section .header-left ul { display: flex; flex-wrap: wrap; align-items: center; }
+.header-section .header-left li a { letter-spacing: 0.14em; text-transform: uppercase; color: #224188; font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 14px; line-height: 17px; }
+.header-section .header-left li.submit-approval a { background: #1D3C86; padding: 15px 20px 8px 20px; color: #fff; display: inline-block; }
+.header-section .header-left li.submit-approval { padding-left: 25px; padding-right: 60px; }
+.header-section .header-left ul .header-admin { max-width: 177px; margin-left: auto; }
+.header-section .header-left ul .header-admin .right { padding-right: 5px; }
+.custom-scroll-new-section { z-index: 1; }
+.insurance-form-title { padding-top: 30px; width: 100%; display: flex; align-items: center; justify-content: space-between; text-align: right; flex-wrap: initial; padding-bottom: 33px; padding-left: 55px; padding-right: 55px; }
+.insurance-form-title .title { text-align: left; padding-left: 13px; font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 48px; line-height: 58px; color: #000000; width: 20%; white-space: nowrap; }
+.complete { }
+.complete-form { width: 98px; background: rgb(217 217 217 / 30%); border-radius: 20px; height: 12px; margin-left: 20px }
+.complete-form .complete-grey { border-radius: 20px; height: 100%; background: #224188; }
+.insurance-form-title .complete { margin-left: auto; display: flex; align-items: center; }
+.insurance-form-title .complete { margin-left: auto; }
+
+/*insurance-addon-information*/
+.insurance-addon-info .custom-scroll-section .custom-scroll >ul { max-width: 974px; margin: 0 auto; }
+.insurance-addon-info .review-banner-section:after { background: linear-gradient(1.23deg, rgba(0, 0, 0, 0.8) 0.42%, rgba(0, 0, 0, 0) 98.32%); }
+.info-bottom-image { width: 100%; }
+.info-bottom-image figure { margin: 0; width: 100%; }
+.info-bottom-image figure img { width: 100%; height: 518px; object-fit: cover; display: block; }
+.insurance-addon-info + .subscribe-instagram-section { display: none; }
+.insurance-tab-container { max-width: 1350px; margin: 0 auto; padding-left: 15px; padding-right: 15px; }
+.tabbing-content { display: flex; flex-wrap: wrap; }
+.tabbing-content-left { width: 50%; padding-right: 80px; }
+.tabbing-content-right { width: 50%; }
+.tabbing-content-right .download-btn a { background: rgba(29, 60, 134, 0.02); width: 100%; display: inline-block; color: #1D3C86; font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 20px; line-height: 24px; }
+.tabbing-content-left .title h2 { font-weight: 300; font-size: 43px; line-height: 84px; letter-spacing: 0.03em; }
+.tabbing-content-left ul li { padding-bottom: 59px; }
+.overview-tab { padding: 90px 0 0; }
+.overview-tab .tabbing-content { padding-bottom: 169px; }
+
+
+.property-header { display: none; }
+.tabbing-content-left ul { padding-top: 40px; }
+.tabbing-content-left ul li h3 { font-size: 28px; padding-bottom: 15px; }
+.tabbing-content-left ul li a { font-size: 28px; color: #1D3C86; font-weight: 300; line-height: 40px; }
+.main-title h2 { font-size: 33px; }
+.box-title h4 { font-size: 20px; line-height: normal; }
+.box-title span { font-size: 12px; color: #000; font-weight: 400; text-transform: lowercase; font-family: 'Canela Cn'; opacity: 0.4; padding-left: 12px; text-transform: capitalize; }
+.box-title { padding-left: 20px; }
+.box-title a { font-size: 12px; color: #000000; font-family: 'Trade Gothic LT Pro cn'; font-weight: 400; }
+.travel-image figure img { width: 345px; height: 90px; object-fit: contain; object-position: left; }
+.tabbing-btns .member { padding-left: 24px; }
+.tabbing-btns .download-btn { width: 100%; }
+.tabbing-btns { padding-top: 45px; }
+.tabbing-content-right .download-btn a { padding: 40px; min-height: 100%; }
+.tabbing-box-content .inner { background: #FFFFFF; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.09); padding: 24px; align-items: center; }
+.tabbing-box-image figure img { width: 52px; height: 54px; }
+.tabbing-box-image figure { margin: 0px; }
+.tabbing-content-right figure { margin: 0px; }
+.tabbing-box { padding-top: 34px;}
+.contacts-content { padding: 79px 0px 130px; }
+.contacts-content ul { display: flex; flex-wrap: wrap; }
+.contacts-content ul li { width: 50%; padding: 10px 16px; }
+.booking-content { padding: 100px 0px 150px; display: flex; flex-wrap: wrap; }
+.booking-image figure img { width: 735px; height: 481px; }
+.tabbing-content-left ul li .booking-btn { padding-top: 20px }
+.tabbing-content-left ul li .booking-btn a { background-color: #1D3C86; color: #fff; font-weight: 700; font-size: 14px; line-height: 17px; text-align: center; letter-spacing: 0.12em; padding: 22px 64px; }
+.Commssions-content { padding: 79px 0px 176px; display: flex; flex-wrap: wrap; align-items: center; }
+.tabbing-content-left .plan { padding-top: 43px; }
+.tabbing-content-left .plan { font-weight: 300; font-size: 18px; line-height: 29px; letter-spacing: 0.03em; color: #000000; padding-top: 60px; }
+.tabbing-content-left .plan h3 { padding-bottom: 60px; }
+.tabbing-content-left .smarties { padding-top: 66px; }
+.tabbing-content-left .smarties h3 { padding-bottom: 30px; }
+.tabbing-content-left .details { padding-top: 40px; }
+.tabbing-content-left .details h3 { padding-bottom: 20px; }
+.tabbing-content-left .details span { font-size: 18px; letter-spacing: 0.03em; color: #979797; }
+.marketing-assets { padding: 79px 0px 100px; }
+.marketing-box .inner { background: #FFFFFF; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.09); padding: 24px; }
+.marketing-main { display: flex; flex-wrap: wrap; }
+.marketing-contant { padding-top: 79px; }
+.marketing-box { width: 33.33%; padding: 10px 16px; }
+.marketing-box .box-title a { word-break: break-word; font-weight: 400; font-size: 12px; line-height: 14px; opacity: 0.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; padding-top: 10px; }
+.marketing-box:first-child { padding-left: 0px; }
+.marketing-training-box { padding-top: 90px; }
+.marketing-training-box .marketing-box { padding-left: 0px; }
+.marketing-training-box .marketing-box .box-title h4 { display: -webkit-box; word-break: break-word; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+/*Experiences Form*/
+.experiences-form-content { max-width: 1240px; }
+.experiences-form-content .main-title h2 { font-size: 44px; padding: 73px 0px; }
+.experiences-form-content form .title { font-size: 28px; padding-bottom: 25px; }
+.experiences-form-content .custom-file-label::after { width: 82.52px; color: #333333; }
+.experiences-form-content .form-property .width50 { margin-bottom: 55px; }
+.experiences-form-content .textarea-div { padding-top: 0px; }
+.experiences-form-content  .form-property textarea { line-height: 34px; font-weight: 300; }
+.experiences-form-content .save-btn { padding-top: 15px; }
+.experiences-form-content .commissions-contact { padding: 30px 0px 70px; }
+.experiences-form-content .things-of-know label { font-size: 20px;/* color: rgb(0 0 0 / 70%)*/ ; font-weight: 300; font-family: 'Canela'; font-style: normal; letter-spacing: 0.05em; line-height: 30px; }
+.experiences-form-content .things-of-know { padding-bottom: 80px; }
+.experiences-form-content .booking-content { padding-top: 20px; }
+.experiences-form-content li .things-label { padding-bottom: 25px; }
+.experiences-form-content .assets-b { padding-top: 60px; }
+.experiences-form-content .assets-top { padding-bottom: 70px; }
+
+/*Experiences Form end*/
+
+/*Experiences addons*/
+.experiences-addons li h5 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 18px; line-height: 34px; letter-spacing: 0.05em; color: #000000; }
+.experiences-addons ul { padding-top: 0px; }
+.experiences-content ul { margin: 0px -15px; }
+.Experiences-things { padding-right: 63px; }
+.experiences-things ul li { padding-bottom: 35px; font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 18px; line-height: 29px; letter-spacing: 0.03em; color: #000000; position: relative; }
+.experiences-things ul li::before { content: ''; background: #000000; width: 4px; height: 4px; left: -17px; right: 0px; top: 14px; border-radius: 30px; position: absolute; }
+.tabbing-content-left .best-way h3 { padding-bottom: 34px; font-size: 28px; }
+.tabbing-content-left .best-way { padding: 50px 0px 80px; }
+.experiences-r h2 { padding-bottom: 13px; }
+.experience-book { display: flex; flex-wrap: wrap; }
+.experience-book-top { padding: 79px 0px 100px; }
+.experiences-addons .title h2 { line-height: normal; }
+.experience-left ul { padding-top: 45px; }
+.major ul { padding-top: 12px; }
+.major ul li { position: relative; padding-bottom: 0px; }
+.major ul li::before { content: ''; background: #000000; width: 4px; height: 4px; left: -17px; right: 0px; top: 14px; border-radius: 30px; position: absolute; }
+.tabbing-content-left .offer { padding-top: 30px; }
+.amenities { padding-bottom: 100px; }
+.amenities-title { display: flex; }
+.amenities-title a { background: #F5F5F5; display: flex; justify-content: center; align-items: center; padding: 12px 30px; font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 700; font-size: 14px; line-height: 17px; text-decoration: none; color: #333333; margin-left: 170px; }
+.plane-title h4 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 24px; line-height: 36px; }
+.inclusions-input { position: relative; padding-bottom: 40px; }
+.inclusions-input i { position: absolute; }
+.experiences-form-content .inclusions-save { padding-top: 100px; }
+.padding-left-right ul .inclusions-clone { padding-left: 0px; }
+.tabbing-content-left .way-to h3 { padding-bottom: 20px; }
+.tabbing-content-left .way-to a { color: #000000; }
+.tabbing-content-left .way-to-offer ul li { padding-bottom: 5px; position: relative; padding-left: 16px; }
+.tabbing-content-left .way-to-offer ul li::before { content: ''; background: #000000; width: 4px; height: 4px; left: 0px; right: 0px; top: 14px; border-radius: 30px; position: absolute; }
+.marketing-training-box .title h3 { padding-bottom: 20px; }
+.tabbing-content-left .way-to-offer ul { padding-top: 0px; }
+.header-section { padding-bottom: 0; }
+.padding-top-remove { padding-top: 0; }
+.things-know label { font-family: 'Canela'; font-weight: 300; font-size: 20px; line-height: 30px; text-transform: initial; letter-spacing: 0.05em; }
+.things-know input, .things-know textarea { padding: 0 0 5px !important; border-color: rgb(0 0 0 / 60%) !important; }
+.AssetsTrainin-append-to ul.AssetsTrainin-clone:nth-child(2) { display: none; }
+.overview-tab .might-also-like.might-also-like-new { padding-top: 100px; }
+.booking-wrap { font-size: 18px; line-height: 29px; }
+.booking-wrap ul li >ul > li { padding: 0; list-style: disc; }
+.booking-wrap ul li >ul { padding: 0 0px 0 29px; }
+.booking-wrap ul li >ul > li::marker { color: rgb(0 0 0 / 60%); font-size: 15px; }
+.booking-tab-yacht .booking-wrap { padding-right: 110px; }
+.booking-tab-yacht .tabbing-content-right { margin-top: 25px; }
+.commssions-yacht .Commssions-left h4 { padding-top: 30px; font-size: 28px; line-height: 40px; font-weight: 300; padding-bottom: 4px; }
+.commssions-yacht .Commssions-left { font-size: 18px; line-height: 29px; }
+.assets-trainings-main-box .marketing-box { padding: 0 15px 30px; }
+.assets-trainings-main-box .marketing-main { margin: 30px -15px 0; }
+.things-know textarea { padding: 30px !important; }
+.things-know-image-wrap { position: relative; }
+.things-know-image-wrap .things-know-image-right { position: absolute; top: 0; right: 0; margin-top: 0; }
+.things-know-image-wrap .things-know-image-right img { height: 830px; width: 80%; object-position: left; }
+.things-know-image-wrap .things-know-image-right figure { text-align: right; }
+.content-padding-righ .tabbing-content-left.booking-wrap { padding-right: 0 !important; }
+.content-padding-right .tabbing-content-left.booking-wrap { width: 66%; margin-top: 0; padding-right: 80px; }
+.content-padding-right .tabbing-content-left { width: 32%; margin-top: 80px; padding-right: 0; }
+.assets-right-image img { border-radius: 0px 240.5px; }
+.tab-assets-trainings .marketing-assets { width: 50%; padding-left: calc((100% - 1350px) / 2); }
+.tab-assets-trainings .assets-right-image { width: 50%; margin-top: 100px; padding-left: 60px; }
+.tab-assets-trainings { max-width: 100%; padding-left: 0; padding-right: 0; }
+.tab-assets-trainings .marketing-assets .marketing-box { width: 100%; }
+.black-white-car .travel-image figure img { height: 178px; }
+.retal-car-wrap .booking-image img { height: 598px; }
+.retal-car-wrap .booking-content { padding-bottom: 169px; }
+.booking-content-wrap { margin-top: -30px; max-width: 60%; }
+.booking-content-wrap h3 { padding-bottom: 14px; padding-top: 20px; }
+.booking-content-wrap h3 { padding-top: 80px; }
+.booking-content-wrap h3:first-child { padding-top: 0; }
+.assets-left-image .tabbing-content-left { padding-left: calc((100% - 1350px) / 2); }
+.assets-left-image figure { text-align: right; }
+.assets-left-image .booking-content { padding-bottom: 0; }
+.assets-left-image .booking-image figure img { width: 735px; height: 649px; display: block; margin-left: auto; object-position: right; border-radius: 240.5px 0px 0px 0px; }
+.on-site-form-custom .container-custom-scroll { max-width: 1440px; padding: 0 60px; }
+.on-site-form-custom .container-custom-scroll li { padding: 0 29px !important; white-space: normal !important; }
+.on-site-form-custom .container-custom-scroll li span { text-align: center; }
+.amenity-tab ul.updates-append-to .updates-clone li.width90 { width: 90%; }
+.amenity-tab ul.updates-append-to .updates-clone { align-items: flex-end; padding-bottom: 20px; }
+.checkbox-section .checkbox-div { width: 50%; }
+.checkbox-section .checkbox-div input { padding: 0; height: initial; width: initial; margin-bottom: 0; display: none; cursor: pointer; }
+.checkbox-section .checkbox-div label { position: relative; cursor: pointer; font-size: 16px; align-items: center; }
+.checkbox-section .checkbox-div label:before { content: ''; -webkit-appearance: none; background-color: transparent; border: 2px solid #979797; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); padding: 6px; display: inline-block; position: relative; vertical-align: middle; cursor: pointer; margin-right: 15px; top: -4px; }
+.checkbox-section .checkbox-div input:checked + label:after { background-color: #979797; content: ''; display: block; position: absolute; width: 10px; height: 10px; top: 11px; left: 3px; }
+.checkbox-section .checkbox-div input[type="checkbox"] { width: auto !important; border-radius: 0px !important; }
+.thingsto-know-tab label { font-size: 24px; padding-bottom: 6px; }
+.thingsto-know-tab .checkbox-section.width100 > li { width: 100%; }
+.thingsto-know-tab .checkbox-section.width100 { }
+.thingsto-know-tab .checkbox-section.width100 .checkbox-div { width: 100%; }
+.booking-commissions-tab h5 { font-family: 'Canela'; font-weight: 300; font-size: 20px; letter-spacing: 0.05em; color: #000000; opacity: 0.7; line-height: 30px; padding-bottom: 32px; }
+ul.MarketingAssets-clone:nth-child(2), .Articles-clone:nth-child(2), .Articlelinks-clone:nth-child(2), .SellingPoints-clone:nth-child(2), .Links-clone:nth-child(2) { display: none; }
+ul.Educational-clone:nth-child(2) { display: none; }
+.Promos-updates-tab .main-title-wrap { padding-bottom: 150px; }
+.on-site-info-tab .container-custom-scroll { margin: 0 auto; }
+.perfect-list .list-perfect-sec ul li { padding-bottom: 0; }
+.perfect-list .list-perfect-sec ul { padding-top: 20px; }
+.perfect-list .list-perfect-sec ul li::marker { line-height: normal; }
+.perfect-for h4 { font-weight: 300; font-size: 28px; line-height: 40px; display: inline-block; padding-bottom: 20px; }
+.list-perfect-sec { padding-bottom: 60px; }
+.perfect-list h3 { font-weight: 300; font-size: 28px; line-height: 40px; padding-bottom: 20px; }
+.perfect-list:nth-child(1) h3 { padding-top: 40px; }
+.Commssions-left +div+div> h3 { padding-top: 40px; }
+.crowdsourcing-tab .marketing-assets > .title { padding-bottom: 60px; }
+.crowdsourcing-tab .title h2 { padding-bottom: 30px; }
+.crowdsourcing-tab .marketing-training-box { padding-top: 0; padding-bottom: 70px; }
+.promo-updates-wrap-box { display: flex; flex-wrap: wrap; margin: 0 -30px; padding-bottom: 200px; }
+.promo-updates-wrap-box .promo-updates-box { width: 50%; padding: 0 30px 60px; }
+.promo-updates-wrap-box .promo-updates-box .inner { display: flex; flex-wrap: wrap; align-items: center; }
+.promo-updates-wrap-box .promo-updates-box .inner .right { width: calc(100% - 293px); padding-left: 51px;/* or 175% */ }
+.promo-updates-wrap-box .promo-updates-box .inner .left figure { margin: 0; }
+.promo-updates-wrap-box .promo-updates-box .inner .left { width: 293px; height: 393px; }
+.promo-updates-wrap-box .promo-updates-box .inner .left { }
+.promo-updates-wrap-box .promo-updates-box .inner .left figure img { width: 100%; height: 100%; object-fit: cover; }
+.promo-updates-box .right .clock-time { font-weight: 700; font-size: 12px; line-height: 14px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'Trade Gothic LT Pro Cn'; opacity: 0.4; display: flex; align-items: center; padding-bottom: 5px; }
+.promo-updates-box .right .clock-time i { padding-right: 10px; font-size: 21px; }
+.promo-updates-box .right h3 { line-height: 44px; padding-bottom: 10px; }
+.promo-updates-wrap-box .promo-updates-box .inner .right .content { font-weight: 300; font-size: 12px; line-height: 21px; letter-spacing: 0.05em; }
+.promo-updates-wrap-box .promo-updates-box .inner .right .learn-more a { text-transform: uppercase; color: #1D3C86; letter-spacing: 0.24em; font-weight: 700; font-size: 16px; line-height: 24px; font-family: 'Trade Gothic LT Pro Cn'; margin-top: 21px; display: inline-block; }
+.Promo-Updates-tab .experience-book-top { padding-bottom: 40px; }
+.ClientBenefits-clone:nth-child(2), .ParticipatingProperties-clone:nth-child(2) { display: none; }
+.width90 { width: 90%; }
+.button-noted a { background: rgba(29, 60, 134, 0.02); width: 343px; height: 104px; display: flex; align-items: center; justify-content: center; color: #1D3C86; font-weight: 300; font-size: 20px; line-height: 24px; }
+.search-properties { background: #F6F5F5; width: 341px; height: 45px; display: flex; align-items: center; padding: 0 15px; margin-bottom: 20px; }
+.search-properties input[type="search"] { width: 100%; border: none; color: #000000; font-family: 'Canela'; background-color: transparent; }
+.search-properties input[type="submit"] { text-align: center; letter-spacing: 0.12em; color: #1D3C86; border: none; font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 14px; line-height: 17px; margin-top: 10px; }
+.search-properties i.fa.fa-search { padding-right: 10px; }
+.search-properties i { color: #1D3C86; }
+.search-properties i.fa.fa-arrow-right { padding-left: 10px; }
+.search-properties-filter { margin: 0 -40px; }
+.search-properties-filter .partners-wrap { width: 50%; }
+.search-properties-filter .partners-wrap .inner { padding: 40px; }
+.list-perfect-sec { padding-left: 8px; }
+.list-perfect-sec li { list-style: none; padding-left: 20px; position: relative; }
+.list-perfect-sec li:before { content: ''; height: 5px; width: 5px; position: absolute; left: 0; top: 13px; background-color: rgb(0 0 0 / 50%); border-radius: 100%; }
+.border-top.width50 { width: 50%; border-top: 1px solid rgb(0 0 0 / 10%); padding-top: 60px; }
+.accordion-container { position: relative; height: auto; padding: 20px 0px; }
+.accordion-container > h2 { text-align: center; color: #fff; padding-bottom: 5px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+.set { position: relative; width: 100%; height: auto; }
+.set > a { display: block; padding: 25px 0px; text-decoration: none; text-transform: uppercase; color: #555; font-weight: 600; font-size: 16px; letter-spacing: 0.24em; font-family: 'Trade Gothic LT Pro'; border-bottom: 1px solid #ddd; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; transition: all 0.2s linear; }
+.set > a i { float: right; margin-top: 2px; }
+.set > a.active { background-color: #fff; color: #1D3C86; border: none; }
+
+.promos-title { padding: 50px 0px 60px; }
+.promo-updates-box .right .text { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 12px; line-height: 21px; }
+.promos-updates { padding-bottom: 0px; }
+.promo-link { padding: 120px 0px; }
+.promo-link-left .links { padding-bottom: 90px; }
+.promo-link ul li { position: relative; padding-left: 20px; }
+.promo-link ul { padding-top: 15px; }
+.promo-link ul li a { text-decoration: underline; color: rgba(29, 60, 134, 1); font-family: 'Canela'; font-style: normal; font-size: 18px; font-weight: 300; line-height: 34px; letter-spacing: 0.05em; }
+.promo-link ul li:before { content: ''; height: 4px; width: 4px; position: absolute; left: 0; top: 18px; background-color: rgb(29, 60, 134, 1); border-radius: 100%; }
+.promo-link { justify-content: space-between; }
+.promos-link-right figure img { width: 686px; height: 730px; border-radius: 199.5px 199.5px 0px 0px; }
+.marketing-promo ul li { padding-bottom: 0px; }
+.marketing-promo .perfect-list { padding-top: 48px; }
+.marketing-promo .perfect-list span { color: #828282; }
+.marketing-promo-image .booking-image  figure img { width: 735px; height: 481px; border-radius: 0px 240.5px; }
+.insurance-addon-tab-content form .cruise-sheet { padding-bottom: 60px; }
+.information-cruise { padding-top: 82px; }
+.tabbing-content-right .cruise-info-image { width: 346px; height: 157px; }
+.box-title .main-box a { padding-left: 40px; }
+.box-title .main-box { color: #000; font-family: 'Trade Gothic LT Pro'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 14px; text-transform: lowercase; padding-top: 5px; }
+.tabbing-content-left .info-features { padding: 50px 0px 60px; }
+.perfect-list h4 { font-family: 'Canela'; font-weight: 300; font-size: 24px; color: #000000; }
+.perfect-list .info-sec { font-size: 18px; font-family: 'Canela'; font-style: normal; font-weight: 300; }
+.retal-car-wrap .cruise-booking { padding-bottom: 60px; }
+.cruise-booking .tabbing-content-right { margin-top: 0px; }
+.tabbing-btns .info-download-btn { width: 50%; }
+.promo-link-left .articles { padding-bottom: 90px; }
+.promos-main { padding-top: 100px; }
+.promos-main-link { padding-top: 60px; }
+.villas-artices-bottom { padding-top: 80px; }
+.villas-wrap { margin-bottom: -35px; }
+.form-property .villas-promo-add { padding-top: 40px; padding-bottom: 30px; }
+.list-perfect-sec .villas-over-icon a { color: #1D3C86; font-size: 18px; padding-left: 15px; font-weight: 300; }
+.rental-villas { margin-bottom: 215px; background: rgba(29, 60, 134, 1); }
+.rental-content span { font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: 0.14em; text-transform: uppercase; color: #FFFFFF; }
+.rental-content h2 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 43px; line-height: 84px; letter-spacing: 0.03em; color: #FFFFFF; }
+.rental-main { padding: 115px 0px 0; }
+.rental-content { position: relative; }
+.rental-content:after { content: ''; height: 1px; width: 126px; position: absolute; left: 0; bottom: -106px; right: 0; top: 350px; background-color: rgba(255, 255, 255, 1); }
+.rental-things-content span { color: #000; }
+.rental-things-content h2 { color: #000; line-height: 70px; }
+.rental-things-main { padding: 80px 0px 120px; }
+.rental-image figure { position: relative; right: 0; bottom: -104px; width: 956px; height: 402px; margin: 0; margin-left: auto; }
+.rental-image img { width: 100%; height: 100%; object-fit: cover; }
+.title.retal-title { padding-top: 60px; }
+.retal-car-wrap .rental-things-image img { width: 735px; height: 481px; object-fit: cover; border-radius: 0px 240.5px; }
+.rental-logo figure img { width: 471px; height: 194px; object-fit: cover; }
+.brand-icon figure { margin: 0px; }
+.brand-icon figure img { width: 24px; height: 24px; }
+.brand-list h3 { padding-bottom: 40px; }
+.brand-filter .partners-wrap { width: 50%; }
+.gateway-line { color: #fff; font-size: 14px; font-family: 'Canela'; }
+.tabbing-content-right .hotel-btns { padding-top: 0px; }
+.hotel-booking-image figure img { width: 735px; height: 481px; border-radius: 0px 240.5px; object-fit: cover; }
+.hotel-list h4 { font-size: 20px; }
+.hotel-list-sec { padding-bottom: 10px; }
+.hotel-list span { font-size: 20px; color: #828282; font-family: 'Canela'; font-style: normal; font-weight: 300; }
+.tabbing-content-right.hotel-book { margin: 0px; }
+.tabbing-box.hotel-boxs { padding-top: 0px; }
+.hotel-links-left { padding-left: 40px; }
+.Mauna-title { padding: 20px 0px 30px; }
+.Mauna-title h5 a { text-decoration: underline; color: #1D3C86; }
+.Mauna-title h5 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 16px; line-height: 24px; color: #000; }
+.hotel-border { border-top: 1px solid rgb(0 0 0 / 10%); width: 100%; }
+.hotel-updates { padding-bottom: 80px; }
+.hotel-marketing { padding-bottom: 170px; }
+.agents-review { justify-content: space-between; display: flex; align-items: flex-end; }
+.agent-submit h5 { text-transform: uppercase; font-family: 'Trade Gothic LT Pro'; font-style: normal; font-weight: 700; font-size: 14px; text-align: center; letter-spacing: 0.22em; text-transform: uppercase; color: #1D3C86; }
+.agent-submit { position: relative; }
+.agent-submit:before { content: ''; height: 1px; width: 126px; position: absolute; left: -151px; top: 13px; background-color: rgba(29, 60, 134, 1); }
+.agent-main-box { padding: 0px 17px 0px; }
+.agent-box { background: #FFFFFF; box-shadow: 0px 4px 30px rgb(0 0 0 / 9%); padding: 42px 68px 27px; height: 100%; }
+.agent-sec { margin: 0px -17px 0px; }
+.agent-box-content { padding-bottom: 170px; }
+.agent-inner figure { margin: 0px; }
+.agent-inner figure img { width: 60px; height: 60px; }
+.agent-icon figure { margin: 0px; }
+.agent-icon figure img { width: 16px; height: 16px; }
+.agent-icon span { font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 700; font-size: 16px; line-height: 30px; text-align: center; letter-spacing: 0.24em; text-transform: uppercase; color: #000000; padding-left: 12px; }
+.agent-inner-title span { font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 700; font-size: 15px; letter-spacing: 0.24em; text-transform: uppercase; color: #000000; }
+.agent-inner-title h5 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 26px; line-height: normal; letter-spacing: 0.03em; color: #000000; }
+.agent-inner-title { padding-left: 22px; }
+.agent-box a { color: #1D3C86; text-decoration: none; text-transform: uppercase; font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 700; font-size: 14px; letter-spacing: 0.22em; }
+.home-slider-main .slider-content .hitlist-image-1 img { width: 399px; height: 518px; border-radius: 199.5px 199.5px 0px 0px; }
+.home-slider-main .slider-content .hitlist-image-2 img { width: 399px; height: 518px; }
+.home-slider-main .slider-content .hitlist-heading h3 { padding-bottom: 20px; }
+.home-slider-main .slider-content .hitlist-desc p { padding-bottom: 20px; }
+.home-slider-main-section .hitlist-img-list {/* margin: 0px -46px 0px;*/ }
+.home-slider-main-section .slider-img-list .hitlist-content { /*margin: 0px; padding: 0px 46px 0px;*/ }
+
+.hitlist-img-list .slider-img-list .slider-content {
+    max-width: 399px;
+    margin-right: 90px;
+}
+.rental-content p { color: #fff; font-size: 18px; }
+.info-map-image { width: 100%; }
+.info-map-image figure img { width: 100%; height: 525px; object-fit: cover; display: block; }
+.info-map-image figure { margin: 0px; }
+.image-right.image-hover.property-image-right { height: 946px; }
+.exclusives-main-wrap { position: relative; height: 946px; }
+.exclusives-main-wrap .property-image-wrap { position: absolute; top: 0; right: 0; left: 0; margin: 0; align-items: baseline; }
+.atay-submit { position: relative; }
+.property-sumit { position: relative; margin-top: 20px; }
+.property-sumit::before { content: ''; height: 1px; width: 8%; position: absolute; left: 0px; top: 13px; background-color: rgba(29, 60, 134, 1); }
+.atay-submit h5 { text-transform: uppercase; font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; color: #1D3C86; padding-left: calc((100% - 1470px) / 2); }
+.property-sumit { }
+.soulful-image img { width: 956px; height: 402px; }
+.the-rooms-wrap .fun h2 { color: #000; }
+.fun-sec { padding-top: 100px; }
+.spa-sec { padding: 40px 0px 0px; }
+.spa-room { padding-bottom: 40px; }
+.sap-left img { width: 100%; height: 518px; }
+.food-sec { padding-top: 0px; }
+.rooms-sec { padding-bottom: 0px; }
+.might-bottom { padding-top: 90px; }
+.daily-right { padding-left: 40px; }
+.booking-res-image figure { margin: 0px; }
+.booking-res-image figure img { width: 428px; height: 401px; border-radius: 120px 0px 0px 0px; object-fit: cover; display: none; }
+.promos-link-right figure { margin: 0px; }
+.hotel-top-res{padding-bottom: 100px;}
+.add-title h4{font-size: 20px; font-family: 'Canela'; font-weight: 300;}
+.experiences-form-content .things-of-know.airo-best{padding-bottom: 0px;}
+
+.promo-meet ul li{padding-bottom: 0px;}
+.meet-link{padding-top: 0px;}
+.perfect-list.meet-letest{font-size: 33px; line-height: normal;}
+.meet-latest h3 {font-size: 33px; padding-bottom: 40px;}
+.meet-lets h4 {font-size: 28px; color: #000000; font-weight: 300; font-family: 'Canela';}
+.rental-content .rental-things-content .rental-know {  padding-top: 120px;}
+.title .villas-links-title {padding-bottom: 30px;}
+.marketing-assets .cruise-up {padding-top: 0px;}
+.info-bottom-image.info-cruise-bg figure img {height: 399px;}
+.accordion-container .set .content {display: none;}
+.tabbing-content-right.cruise-tab-right {margin-top: 0px;}
+.perfect-list .cruise-Commissions {   padding-top: 80px;}
+.cruise-rental.rental-things-content.rental-know span {font-size: 15px; font-family: 'Trade Gothic LT Pro cn'; 
+letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase;}
+.cruise-rental.rental-things-content.rental-know {    padding-top: 90px;}
+.the-rooms-bottom{margin-bottom: 100px;}
+.content-room-bottom span {opacity: 0.5;}
+.content-room-bottom h2 {font-size: 25px; color: #fff; text-transform: uppercase; font-family: 'Trade Gothic LT Pro cn';
+letter-spacing: 0.14em; font-weight: 700;}
+.on-sit-right { width: 735px; height: 481px; }
+.on-sit-right figure img { width: 100%; height: 100%; border-radius: 0px 240.5px;}
+.meet-lets ul:nth-child(2){padding-left: 20px;}
+.might-also-like.might-also-like-new.wide-might { padding-bottom: 40px; }
+.promo-link-left.promo-link.meet-link.wide-jet { padding-top: 160px; padding-bottom: 0px; }
+.content.info-sec ul li {padding-bottom: 0px;}
+.wide-promo-image {width: 686px; height: 730px;}
+.wide-promo-image figure{margin: 0px;}
+.wide-promo-image figure img {border-radius: 199.5px 199.5px 0px 0px; width: 100%; height:100%;}
+.yacht-things{padding-top: 30px;}
+.yacht-attech li{display: inline-block;}
+.yacht-attech .custom-file {overflow: visible; height: 100%;}
+.yacht-form-bottom {padding-top: 180px;}
+.yacht-form-bottom .yacht-title-wrap{padding-bottom: 58px;}
+.yachts-sea-contact {padding-top: 15px;}
+.wide-booking-content {padding-top: 50px;}
+.rental-things-content span { font-family: 'Trade Gothic LT Pro cn'; font-style: normal; font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: 0.14em; text-transform: uppercase; color: #000000; }
+.box-title.cars-link a { text-decoration: underline; text-transform: lowercase;font-family: 'Trade Gothic LT Pro cn';}
+.box-title.contact-box a { text-transform: lowercase; font-family: 'Trade Gothic LT Pro cn';}
+.car-things h5 { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 18px; letter-spacing: 0.03em; color: #000000; }
+.experiences-form-content .private-airo label {text-transform: lowercase;}
+.private-booking-link a { font-family: 'Canela'; font-style: normal; font-weight: 300; font-size: 18px; letter-spacing: 0.03em; text-decoration-line: underline; color: #000000; }
+.tabbing-content-left.Commssions-left.ex-booking-left { padding-top: 40px; }
+.pri-booking{padding-top: 0px}
+.ex-box-bottom { padding-top: 50px; }
+ul.promo-link-left { padding-top: 0px; }
+.the-rooms-wrap .in-addon-content { padding-bottom: 140px; }
+.in-addon-marketing{padding-bottom: 150px;}
+.d-flex.width50.hotel50 { margin-bottom: 0px; }
+.hotel-input {width: 50%;}
+.hotel-gym span{width: 100%;}
+label.custom-file-label.hotel-file-label:before { width: 50%; }
+.hotel-short {padding-top: 50px;}
+.short-custom{padding:30px 0px;}
+.short-training .main-title-wrap{padding-bottom: 80px;}
+.tabbing-content-right .aero-image{width: 255px; height: 136px;}
+.tabbing-content-right .aero-image figure img{width: 100%; height: 100%;}
+.aero-box ul li{position: relative;}
+.aero-box ul li:last-child:after { content: ''; position: absolute; background: #000; width: 1px; left: 0; top: 12px; height: 11px; }
+.aero-box ul li:first-child{padding-right: 15px;}
+.aero-box ul li:last-child{padding-left: 10px;}
+.aero-box span { opacity: inherit; font-family: 'Trade Gothic LT Pro cn'; }
+.aero-box ul li {padding: 0px;}
+.plane-box ul li:first-child{padding-left: 12px;}
+
+/*11-11-2022*/
+.dropdown-login { position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #1D3C86;  display: none ;background: #FFFFFF; box-shadow: 0px 34px 54px rgb(11 29 71 / 50%); }
+.header-info .header-admin { position: relative; cursor: pointer; }
+.dropdown-login ul li a { width: 100%; display: inline-block; letter-spacing: 0.12em; font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 14px; text-transform: uppercase; color: #1D3C86; padding: 8px 12px 3px 12px; border-bottom: 1px solid #1D3C86; }
+.dropdown-login ul li { width: 100%; display: inline-block; }
+.dropdown-login ul { width: 100%; }
+.dropdown-login ul li a:hover { background-color: #1D3C86; color: #fff; }
+.dropdown-login ul li:last-child a { border-bottom: 0px; }
+
+
+@media (max-width:1600px) {
+    .property-sumit::before{width: 6%;}
+}
+
+@media (max-width:1199px) {
+    .insurance-addon-tab-content { max-width: 950px; padding-left: 15px !important; padding-right: 15px !important; }
+
+}
+@media (max-width:1100px) {
+    .promo-updates-wrap-box .promo-updates-box { width: 100%; }
+    .agent-sec { display: block; }
+    .agent-box-res { padding-bottom: 24px; }
+}
+
+@media (max-width:991px) {
+    .experiences-r h2 { line-height: normal; }
+}
+
+@media (max-width:992px) {
+    .insurance-addon-tab-content { max-width: 720px; }
+    .review-banner-section .review-banner { min-height: 500px; }
+    .tabbing-content-left { padding-right: 40px; }
+    .tabbing-btns .download-btn { width: 100%; padding: 0px 0 20px; }
+    .tabbing-content-right .hotel-btns { flex-wrap: wrap; }
+    .overview-tab .tabbing-content { padding-bottom: 20px; }
+    .perfect-list .info-sec { padding: 0 0 20px; }
+    .list-perfect-sec { padding-bottom: 10px; }
+    .exclusives-main-wrap .property-image-wrap { position: initial; margin: 0; }
+    .exclusives-left { width: 100%; }
+    .image-right.image-hover.property-image-right { height: initial; width: 100%; }
+    .exclusives-main-wrap .image-wrap .image-left { width: 100%; height: auto; }
+    .exclusives-main-wrap { height: auto; }
+    .the-rooms-section { margin: 0; }
+    .exclusives-section { padding-top: 0; }
+    .atay-submit { padding-left: 50px; }
+    .pool-gym-sec { min-height: initial; }
+    .tabbing-content-left .title h2 { line-height: normal; }
+    .assets-left-image .tabbing-content-left { padding-bottom: 50px; }
+    .info-bottom-image figure img { height: auto; }
+    .hitlist-img-list .slider-img-list .slider-content { margin-right: 0; max-width: 100%; }
+    .home-slider-main .slider-content .slider-image { }
+    .retal-car-wrap .booking-content { padding-bottom: 50px; }
+    .hotel-booking-image figure img { width: 100%; height: auto; border-radius: 0 50px; }
+    .tab_content h2 { line-height: normal; }
+    .border-top.width50 { width: 100%; }
+    .hotel-updates { padding-bottom: 0; }
+    .promo-link { padding: 50px 0; }
+    .promos-link-right figure img { width: 100%; height: 300px; }
+}
+
+@media (max-width:767px) {
+     .tabbing-content-left { width: 100%; padding-right: 0px; }
+    .tabbing-content-right { width: 100%; }
+    .booking-tab-yacht .tabbing-content-right { margin-top: 0px; }
+    .book-border { border-top: 1.5px solid #E6E6E6; padding-top: 40px; }
+    .daily-sec { display: block; }
+    .daily-right { padding-left: 0px; padding-top: 24px; display: flex; }
+    .daily-left { display: flex; }
+    .daily-right p { padding-left: 20px; }
+    .daily-left p { padding-left: 20px; }
+    .tabbing-btns { display: block; }
+    .tabbing-btns .member { padding-left: 0px; padding-top: 16px; }
+    .tabbing-content-right .download-btn a { padding: 15px 9px; text-align: center; }
+    .contacts-content ul li { width: 100%; }
+    .tabbing-box { padding-top: 0px; }
+    .hotel-booking-image figure img { width: 428px; height: 280px; border-radius: 0px 120px; }
+    .border-top.width50 { width: 100%; padding-top: 40px; }
+    .retal-car-wrap .insider-res { padding-bottom: 0px; }
+    .border-top.width50.tips-res { border: none; padding-top: 128px; }
+    .booking-res-image figure img { display: block; }
+    .booking-res-image { padding: 40px 0px 50px; }
+    .promo-updates-wrap-box { display: block; }
+    .promo-updates-wrap-box .promo-updates-box { width: 100%; }
+    .promo-updates-wrap-box .promo-updates-box .inner { display: block; }
+    .promo-updates-wrap-box .promo-updates-box .inner .right { width: 100%; padding-left: 0px; }
+    .promo-updates-box .right .clock-time { padding-top: 20px; }
+    .promos-link-right figure img { width: 428px; height: 301px; border-radius: 120px 120px 0px 0px; }
+    .promo-link { padding-top: 39px; padding-bottom: 0px; flex-direction: column-reverse; align-items: flex-start; }
+    .promo-link-left { padding-top: 40px; }
+    .promo-link-left .articles { padding-bottom: 0px; }
+    .marketing-assets { padding: 79px 0px 60px; }
+    .promo-updates-wrap-box .promo-updates-box .inner .left { width: 163px; height: auto; }
+    .hotel-agent-content { position: relative; }
+    .agent-submit { position: absolute; bottom: 0; }
+    .agent-submit:before { content: ''; height: 1px; width: 126px; position: absolute; left: -14px; top: 13px; background-color: rgba(29, 60, 134, 1); }
+    .agent-submit h5 { padding-left: 150px; }
+    .agent-submit { padding-bottom: 49px; } 
+    .insurance-addon-tab-content { max-width: 100%; box-shadow: none !important; }
+    .insurance-addon-tab-content .save-btn { padding-top: 50px; padding-bottom: 60px; }
+    .custom-file { overflow: visible; }
+    .form-clone-div .select-icon { padding-left: 0; }
+    .form-property .select-icon { padding-left: 0; }
+
+    .tabbing-content-left .title h2 { font-size: 34px; line-height: 48px; }
+    .overview-tab { padding-top: 60px; }
+    .experiences-addons li h5 { letter-spacing: 0.05em; font-size: 16px; line-height: 24px; }
+    .insurance-tab-container { padding-left: 40px; padding-right: 40px; }
+    .tabbing-content-left ul li { padding-bottom: 0; }
+    .primary-main .tabbing-box { padding-top: 30px; }
+    .tabbing-box-content .inner .box-title { width: calc(100% - 52px); }
+    .experiences-r h2 { font-size: 28px; line-height: 40px; padding-bottom: 20px; }
+    .tabbing-content-right.book-border { padding-bottom: 40px; }
+    .info-map-image figure img { height: 300px; }
+    .exclusives-main-wrap .image-wrap .details-wrap .inner { display: flex; text-align: left; }
+    .review-banner-section .review-banner h1 { padding-bottom: 0; }
+    .exclusives-main-wrap .container { padding: 0 40px; }
+    .exclusives-wrap  .details-wrap { }
+    .details-wrap .inner { width: 100%; display: flex; }
+    .details-wrap .inner .image { margin: 0; }
+    .details-wrap .inner .details-content { width: calc(100% - 75px); padding-left: 20px; }
+    .details-wrap .inner .details-content span { letter-spacing: 1.1px; font-weight: 400; }
+    .atay-submit h5 { text-align: center; }
+    .atay-submit { padding-left: 0; }
+    .property-sumit::before { width: 30%; }
+    .exclusives-main-wrap { display: flex; flex-wrap: wrap; }
+    .exclusives-main-wrap .property-sumit { order: 1; }
+    .details-wrap { font-size: 16px; line-height: 24px;/* or 150% */ letter-spacing: 0.05em; text-align: left; }
+    .exclusives-main-wrap .image-wrap .details-wrap { text-align: left; padding: 50px 40px 10px; }
+    .exclusives-main-wrap .image-wrap .image-left { order: 1; }
+    .exclusives-main-wrap .property-sumit { position: absolute; bottom: 54%; left: 0; right: 0; }
+    .exclusives-main-wrap .image-wrap .details-wrap +   .details-wrap { padding-bottom: 90px; }
+    .exclusives-main-wrap .image-wrap img { height: 300px; }
+    .featured-img { position: initial !important; top: 0; width: 100%; margin-top: 60px; }
+    .blue-background .container { padding: 0; }
+    section#rooms .featured-content, section#rooms .content { padding: 0 40px; }
+    .the-rooms-wrap .content:after { display: inline-block; position: inherit; }
+    .sap-left img { height: 320px; }
+    .info-bottom-image figure img { height: 320px; }
+    section#amenties { padding-top: 60px; }
+
+    /********************/
+    .accordion-container{padding: 0px; }
+	.booking-res-image { margin: 0px -40px; }
+	.box-title a { word-break: break-all; }
+	.hotel-booking-image figure img { height: 320px; margin-left: 0; border-radius: 0 50px; }
+	.hotel-booking-image { position: absolute; left: 0; right: 0; height: 320px; }
+	.booking-tab-yacht .tabbing-content-right { height: 220px; }
+	.insider-res .tabbing-content-left { padding-bottom: 30px; }
+	.tab_content h2 { font-size: 34px; }
+	.access-res { padding-top: 40px; }
+	.perfect-list .info-sec{ padding: 0px 0px 48px; }
+	.res-title{ padding-bottom: 40px; }
+	.perfect-list.hotel-list {padding-bottom: 35px;}
+	.hotel-top-res{padding-bottom: 0px;}
+	.res-p{ padding-bottom: 10px; }
+	.offers-res{padding-bottom: 55px;}
+	.hotel-book-res{display: none;}
+	.booking-content{padding-bottom: 90px;}
+	.promo-updates-box .right .clock-time.res-d-none{display: none;}
+	.res-promo-left{padding-top: 80px;}
+	.promo-link ul{padding-top: 0px;}
+	.assets-left-image .tabbing-content-left.res-marketing{padding-bottom: 100px;}
+	.agent-inner-title h5 {font-size: 20px}
+	.agent-inner-title span {font-size: 12px}
+
+
+}
+
+
+
+@media (max-width: 767px){
+
+}
+
+
+.header-info .header-left ul { display: flex; align-items: center; flex-wrap: wrap; }
+.header-info .header-logo { height: 32px; }
+.header-info .header-logo a { width: 100%; display: inline-block; padding-top: 4px; }
+.header-info .header-logo a img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.header-info .header-search-box { margin-right: 62px; }
+.header-info .header-admin { max-width: 206px; }
+.header-info .header-admin .inner { flex-direction: row-reverse; flex-wrap: unset;}
+.header-info .header-admin .inner .left { padding-right: 10px; width: calc(100% - 72px);}
+.header-info .header-admin .inner .down-arrow { width: 16px; order: -1; margin-left: 10px; }
+.header-info .header-admin .inner .left h3 { color: #1D3C86; }
+.header-info .header-search-box .search-icon { padding-top: 0; }
+.header-info ul.mainmenu > li.menu-item-has-children> a.child-triggerm:after { content: none !important; }
+.insurance-form-title { padding-top: 0; }
+.header-info .header-admin .inner .left { padding-right: 10px; width: calc(100% - 72px); font-family: 'Trade Gothic LT Pro Cn'; font-style: normal; font-weight: 700; font-size: 10px; line-height: 12px; color: #1D3C86; letter-spacing: 0.12em; font-feature-settings: 'liga' off; }
+
+@media (max-width:1600px) {
+		.header-info ul.mainmenu > li > a:link,.header-info  ul.mainmenu > li > a:visited { font-size: 12px; }
+		.header-info .header-search-box { margin-right: 12px; }
+  }
+@media (max-width: 1400px){
+	.header-info .header-logo { width: 200px; }
+	.header-info .header-search-box { margin-right: 0; }
+	ul.mainmenu > li > a:link, ul.mainmenu > li > a:visited { font-size: 11px; }
+}
+
+@media (max-width: 1200px){
+	.header-info .header-admin{    margin-right: 60px;}
+	.header-info .menulinks { display: block !important;}
+	.header-info ul.mainmenu {display: none;}
+	.menulinks { display: inline-block; }
+	ul.mainmenu { text-align: left; position: absolute; top: 99%; padding: 0; right: 0; width: 100%; background: #fff; display: none; z-index: 9;overflow: auto;}
+	ul.mainmenu > li { float: left; width: 100%; padding: 0px; margin: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); position: relative; }
+	ul.mainmenu > li:first-child { border: none; }
+	ul.mainmenu > li > a:link, ul.mainmenu > li > a:visited { padding: 10px 15px; font-size: 16px; float: left; width: 100%; border: none; text-align: left; color: #1D3C86; }
+	ul.mainmenu > li > a:hover { background: rgba(255, 255, 255, 0.2); }
+	ul.mainmenu ul { box-shadow: none; padding: 0; }
+	a.menulinks i { display: inline; position: relative; top: -2px; margin-left: 0; -webkit-transition-duration: 0s; -webkit-transition-delay: .2s; -moz-transition-duration: 0s; -moz-transition-delay: .2s; transition-duration: 0s; transition-delay: .2s; }
+	a.menulinks i:before, a.menulinks i:after { position: absolute; content: ''; left: 0; }
+	a.menulinks i, a.menulinks i:before, a.menulinks i:after { width: 23px; height: 2px; background-color: #1d3c86; display: inline-block; }
+	a.menulinks i:before { margin-top: -7px;  -webkit-transition-duration: .2s; -webkit-transition-delay: .2s, 0; }
+	a.menulinks i:after { margin-top: 7px; }
+	.mobile-open a.menulinks i { background-color: rgba(0, 0, 0, 0.0); -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); }
+	.mobile-open a.menulinks i:before { margin-top: 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); }
+	.mobile-open a.menulinks i:after { margin-top: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0); }
+	ul.mainmenu > li > a.current:after { display: none; }
+	ul.mainmenu ul { position: relative; top: auto; left: auto; float: left; width: 100%; }
+	ul.mainmenu ul li { position: relative; }
+	ul.mainmenu li li a:link, ul.mainmenu li li a:visited { padding: 8px 15px 8px 25px; color: #fff; }
+	ul.mainmenu ul ul { position: relative; left: auto; top: auto; float: left; width: 100%; }
+	ul.mainmenu ul ul li { padding-left: 10px; }
+
+
+	a.child-triggerm span { display: inline-block; }
+	a.child-triggerm {    left: auto; display: block !important; cursor: pointer; position: absolute !important; top: 0px; right: 0px; width: 80px !important; height: 48px !important; padding: 0 !important; transition: all 400ms ease; }
+	ul.mainmenu > li:hover > a { color: #fff; background-color: rgb(29 60 134 / 80%); }
+	ul.mainmenu > li > a { padding: 15px  40px !important; }
+	ul.mainmenu > li > ul >li > a { padding: 12px 80px !important; }
+	a.child-triggerm:hover { text-decoration: none; color: #414141; }
+	a.child-triggerm span:after { content: '\f107'; font-family: fontawesome; position: absolute; top: 50%; transform: translateY(-50%); right: 40px; font-size: 24px; transition: all 400ms ease; color: #1D3C86; }
+	a.child-triggerm.child-open span::after { transform: translateY(-50%) rotate(180deg); color: #fff; }
+	ul.mainmenu > li.mobile-header-btn a { background-color: #1D3C86; color: #fff; }
+	ul.mainmenu > li:hover a.child-triggerm span:after { color: #fff;}
+	.mobile-open:after { content: ''; position: absolute; background: #000000; opacity: 0.4; left: 0; right: 0; bottom: 0; top: 0; z-index: 7; }
+	.mobile-open header { background-color: #fff; }
+	.mobile-open { position: relative; }
+	.main-header-top ul.primary-menu >li { width: 100%; }
+	.main-header-top ul.primary-menu { display: block; }
+	.main-header-top ul.primary-menu >li >a { width: 100%; }
+	.main-header-top ul.primary-menu >li >ul.sub-menu { position: relative; left: auto; top: auto; float: left; width: 100%; }
+	.header-main { padding: 26px 15px; }
+	.search-box { width: 300px; }
+	.search-box input[type="text"] { width: 200px; margin-left: 10px; }
+	.hero-banner-section .herobanner { padding-top: 90px; }
+	.banner-content .sub-title { font-size: 12px; line-height: 21px; padding-bottom: 0; }
+	.hero-banner-section .herobanner .banner-content { text-align: center; padding-bottom: 20px; }
+	.banner-btn .button-1 { width: 100%; margin-right: 0; margin-bottom: 13px; }
+	.banner-btn { flex-wrap: wrap; padding-bottom: 30px; }
+	.banner-btn .button-1 a { width: 100%; }
+	body { font-size: 12px; line-height: 26px; }
+	.mobile-btn a { padding: 15px 40px !important; border: 1px solid #1D3C86 !important; text-align: center !important; max-width: 348px; margin: 0 auto; }
+	.mobile-btn { text-align: center; margin: 0 auto !important; clear: both; padding-bottom: 10px !important; }
+	.mobile-btn a { float: none !important; }
+	.mobile-user-btn { padding-top: 50px !important; }
+	ul.mainmenu > li.mobile-header-btn { padding-bottom: 40px !important; }
+}
+
+
+@media (min-width: 768px){
+	ul.mainmenu > li.menu-item-has-children> a:after{content: '' !important ;background-image: url(../../images/Vector-down.png); height: 12px; width: 12px; background-repeat: no-repeat; background-size:contain ;display: inline-block;position: relative; top: 3px;}
+	ul.mainmenu > li.menu-item-has-children:hover> a:after{content: '' !important; background-image: url(../../images/white-Vector-down.png);transform: rotate(180deg);top: -3px;}	
+
+}

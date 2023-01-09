@@ -1,0 +1,461 @@
+.footer-contact {
+
+  padding: 42px 0;
+  background-color: $lightest-grey;
+  margin: 0 40px -72px;
+  z-index: 1;
+  position: relative;
+
+  @include breakpoint($max: 600px) {
+
+    margin: 0 0 -72px;
+
+  }
+
+  .wrapper {
+
+    @include justifyed();
+
+  }
+
+  .contact-left,
+  .contact-right {
+
+    width: calc(50% - 17px);
+    display: inline-block;
+    vertical-align: middle;
+
+    @include breakpoint($max: 1020px) {
+
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      display: block;
+
+    }
+
+  }
+
+  .contact-left {
+
+    @include breakpoint($max: 1020px) {
+
+      margin-bottom: 48px;
+
+    }
+
+    > span {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 28.79px;
+
+      @include breakpoint($max: 500px) {
+
+        text-align: center;
+        display: block;
+
+      }
+
+    }
+
+    form {
+
+      position: relative;
+      padding-left: 38px;
+      margin-top: 12px;
+
+      @include breakpoint($max: 500px) {
+
+        padding-left: 0;
+
+      }
+
+      > svg {
+
+        fill: $light-grey; 
+        width: 18px;
+        height: 15px; 
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include breakpoint($max: 500px) {
+
+          display: none;
+
+        }
+
+      }
+
+      input {
+
+        width: 100%;
+        display: block;
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: $dark-grey;
+        line-height: 23px;
+        background: transparent;
+        border: 0;
+        border-bottom: solid 1px $light-grey;
+
+        @include breakpoint($max: 500px) {
+
+          font-size: 24px;
+          line-height: 29px;
+
+        }
+
+      }
+
+      button {
+
+        @include alignment(absolute, vertical);
+        right: 0;
+        background-color: transparent;
+        border: 0;
+        padding: 12px 0 12px 12px;
+
+        @include breakpoint($max: 500px) {
+
+          padding: 12px 0 20px 12px;
+
+        }
+
+        svg {
+
+          width: 27px;
+          height: 12px;
+
+          @include breakpoint($max: 500px) {
+
+            width: 34px;
+            height: 16px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .contact-right {
+
+    @include justifyed();
+
+    > span {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 28.79px;
+      display: block;
+      text-align: left;
+      margin-bottom: 12px;
+
+      @include breakpoint($max: 500px) {
+
+        text-align: center;
+
+      }
+
+    }
+
+    > a {
+
+      display: inline-block;
+      width: calc(50% - 18px);
+      font-family: $sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: $dark-grey;
+      letter-spacing: 2px;
+      line-height: 24px;
+
+      @include breakpoint($max: 500px) {
+
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+
+      }
+
+      &:last-of-type {
+
+        text-transform: uppercase;
+        color: $brand;
+
+        &:hover {
+
+          svg.arrow-right-large {
+
+            @include transform(translateX(6px));
+
+          }
+
+        }
+
+      }
+
+      svg {
+
+        width: 20px;
+        height: 20px;
+        fill: $light-grey;
+        margin-bottom: -3px;
+        margin-right: 12px;
+        transition: all .3s;
+
+        &.arrow-right-large {
+
+          stroke: $brand;
+          margin-right: 0;
+          margin-left: 6px;
+
+          @include breakpoint($max: 500px) {
+
+            display: none;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.footer-main {
+
+  background-color: $brand;
+  color: $white;
+  padding: 130px 0 70px;
+  
+  .wrapper {
+
+    @include justifyed();
+
+    position: relative;
+
+  }
+
+  .footer-col {
+
+    display: inline-block;
+    vertical-align: top;
+
+    @include breakpoint($max: 700px) {
+
+      width: 31%;
+      margin-bottom: 12px;
+
+    }
+
+    @include breakpoint($max: 500px) {
+
+      width: 49%;
+
+    }
+
+    a {
+
+      display: block;
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 15px;
+      color: $white;
+      line-height: 25px;
+      transition: all .3s;
+
+      &:hover {
+
+        opacity: .7;
+
+      }
+
+      &:first-of-type {
+
+        font-family: $sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 42px;
+        text-transform: uppercase;
+
+      }
+
+      &.footer-logo {
+
+        svg {
+
+          width: 65px;
+          height: 65px;
+          fill: $white;
+
+        }
+
+      }
+
+    }
+
+    p {
+
+      font-family: $serif;
+      font-weight: $book;
+      font-size: 12px;
+      color: $white;
+      letter-spacing: .61px;
+      line-height: 18px;
+      margin-top: 30px;
+      margin-bottom: 0;
+      text-align: left;
+      display: block;
+
+      &.cst {
+
+        margin-top: 0;
+
+      }
+
+    }
+
+    svg {
+
+      width: 20px;
+      height: 20px;
+      fill: $white;
+
+    }
+
+    img {
+
+      width: 152px;
+      height: auto;
+
+    }
+
+  }
+
+  .credit {
+
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    /* Site by: */
+    font-family: $serif;
+    font-weight: $book;
+    font-size: 12px;
+    color: $white;
+    letter-spacing: .61px;
+    line-height: 36px;
+
+    @include breakpoint($max: 700px) {
+
+      display: inline-block;
+      text-align: right;
+      position: static;
+      width: 100%;
+
+    }
+
+    svg {
+
+      width: 140px;
+      height: 15px;
+      fill: $white;
+      margin-left: 0;
+      margin-bottom: -4px;
+
+    }
+
+    p {
+
+      display: inline;
+      float: left;
+      margin: 0;
+
+      &.cst {
+
+        display: block;
+        float: none;
+        margin-bottom: 6px;
+        text-align: left;
+
+      }
+
+    }
+
+  }
+
+}
+
+.footer-mob {
+
+
+  text-align: left;
+  margin-bottom: 20px;
+
+  a.footer-logo {
+
+    display: inline-block;
+    width: 31%;
+    vertical-align: middle;
+
+    @include breakpoint($max: 500px) {
+
+      width: 49%;
+
+    }
+
+    svg {
+
+      fill: $white;
+      width: 100px;
+      height: 100px;
+
+    }
+
+  }
+
+  .mob-socials {
+
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 2%;
+
+    @include breakpoint($max: 500px) {
+
+      width: 49%;
+
+    }
+
+  }
+
+  .footer-col {
+
+    margin: 0 24px 0 0;
+    width: auto;
+
+    &:last-of-type {
+
+      margin: 0;
+
+    }
+
+  }
+
+}
+
+
